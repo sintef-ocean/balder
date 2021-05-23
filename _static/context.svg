@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="972px" preserveAspectRatio="none" style="width:707px;height:972px;" version="1.1" viewBox="0 0 707 972" width="707px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="Helvetica" font-size="18" lengthAdjust="spacing" textLength="225" x="234.5" y="16.708">[System Context]  Balder</text><!--MD5=[5c63b03b4aeccbc25ceb87e9ea5551fb]
+entity cap--><rect fill="#08427B" height="119.2188" style="stroke:#073B6F;stroke-width:1.5;" width="158" x="151" y="27.9531"/><image height="48" width="48" x="206" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAIAAADYYG7QAAACD0lEQVR4Xu2YoU4EMRCGT+4j8Ai8AhaH4QHgAUjQuFMECUgMIUgwJAgMhgQsAYUiJCiQIBBY+EITsjfTdme6V24v4c8vyGbb+ZjOtN0bNcvjQXmkH83WvYBWto6PLm6v7p7uH1/w2fXD+PBycX1Pv2l3IdDm/vn7x+dXQiAubRzoURa7gRZWd0iGRIiJbOnhnfYBQZNJjNbuyY2eJG8fkDE3bbG4ep6MHUAsgYxmE3nVs6VsBWJSGccsOlFPmLIViMzLOB7pCVO2AtHJMohH7Fh6zqitQK7m0rJvAVYgGcEpe//PLdDz65sM4pF9N7ICcXDKIB5Nv6j7tD0NoSdM2QrU9Gg0ewE1LqBhHR3BBdvj2vapnidjHxD/q6vd7Pvhr31AwcY8eXMTXAKECZZJFXuEq27aLgQK5uLMohCenGGuGewOxSjBvYBqeG6B+Nqiblggdjnc+ZXDy+FNFpFzw76O3UBAROuXh6FoiAcf5g9eTvUgzy0nWg6I8cXHRUpg5bOVBCo+KDpFajOf23GgPme7RSQ+lacIENUgJ6gg1k6HjgOlqnLqip4tEuhv0hNEMXUD0clyXE3p6pZA0S2nnvTlXwLJEZWlb7cTQH1+USgTN4VhAenm/wea1OCAOmqo6fE1WCb9WSKBah+rbUWPWAmE2Rvk0ApiB45eOyNAzU8xcTvj8KvkKEoOaIYeHNA3ZuygAvFMUO0AAAAASUVORK5CYII=" y="37.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="66" x="197" y="100.8047">Captain</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="232" y="117.5732"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="134" x="165" y="133.8701">Purse seine master</text><!--MD5=[5e1e48695b2b6883ccf52efc4d99836b]
+entity balder--><rect fill="#1168BD" height="71.2188" style="stroke:#3C7FC0;stroke-width:1.5;" width="201" x="129.5" y="249.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="56" x="202" y="274.8047">Balder</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="232" y="291.5732"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="177" x="143.5" y="307.8701">Graphical user application</text><!--MD5=[9559819944d120df6b7fb58c78a1e9cc]
+entity mimir--><rect fill="#1168BD" height="71.2188" style="stroke:#3C7FC0;stroke-width:1.5;" width="118" x="320" y="423.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="48" x="355" y="448.8047">Mimir</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="381" y="465.5732"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="94" x="334" y="481.8701">Path planning</text><!--MD5=[a08a7ddfa378281c366a12a88461b934]
+entity stim--><rect fill="#1168BD" height="71.2188" style="stroke:#3C7FC0;stroke-width:1.5;" width="150" x="7" y="423.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="48" x="58" y="448.8047">Mimir</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="84" y="465.5732"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="126" x="21" y="481.8701">Leadline Estimator</text><!--MD5=[6c5535b14f3536aadb7b9be08ca4ebfc]
+entity ratatosk--><rect fill="#1168BD" height="71.2188" style="stroke:#3C7FC0;stroke-width:1.5;" width="183" x="138.5" y="583.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="80" x="190" y="608.8047">Ratatosk</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="232" y="625.5732"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="159" x="152.5" y="641.8701">Vessel instrument data</text><!--MD5=[d7a01c17c4163d10b2c6131af23a7c66]
+entity logger--><path d="M480,598.4531 C480,588.4531 590,588.4531 590,588.4531 C590,588.4531 700,588.4531 700,598.4531 L700,640.0469 C700,650.0469 590,650.0469 590,650.0469 C590,650.0469 480,650.0469 480,640.0469 L480,598.4531 " fill="#438DD5" style="stroke:#3C7FC0;stroke-width:1.5;"/><path d="M480,598.4531 C480,608.4531 590,608.4531 590,608.4531 C590,608.4531 700,608.4531 700,598.4531 " fill="none" style="stroke:#3C7FC0;stroke-width:1.5;"/><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="95" x="542.5" y="627.3047">Data store</text><text fill="#FFFFFF" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="200" x="490" y="642.2168">[Saves vessel data to database]</text><!--MD5=[47c18842d683cfadded74535f4d5b6fb]
+entity vessel--><rect fill="#999999" height="71.2188" style="stroke:#8A8A8A;stroke-width:1.5;" width="193" x="133.5" y="743.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="58" x="201" y="768.8047">Vessel</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="232" y="785.5732"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="169" x="147.5" y="801.8701">Instrument data sources</text><!--MD5=[4448e086b86210416f39309e631db8ed]
+link cap to balder--><path d="M230,146.9931 C230,177.3531 230,213.7831 230,241.5031 " fill="none" id="cap-to-balder" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="230,249.8131,233,241.8131,227,241.8131,230,249.8131" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="122" x="231" y="189.0918">Views suggested</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="84" x="250" y="203.0605">deployment</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="70" x="259" y="217.0293">trajectory</text><!--MD5=[23ad11a59935958f7127e76ae51b7ec1]
+reverse link balder to mimir--><path d="M277.4,327.0031 C285.56,334.6731 293.74,342.8431 301,350.9531 C321.46,373.7931 341.72,401.9231 356.46,423.6731 " fill="none" id="balder-backto-mimir" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="271.18,321.2431,275.0074,328.8819,279.0864,324.4817,271.18,321.2431" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="124" x="337" y="363.0918">Sends suggested</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="84" x="357" y="377.0605">deployment</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="83" x="359.5" y="391.0293">trajectories</text><!--MD5=[f94ec09784496528db134b36c7ebf164]
+reverse link balder to stim--><path d="M194.79,327.3731 C169.53,356.7231 135.87,395.8531 111.91,423.6931 " fill="none" id="balder-backto-stim" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="200.05,321.2631,192.5516,325.3587,197.0935,329.2793,200.05,321.2631" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="113" x="175" y="370.0918">Sends expected</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="111" x="178" y="384.0605">leadline depths</text><!--MD5=[53ee4277ac9e1a2f8a8383dd4a177b13]
+link stim to mimir--><path d="M157.33,459.4531 C204.83,459.4531 265.65,459.4531 311.56,459.4531 " fill="none" id="stim-to-mimir" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="319.66,459.4531,311.66,456.4531,311.66,462.4531,319.66,459.4531" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="122" x="175.5" y="439.5918">Provides leadline</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="63" x="207" y="453.5605">estimate</text><!--MD5=[2e5362af1e6de69b2770d7cc7595049a]
+reverse link mimir to ratatosk--><path d="M349.66,501.7131 C336.97,518.5531 321.49,537.8231 306,553.9531 C296.17,564.1931 284.84,574.4831 273.98,583.7531 " fill="none" id="mimir-backto-ratatosk" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="354.57,495.1431,347.3766,499.7534,352.1817,503.3465,354.57,495.1431" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="147" x="331" y="544.0918">Provides vessel data</text><!--MD5=[69876181b736925360d44e2c9eba7290]
+reverse link stim to ratatosk--><path d="M120.12,501.1431 C144.12,526.7731 174.77,559.4931 197.6,583.8631 " fill="none" id="stim-backto-ratatosk" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="114.48,495.1231,117.7584,503.0131,122.138,498.912,114.48,495.1231" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="61" x="201.5" y="537.0918">Provides</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="126" x="171" y="551.0605">environment data</text><!--MD5=[1daf75a8b693c16c52bffbe75803e769]
+link ratatosk to logger--><path d="M321.77,619.4531 C367.36,619.4531 422.97,619.4531 471.71,619.4531 " fill="none" id="ratatosk-to-logger" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="479.79,619.4531,471.79,616.4531,471.79,622.4531,479.79,619.4531" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="118" x="339.75" y="599.5918">Shares available</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="33" x="384.25" y="613.5605">data</text><!--MD5=[ae39d81129783129a015057d9485f219]
+reverse link ratatosk to vessel--><path d="M230,663.4331 C230,688.6931 230,720.2131 230,743.8631 " fill="none" id="ratatosk-backto-vessel" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="230,655.1231,227,663.1231,233,663.1231,230,655.1231" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="114" x="231" y="697.0918">Provides sensor</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="33" x="273.5" y="711.0605">data</text><rect fill="#FFFFFF" height="128.0781" rx="5" ry="5" style="stroke:#FFFFFF;stroke-width:1.0;" width="144" x="541" y="828.1719"/><text fill="#000000" font-family="Helvetica" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="59" x="547" y="848.167">Legend</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="610" y="848.167"/><rect fill="#08427B" height="16.2969" style="stroke:none;stroke-width:1.0;" width="132" x="547" y="851.4688"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="49" x="551" y="864.4639">person</text><rect fill="#1168BD" height="16.2969" style="stroke:none;stroke-width:1.0;" width="132" x="547" y="867.7656"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="50" x="551" y="880.7607">system</text><rect fill="#438DD5" height="16.2969" style="stroke:none;stroke-width:1.0;" width="132" x="547" y="884.0625"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="65" x="551" y="897.0576">container</text><rect fill="#686868" height="16.2969" style="stroke:none;stroke-width:1.0;" width="132" x="547" y="900.3594"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="108" x="551" y="913.3545">external person</text><rect fill="#999999" height="16.2969" style="stroke:none;stroke-width:1.0;" width="132" x="547" y="916.6563"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="109" x="551" y="929.6514">external system</text><rect fill="#B3B3B3" height="16.2969" style="stroke:none;stroke-width:1.0;" width="132" x="547" y="932.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="124" x="551" y="945.9482">external container</text><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="679" y1="835.1719" y2="835.1719"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="679" y1="851.4688" y2="851.4688"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="679" y1="867.7656" y2="867.7656"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="679" y1="884.0625" y2="884.0625"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="679" y1="900.3594" y2="900.3594"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="679" y1="916.6563" y2="916.6563"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="679" y1="932.9531" y2="932.9531"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="679" y1="949.25" y2="949.25"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="547" x2="547" y1="835.1719" y2="949.25"/><line style="stroke:#FFFFFF;stroke-width:1.0;" x1="679" x2="679" y1="835.1719" y2="949.25"/><!--MD5=[099c2d5f320f2e73cb794f17773b59e2]
+@startuml
+!include ../static/style.puml
+!include  <C4/C4_Context.puml>
+!include  <C4/C4_Container.puml>
+LAYOUT_WITH_LEGEND()
+
+title [System Context]  Balder
+
+Person(cap, "Captain", "Purse seine master")
+
+System(balder, "Balder", "Graphical user application")
+System(mimir, "Mimir", "Path planning")
+System(stim, "Mimir", "Leadline Estimator")
+System(ratatosk, "Ratatosk", "Vessel instrument data")
+ContainerDb(logger, "Data store", "Saves vessel data to database")
+System_Ext(vessel, "Vessel", "Instrument data sources")
+
+
+Rel(cap, balder, "Views suggested deployment trajectory")
+Rel_U(mimir, balder, "Sends suggested deployment trajectories")
+Rel_U(stim, balder, "Sends expected leadline depths")
+Rel_Neighbor(stim, mimir, "Provides leadline estimate")
+Rel_Back(mimir, ratatosk, "Provides vessel data")
+Rel_Back(stim, ratatosk,  "Provides environment data")
+Rel_Neighbor(ratatosk, logger, "Shares available data")
+Rel_Back(ratatosk, vessel, "Provides sensor data")
+
+@enduml
+
+@startuml
+
+
+skinparam defaultFontName  Helvetica
+skinparam backgroundColor white
+
+
+skinparam activity {
+  ArrowColor Black
+  BorderColor Black
+  BorderThickness 1
+}
+
+skinparam actor {
+  BorderColor Black
+}
+
+skinparam usecase {
+  ArrowColor Black
+  BorderColor Black
+  BorderThickness 1
+}
+
+skinparam class {
+  ArrowColor Black
+
+  BorderColor Black
+  BorderThickness 1
+}
+
+
+skinparam object {
+  ArrowColor Black
+  BorderColor Black
+}
+
+skinparam package {
+  BorderColor Black
+}
+
+skinparam note {
+  BorderColor Black
+}
+
+skinparam state {
+  ArrowColor Black
+  BorderColor Black
+}
+
+
+skinparam interface {
+  BorderColor Black
+}
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam defaultTextAlignment center
+
+skinparam wrapWidth 200
+skinparam maxMessageSize 150
+
+skinparam LegendBorderColor transparent
+skinparam LegendBackgroundColor transparent
+skinparam LegendFontColor #FFFFFF
+
+skinparam rectangle {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam database {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam queue {
+    StereotypeFontSize 12
+    shadowing false
+}
+
+skinparam Arrow {
+    Color #666666
+    FontColor #666666
+    FontSize 12
+}
+
+skinparam rectangle<<boundary>> {
+    Shadowing false
+    StereotypeFontSize 0
+    FontColor #444444
+    BorderColor #444444
+    BorderStyle dashed
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+
+skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+
+skinparam rectangle<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+sprite $person [48x48/16] {
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+000000000000025788300000000005886410000000000000
+000000000007DFFFFFFD9643347BFFFFFFFB400000000000
+0000000004EFFFFFFFFFFFFFFFFFFFFFFFFFFB1000000000
+000000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFD200000000
+00000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE10000000
+0000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB0000000
+000000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF5000000
+000003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD000000
+000009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF200000
+00000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF600000
+00000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF800000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+00001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA00000
+00000EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF700000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+0000008FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD3000000
+000000014555555555555555555555555555555300000000
+000000000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000000000
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skinparam rectangle<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam database<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam queue<<container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #438DD5
+    BorderColor #3C7FC0
+}
+
+skinparam rectangle<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+skinparam database<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+skinparam queue<<external_container>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #B3B3B3
+    BorderColor #A6A6A6
+}
+
+
+
+
+
+
+
+
+
+
+
+
+hide stereotype
+legend right
+|<color:#000000>**Legend**</color> |
+|<#08427B> person |
+|<#1168BD> system |
+|<#438DD5> container |
+|<#686868> external person |
+|<#999999> external system |
+|<#B3B3B3> external container |
+endlegend
+
+title [System Context]  Balder
+
+rectangle "<$person>\n==Captain\n\n Purse seine master" <<person>> as cap
+
+rectangle "==Balder\n\n Graphical user application" <<system>> as balder
+rectangle "==Mimir\n\n Path planning" <<system>> as mimir
+rectangle "==Mimir\n\n Leadline Estimator" <<system>> as stim
+rectangle "==Ratatosk\n\n Vessel instrument data" <<system>> as ratatosk
+database "==Data store\n//<size:12>[Saves vessel data to database]</size>//" <<container>> as logger
+rectangle "==Vessel\n\n Instrument data sources" <<external_system>> as vessel
+
+
+cap - ->> balder : **Views suggested deployment trajectory**
+mimir -UP->> balder : **Sends suggested deployment trajectories**
+stim -UP->> balder : **Sends expected leadline depths**
+stim ->> mimir : **Provides leadline estimate**
+mimir <<- - ratatosk : **Provides vessel data**
+stim <<- - ratatosk : **Provides environment data**
+ratatosk ->> logger : **Shares available data**
+ratatosk <<- - vessel : **Provides sensor data**
+
+@enduml
+
+PlantUML version 1.2021.2(Sun Mar 07 12:10:27 CET 2021)
+(GPL source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

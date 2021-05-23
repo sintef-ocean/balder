@@ -1,0 +1,555 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Data sharing &mdash; balder  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Build instructions" href="installation.html" />
+    <link rel="prev" title="Introduction" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #00457c" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> balder
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#component-overview">Component overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#screendumps-of-application">Screendumps of application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#usage">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#running-the-application">Running the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#todo-typical-usage">TODO Typical usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Data sharing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#signal-overview">Signal overview</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer zone</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Build instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#configuration-options-and-targets">Configuration options and targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#prerequisites-debian-based">Prerequisites (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#documentation-prerequisites-optional">Documentation prerequisites <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#building-and-running-debian-based">Building and running (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#packaging-into-artifacts">Packaging into artifacts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#documentation-prerequisites-on-windows-optional">Documentation prerequisites on Windows <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#building-and-running">Building and running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#packaging-into-installer-and-archive">Packaging into installer and archive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#android">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../api/library-api.html">Private API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../api/library-api.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/library-api.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../api/library-api.html#items-listing">Items listing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../api/library-api.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/namespace_fkin__Dds.html">Namespace fkin::Dds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/namespace_ratatosk.html">Namespace ratatosk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../api/library-api.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../api/classbalder.html">Class balder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinControls.html">Class FkinControls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinDdsTopics.html">Class FkinDdsTopics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinDecisionIndicator.html">Class FkinDecisionIndicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinFooter.html">Class FkinFooter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinInfoDash.html">Class FkinInfoDash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinPurseDashboard.html">Class FkinPurseDashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinSettings.html">Class FkinSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinStyle.html">Class FkinStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classFkinTimeSeries.html">Class FkinTimeSeries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classInfoDirectionMagnitude.html">Class InfoDirectionMagnitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classInfoPlanning.html">Class InfoPlanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classNlpInfo.html">Class NlpInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classNorthEast.html">Class NorthEast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classRemoteProgramCommands.html">Class RemoteProgramCommands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classRemoteProgramGroup.html">Class RemoteProgramGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classSplash.html">Class Splash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classTabIconButton.html">Class TabIconButton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classTimeChart.html">Class TimeChart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../api/classTransformToNED.html">Class TransformToNED</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">balder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Data sharing</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="installation.html" class="btn btn-neutral float-right" title="Build instructions" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="data-sharing">
+<h1>Data sharing<a class="headerlink" href="#data-sharing" title="Permalink to this headline">¶</a></h1>
+<p>Communication of signals and data between software systems, which is indicated in
+<a class="reference internal" href="#fig-containers"><span class="std std-numref">Figure 6</span></a>, is achieved using a data distribution service standard <a class="reference external" href="https://www.omg.org/spec/DDS/About-DDS/">OMG DDS</a>.
+In the following, we provide an overview of the various signals. This overview also
+includes the interface definition language (IDL) types used for the
+different signals. The IDL types are defined in the companion project <code class="docutils literal notranslate"><span class="pre">RatatoskIDL</span></code>.</p>
+<div class="figure align-center" id="id5">
+<span id="fig-containers"></span><a class="reference internal image-reference" href="../_images/container.svg"><img alt="../_images/container.svg" height="613" src="../_images/container.svg" width="388" /></a>
+<p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text">Container diagram for Balder.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="signal-overview">
+<h2>Signal overview<a class="headerlink" href="#signal-overview" title="Permalink to this headline">¶</a></h2>
+<p>The diagram in <a class="reference internal" href="#fig-containers"><span class="std std-numref">Figure 6</span></a> only give a high-level view of the data sharing between the different systems.
+With focus on the two algorithm systems <em>Mimir: Leadline</em> and <em>Mimir: Path planner</em>, we provide a more complete signal list in <a class="reference internal" href="#tab-flow"><span class="std std-numref">Table 1</span></a>.
+<em>Source</em> is a signal originator, it is the system that sends out the signal. <em>Target</em> is an intended signal receiver.
+The DCPS DDS interface (data-centric publish-subscribe) is designed to allow multiple recipients – one-to-many.
+<em>Causality</em> is one of <em>input</em>, <em>output</em>, <em>parameter</em> and describes the variable type.
+In our case, the <em>variability</em> for <em>parameter</em> in the table is always tunable, that is, they can be changed while algorithms are running.
+Please consult the documentation for the respective system/algorithm on how to specify the DDS topic and other settings in their configuration files.
+In the case of <em>Balder</em>, the DDS topic names are specified in <a class="reference internal" href="../api/classFkinDdsTopics.html#_CPPv413FkinDdsTopics" title="FkinDdsTopics"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FkinDdsTopics</span></code></a>.
+Note that <em>Name</em> in the table below is not the topic name of a signal. It is the variable named used in the <em>Mimir</em> configuration file.</p>
+<table class="docutils align-default" id="tab-flow">
+<caption><span class="caption-number">Table 1 </span><span class="caption-text">Overview of signal flow between systems.</span><a class="headerlink" href="#tab-flow" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 11%" />
+<col style="width: 34%" />
+<col style="width: 28%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Causality</p></th>
+<th class="head"><p>IDL type</p></th>
+<th class="head"><p>(S)ource/(T)arget</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Mimir: Leadline</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">command</span></code></p></td>
+<td><p>input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::Command</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">command</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::CommandResponse</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">notifier</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::ProcessStateAutomaton</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">parameters</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec2d</span></code></p></td>
+<td><p>S: Balder,</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p>Mimir: Path planner</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">depth</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::BatchIdVec1d</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Mimir: Path planner</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">command</span></code></p></td>
+<td><p>input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::Command</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">command</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::CommandResponse</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">notifier</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::ProcessStateAutomaton</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">setting_speed</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">setting_radius</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aim_point_arc</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">leadline</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec2d</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">current_surface</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
+<td><p>S: Ratatosk</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">current_fish</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
+<td><p>S: Ratatosk</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fish_water_velocity</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
+<td><p>S: Ratatosk, Balder <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fish_depth</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
+<td><p>S: Ratatosk, Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">GPS_origin</span></code></p></td>
+<td><p>input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
+<td><p>S: Balder   <a class="footnote-reference brackets" href="#id4" id="id2">2</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">vessel_pos_info</span></code></p></td>
+<td><p>input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::PosInfo</span></code></p></td>
+<td><p>S: Ratatosk</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vessel_gyro_info</span></code></p></td>
+<td><p>input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::PosInfo</span></code></p></td>
+<td><p>S: Ratatosk</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fish_pos_info</span></code></p></td>
+<td><p>input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::PosInfo</span></code></p></td>
+<td><p>S: Ratatosk</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fish_relative_pos</span></code></p></td>
+<td><p>input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double3</span></code></p></td>
+<td><p>S: Ratatosk</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">trajectory_vessel</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::BatchKinematics2D</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">trajectory_fish</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::BatchKinematics2D</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nlp_config</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::NlpConfig</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nlp_stats</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::OptiStats</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">vessel_speed</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::DoubleVal</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vessel_heading_rate</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::DoubleVal</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">deploy_position</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">collide_position</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Balder currently does not support user configuration of topic names. Future
+improvements include moving <a class="reference internal" href="../api/classFkinDdsTopics.html#_CPPv413FkinDdsTopics" title="FkinDdsTopics"><code class="xref cpp cpp-class docutils literal notranslate"><span class="pre">FkinDdsTopics</span></code></a> outside the compiled
+program, so that it can be loaded at runtime. This would allow configuration of
+topics without recompilation.</p>
+</div>
+<dl class="footnote brackets">
+<dt class="label" id="id3"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>The user can set manually.</p>
+</dd>
+<dt class="label" id="id4"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>Calculated from <code class="docutils literal notranslate"><span class="pre">vessel_pos_info</span></code>.</p>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Build instructions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="intro.html" class="btn btn-neutral float-left" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, SINTEF Ocean.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb1c2ebe0>
+
+<br /><br />
+<table>
+  <tr>
+    <td width="120" style="vertical-align:middle;text-align:center">
+      <img alt="FHF" style="border-width:0" width="100" src="../_static/FHF-black-txt.png" />
+    </td>
+    <td>
+      This work was funded by <a href="https://www.fhf.no/fhf/about-fhf-english">FHF &ndash; Norwegian Seafood Research Fund</a> with <a href="https://www.fhf.no/prosjekter/prosjektbasen/901350/">Grant No. 901350</a>.<br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td width="90" style="vertical-align:middle;text-align:center">
+      <img alt="GNU General Public License, Version 3.0" style="border-width:0" width="90" src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" />
+    </td>
+    <td>
+      This program is free software: you can redistribute it and/or modify
+      it under the terms of the GNU General Public License as published by
+      the Free Software Foundation, either version 3 of the License, or
+      (at your option) any later version.<br /><br />
+
+      This program is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      GNU General Public License for more details.<br /><br />
+
+      You should have received a copy of the GNU General Public License
+      along with this program.  If not, see <a rel="license" href="https://www.gnu.org/licenses/">gnu.org/licenses</a>.
+    </td>
+  </tr>
+</table>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

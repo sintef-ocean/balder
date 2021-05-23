@@ -1,0 +1,1160 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Program Listing for File FkinPurseDashboard.qml &mdash; balder  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #00457c" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> balder
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#component-overview">Component overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#screendumps-of-application">Screendumps of application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/intro.html#usage">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#running-the-application">Running the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#todo-typical-usage">TODO Typical usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/signals.html">Data sharing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/signals.html#signal-overview">Signal overview</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer zone</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/installation.html">Build instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#configuration-options-and-targets">Configuration options and targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#linux">Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#prerequisites-debian-based">Prerequisites (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#documentation-prerequisites-optional">Documentation prerequisites <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#building-and-running-debian-based">Building and running (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#packaging-into-artifacts">Packaging into artifacts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#documentation-prerequisites-on-windows-optional">Documentation prerequisites on Windows <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#building-and-running">Building and running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#packaging-into-installer-and-archive">Packaging into installer and archive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#android">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="library-api.html">Private API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="library-api.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library-api.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library-api.html#items-listing">Items listing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="library-api.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_fkin__Dds.html">Namespace fkin::Dds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_ratatosk.html">Namespace ratatosk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library-api.html#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classbalder.html">Class balder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinControls.html">Class FkinControls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinDdsTopics.html">Class FkinDdsTopics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinDecisionIndicator.html">Class FkinDecisionIndicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinFooter.html">Class FkinFooter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinInfoDash.html">Class FkinInfoDash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinPurseDashboard.html">Class FkinPurseDashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinSettings.html">Class FkinSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinStyle.html">Class FkinStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinTimeSeries.html">Class FkinTimeSeries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classInfoDirectionMagnitude.html">Class InfoDirectionMagnitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classInfoPlanning.html">Class InfoPlanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNlpInfo.html">Class NlpInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNorthEast.html">Class NorthEast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRemoteProgramCommands.html">Class RemoteProgramCommands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRemoteProgramGroup.html">Class RemoteProgramGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSplash.html">Class Splash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTabIconButton.html">Class TabIconButton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTimeChart.html">Class TimeChart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTransformToNED.html">Class TransformToNED</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">balder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Program Listing for File FkinPurseDashboard.qml</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="program-listing-for-file-fkinpursedashboard-qml">
+<span id="program-listing-file-src-qml-components-fkinpursedashboard-qml"></span><h1>Program Listing for File FkinPurseDashboard.qml<a class="headerlink" href="#program-listing-for-file-fkinpursedashboard-qml" title="Permalink to this headline">¶</a></h1>
+<p>↰ <a class="reference internal" href="file_src_qml_components_FkinPurseDashboard.qml.html#file-src-qml-components-fkinpursedashboard-qml"><span class="std std-ref">Return to documentation for file</span></a> (<code class="docutils literal notranslate"><span class="pre">src/qml/components/FkinPurseDashboard.qml</span></code>)</p>
+<div class="highlight-qml notranslate"><div class="highlight"><pre><span></span><span class="kr">import</span> <span class="nx">QtQuick</span> <span class="mf">2.11</span>
+<span class="kr">import</span> <span class="nx">QtQuick</span><span class="p">.</span><span class="nx">Layouts</span> <span class="mf">1.11</span>
+<span class="kr">import</span> <span class="nx">QtQuick</span><span class="p">.</span><span class="nx">Controls</span> <span class="mf">2.4</span>
+<span class="kr">import</span> <span class="nx">QtQuick</span><span class="p">.</span><span class="nx">Controls</span><span class="p">.</span><span class="nx">Material</span> <span class="mf">2.4</span>
+<span class="kr">import</span> <span class="nx">QtCharts</span> <span class="mf">2.2</span>
+
+<span class="kr">import</span> <span class="nx">fkin</span><span class="p">.</span><span class="nx">Dds</span> <span class="mf">1.0</span>
+<span class="kr">import</span> <span class="s2">&quot;fkinHelpers.js&quot;</span> <span class="nx">as</span> <span class="nx">Fkin</span>
+<span class="kr">import</span> <span class="nx">ratatosk</span> <span class="mf">1.0</span>
+
+<span class="nx">RowLayout</span> <span class="p">{</span>
+
+  <span class="kd">id: root</span><span class="p">;</span>
+  <span class="nx">FkinStyle</span> <span class="p">{</span> <span class="kd">id: fkinStyle</span><span class="p">;</span> <span class="p">}</span>
+  <span class="nx">property</span> <span class="nx">vector2d</span> <span class="k">originNED:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span><span class="mf">63.4581027</span><span class="p">,</span> <span class="mf">10.3683367</span><span class="p">);</span>
+  <span class="nx">signal</span> <span class="nx">triggerReset</span><span class="p">;</span>
+  <span class="nx">signal</span> <span class="nx">themeChanged</span><span class="p">;</span>
+  <span class="nx">property</span> <span class="nx">bool</span> <span class="k">plannerRunning:</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="nx">property</span> <span class="nx">bool</span> <span class="k">ddsInitialized:</span> <span class="kc">false</span><span class="p">;</span>
+
+  <span class="nx">property</span> <span class="nx">vector3d</span> <span class="k">currentMagDirDepth:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector3d</span><span class="p">(</span><span class="mf">0.25</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
+  <span class="nx">property</span> <span class="nx">vector2d</span> <span class="k">windMagDir:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">);</span>
+  <span class="nx">property</span> <span class="nx">vector2d</span> <span class="k">fishCurrent:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span><span class="mf">0.35</span><span class="p">,</span> <span class="mf">0.35</span><span class="p">);</span> <span class="c1">// also published dds</span>
+  <span class="nx">property</span> <span class="nx">vector2d</span> <span class="k">seaCurrent:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span><span class="nx">currentMagDirDepth</span><span class="p">.</span><span class="nx">x</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">currentMagDirDepth</span><span class="p">.</span><span class="nx">y</span><span class="p">),</span>
+                                            <span class="nx">currentMagDirDepth</span><span class="p">.</span><span class="nx">x</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">currentMagDirDepth</span><span class="p">.</span><span class="nx">y</span><span class="p">));</span>
+
+  <span class="nx">property</span> <span class="nx">point</span> <span class="k">mouseTip:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+  <span class="nx">property</span> <span class="nx">bool</span> <span class="k">mouseActive:</span> <span class="kc">false</span><span class="p">;</span>
+  <span class="nx">property</span> <span class="nx">bool</span> <span class="k">manualFishCtrl:</span> <span class="nx">manualFish</span><span class="p">.</span><span class="nx">checked</span><span class="p">;</span> <span class="c1">// Togglable switch</span>
+
+  <span class="nx">signal</span> <span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span> <span class="nx">pnt</span><span class="p">);</span>
+
+  <span class="k">onPointHovered:</span><span class="p">{</span>
+    <span class="nx">mouseTip</span> <span class="o">=</span> <span class="nx">pnt</span><span class="p">;</span>
+    <span class="nx">mouseActive</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="nx">hoverShow</span><span class="p">.</span><span class="nx">restart</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="nx">Timer</span> <span class="p">{</span>
+    <span class="kd">id: hoverShow</span><span class="p">;</span>
+    <span class="k">interval:</span> <span class="mi">1500</span><span class="p">;</span>
+    <span class="k">running:</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="k">repeat:</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="k">onTriggered:</span> <span class="p">{</span>
+      <span class="nx">root</span><span class="p">.</span><span class="nx">mouseActive</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+
+  <span class="nx">property</span> <span class="nx">color</span> <span class="k">vesselColor:</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="nx">Material</span><span class="p">.</span><span class="nx">Blue</span><span class="p">,</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">Shade500</span><span class="p">);</span>
+  <span class="nx">property</span> <span class="nx">color</span> <span class="k">deployColor:</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="nx">Material</span><span class="p">.</span><span class="nx">Blue</span><span class="p">,</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">Shade500</span><span class="p">);</span>
+  <span class="nx">property</span> <span class="nx">color</span> <span class="k">fishColor:</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="nx">Material</span><span class="p">.</span><span class="nx">DeepOrange</span><span class="p">,</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">Shade500</span><span class="p">);</span>
+  <span class="nx">property</span> <span class="nx">color</span> <span class="k">windColor:</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="nx">Material</span><span class="p">.</span><span class="nx">Cyan</span><span class="p">,</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">Shade500</span><span class="p">);</span>
+  <span class="nx">property</span> <span class="nx">color</span> <span class="k">currentColor:</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="nx">Material</span><span class="p">.</span><span class="nx">Indigo</span><span class="p">,</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">Shade500</span><span class="p">);</span>
+
+  <span class="nx">FkinDdsTopics</span> <span class="p">{</span> <span class="kd">id: topic</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="c1">// Notifies new solution (resets time since update timer)</span>
+  <span class="nx">Connections</span> <span class="p">{</span>
+    <span class="k">target:</span> <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">;</span>
+    <span class="k">onNewData:</span>  <span class="nx">root</span><span class="p">.</span><span class="nx">triggerReset</span><span class="p">();</span>
+  <span class="p">}</span>
+
+  <span class="kd">function</span> <span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">){</span>
+
+    <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span>
+      <span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">vesselTrajectory</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">idPursePlanner</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="nx">ddsFishTrajectoryBuffer</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span>
+      <span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">fishTrajectory</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">idPursePlanner</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+    <span class="nx">ddsVesselPosInfo</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">vesselPosInfo</span><span class="p">);</span>
+    <span class="nx">vesselNED</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">vesselPosInfo</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">localNedTopic</span><span class="p">,</span> <span class="s2">&quot;vessel&quot;</span><span class="p">);</span>
+    <span class="nx">ddsVesselBuffer</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">localNedTopic</span><span class="p">,</span> <span class="s2">&quot;vessel&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+
+    <span class="nx">ddsFishPosInfo</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">fishPosInfo</span><span class="p">);</span>
+    <span class="nx">fishNED</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">fishPosInfo</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">localNedTopic</span><span class="p">,</span> <span class="s2">&quot;fish&quot;</span><span class="p">);</span>
+    <span class="nx">fishRelative</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">fishRelativePos</span><span class="p">);</span>
+    <span class="nx">ddsFishBuffer</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">localNedTopic</span><span class="p">,</span> <span class="s2">&quot;fish&quot;</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
+
+    <span class="nx">currentSurface</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">currentSurface</span><span class="p">,</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="nx">currentFish</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">currentFish</span><span class="p">,</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishCurrent</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+    <span class="nx">fishDepth</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">fishDepth</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">idFish</span><span class="p">,</span> <span class="nx">fishRelative</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">z</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+    <span class="nx">fishVelocityOverGround</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">fishVelocityOverGround</span><span class="p">,</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="kc">false</span><span class="p">);</span>
+
+    <span class="c1">// This is TEMOPORARY, TODO: use vessel pos info lat lon instead</span>
+    <span class="nx">gpsOrigin</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">gpsOrigin</span><span class="p">,</span> <span class="nx">root</span><span class="p">.</span><span class="nx">originNED</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+    <span class="nx">vessel_rot_desired</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">vesselRotDesired</span><span class="p">);</span>
+
+    <span class="nx">vessel_deploy_position</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">deployPosition</span><span class="p">);</span>
+    <span class="nx">fish_collide_position</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">collidePosition</span><span class="p">);</span>
+
+    <span class="p">}</span>
+
+  <span class="nx">Item</span> <span class="p">{</span>
+    <span class="kd">id: dds</span><span class="p">;</span>
+
+    <span class="nx">DdsKinematics2DBuffer</span> <span class="p">{</span> <span class="kd">id: ddsVesselTrajectoryBuffer</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">DdsKinematics2DBuffer</span> <span class="p">{</span> <span class="kd">id: ddsFishTrajectoryBuffer</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="nx">RatatoskPosInfoSubscriber</span> <span class="p">{</span> <span class="kd">id: ddsVesselPosInfo</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskPosInfoSubscriber</span> <span class="p">{</span> <span class="kd">id: ddsFishPosInfo</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskDouble3Subscriber</span> <span class="p">{</span> <span class="kd">id: fishRelative</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskDoubleValSubscriber</span> <span class="p">{</span> <span class="kd">id: vessel_rot_desired</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskDouble2Subscriber</span> <span class="p">{</span> <span class="kd">id: vessel_deploy_position</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskDouble2Subscriber</span> <span class="p">{</span> <span class="kd">id: fish_collide_position</span><span class="p">;</span> <span class="p">}</span>
+
+    <span class="nx">RatatoskDouble2Publisher</span> <span class="p">{</span> <span class="kd">id: gpsOrigin</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskDouble2Publisher</span> <span class="p">{</span> <span class="kd">id: currentSurface</span><span class="p">;</span> <span class="k">value:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">seaCurrent</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskDouble2Publisher</span> <span class="p">{</span> <span class="kd">id: currentFish</span><span class="p">;</span>    <span class="k">value:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishCurrent</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">DdsIdVec1dPublisher</span> <span class="p">{</span> <span class="kd">id: fishDepth</span><span class="p">;</span>    <span class="k">value:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">manualFishCtrl</span> <span class="o">?</span> <span class="k">fishDepthPred.value :</span> <span class="nx">fishRelative</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">z</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskDouble2Publisher</span> <span class="p">{</span>
+      <span class="kd">id: fishVelocityOverGround</span><span class="p">;</span>
+      <span class="k">value:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">manualFishCtrl</span> <span class="o">?</span>
+        <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span> <span class="nx">fishSpeedPred</span><span class="p">.</span><span class="nx">value</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="o">*</span><span class="nx">fishCoursePred</span><span class="p">.</span><span class="nx">value</span><span class="o">/</span><span class="mi">180</span><span class="p">),</span>
+                     <span class="nx">fishSpeedPred</span><span class="p">.</span><span class="nx">value</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="o">*</span><span class="nx">fishCoursePred</span><span class="p">.</span><span class="nx">value</span><span class="o">/</span><span class="mi">180</span><span class="p">))</span> <span class="o">:</span>
+        <span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span> <span class="nx">ddsFishPosInfo</span><span class="p">.</span><span class="nx">sog</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="o">*</span><span class="nx">ddsFishPosInfo</span><span class="p">.</span><span class="nx">cog</span><span class="o">/</span><span class="mi">180</span><span class="p">),</span>
+                     <span class="nx">ddsFishPosInfo</span><span class="p">.</span><span class="nx">sog</span><span class="o">*</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="o">*</span><span class="nx">ddsFishPosInfo</span><span class="p">.</span><span class="nx">cog</span><span class="o">/</span><span class="mi">180</span><span class="p">));</span>
+    <span class="p">}</span>
+
+
+
+    <span class="c1">// Forcefully send parameters regularly</span>
+    <span class="nx">Timer</span> <span class="p">{</span>
+      <span class="k">interval:</span> <span class="mi">2000</span><span class="p">;</span>
+      <span class="k">running:</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="k">repeat:</span> <span class="kc">true</span><span class="p">;</span>
+      <span class="k">onTriggered:</span> <span class="p">{</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">ddsInitialized</span><span class="p">)</span>
+        <span class="p">{</span>
+          <span class="nx">currentSurface</span><span class="p">.</span><span class="nx">publish</span><span class="p">();</span>
+          <span class="nx">currentFish</span><span class="p">.</span><span class="nx">publish</span><span class="p">();</span>
+          <span class="nx">fishDepth</span><span class="p">.</span><span class="nx">publish</span><span class="p">();</span>
+          <span class="nx">fishVelocityOverGround</span><span class="p">.</span><span class="nx">publish</span><span class="p">();</span>
+          <span class="nx">gpsOrigin</span><span class="p">.</span><span class="nx">publish</span><span class="p">();</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="cm">/*</span>
+<span class="cm">    Timer {</span>
+<span class="cm">      interval: 10000;</span>
+<span class="cm">      running: true;</span>
+<span class="cm">      repeat: true;</span>
+<span class="cm">      onTriggered: ddsVesselTrajectoryBuffer.clearBuffers();</span>
+<span class="cm">    }*/</span>
+
+    <span class="nx">TransformToNED</span> <span class="p">{</span>
+      <span class="kd">id: vesselNED</span><span class="p">;</span>
+      <span class="k">lat:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">originNED</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
+      <span class="k">lon:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">originNED</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">DdsIdVec3dBuffer</span> <span class="p">{</span> <span class="kd">id: ddsVesselBuffer</span><span class="p">;</span> <span class="p">}</span>
+
+
+    <span class="nx">TransformToNED</span> <span class="p">{</span>
+      <span class="kd">id: fishNED</span><span class="p">;</span>
+      <span class="k">lat:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">originNED</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
+      <span class="k">lon:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">originNED</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">DdsIdVec3dBuffer</span> <span class="p">{</span> <span class="kd">id: ddsFishBuffer</span><span class="p">;</span> <span class="p">}</span>
+
+  <span class="p">}</span>
+
+  <span class="nx">NorthEast</span> <span class="p">{</span>
+    <span class="kd">id: plot</span><span class="p">;</span>
+    <span class="k">legend.visible:</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="k">legend.markerShape:</span> <span class="nx">Legend</span><span class="p">.</span><span class="nx">MarkerShapeCircle</span><span class="p">;</span>
+    <span class="k">legend.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignBottom</span><span class="p">;</span>
+    <span class="k">fovX:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="k">fovY:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="o">-</span><span class="mi">100</span><span class="p">,</span> <span class="mi">100</span><span class="p">);</span>
+    <span class="k">addMinFOV:</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="k">axisX.tickCount:</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="k">axisY.tickCount:</span> <span class="mi">8</span><span class="p">;</span>
+    <span class="k">margins.left:</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="k">margins.right:</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="k">margins.bottom:</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="k">margins.top:</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="c1">// Use offseted axes instead based on vessel NED position</span>
+    <span class="k">axisX.visible:</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="k">axisY.visible:</span> <span class="kc">false</span><span class="p">;</span>
+
+    <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">()</span> <span class="p">{</span>
+      <span class="nx">offY</span><span class="p">.</span><span class="nx">labelsFont</span> <span class="o">=</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">plotFont</span><span class="p">;</span>
+      <span class="nx">offY</span><span class="p">.</span><span class="nx">titleFont</span> <span class="o">=</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">plotFont</span><span class="p">;</span>
+      <span class="nx">offX</span><span class="p">.</span><span class="nx">labelsFont</span> <span class="o">=</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">plotFont</span><span class="p">;</span>
+      <span class="nx">offX</span><span class="p">.</span><span class="nx">titleFont</span> <span class="o">=</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">plotFont</span><span class="p">;</span>
+      <span class="nx">vesselTrack</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+      <span class="nx">vesselNow</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+      <span class="nx">vesselFuture</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+      <span class="nx">fishTrack</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+      <span class="nx">fishNow</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+      <span class="nx">fishFuture</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+      <span class="nx">plot</span><span class="p">.</span><span class="nx">themeChanged</span><span class="p">();</span>
+      <span class="nx">deployPos</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+      <span class="nx">collidePos</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+    <span class="p">}</span>
+
+
+    <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+    <span class="nx">ValueAxis</span> <span class="p">{</span>
+      <span class="kd">id: offX</span><span class="p">;</span>
+      <span class="k">titleText:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;East&quot;</span><span class="p">)</span><span class="o">+</span> <span class="s2">&quot; [m]&quot;</span><span class="p">;</span>
+      <span class="k">labelsFont:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">plotFont</span><span class="p">;</span>
+      <span class="k">tickCount:</span> <span class="mi">8</span><span class="p">;</span>
+      <span class="k">min:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">.</span><span class="nx">min</span><span class="p">;</span>
+      <span class="k">max:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">.</span><span class="nx">max</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">ValueAxis</span> <span class="p">{</span>
+      <span class="kd">id: offY</span><span class="p">;</span>
+      <span class="k">titleText:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;North&quot;</span><span class="p">)</span><span class="o">+</span> <span class="s2">&quot; [m]&quot;</span><span class="p">;</span>
+      <span class="k">labelsFont:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">plotFont</span><span class="p">;</span>
+      <span class="k">tickCount:</span> <span class="mi">8</span><span class="p">;</span>
+      <span class="k">min:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">.</span><span class="nx">min</span><span class="p">;</span>
+      <span class="k">max:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">.</span><span class="nx">max</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">LineSeries</span> <span class="p">{</span>
+      <span class="kd">id: dummy</span><span class="p">;</span>
+      <span class="k">axisXTop:</span> <span class="nx">offX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">offY</span><span class="p">;</span>
+      <span class="k">visible:</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">root</span><span class="p">;</span>
+      <span class="k">onThemeChanged:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">setStyle</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="nx">LineSeries</span> <span class="p">{</span>
+      <span class="kd">id: vesselTrack</span><span class="p">;</span>
+      <span class="k">name:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Vessel&quot;</span><span class="p">);</span>
+      <span class="c1">// useOpenGL: true</span>
+      <span class="c1">// style: Qt.DotLine // no effect with openGL</span>
+      <span class="k">axisXTop:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">;</span>
+
+      <span class="k">onHovered:</span> <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span> <span class="nx">root</span><span class="p">.</span><span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span> <span class="p">}</span>
+      <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+      <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">(){</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">vesselColor</span><span class="p">;</span>
+        <span class="nx">width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+      <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">LineSeries</span> <span class="p">{</span>
+      <span class="kd">id: vesselFuture</span><span class="p">;</span>
+      <span class="k">name:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Vessel future&quot;</span><span class="p">);</span>
+      <span class="k">axisXTop:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">;</span>
+
+      <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+      <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">(){</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">vesselColor</span><span class="p">;</span>
+        <span class="nx">width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+        <span class="nx">style</span> <span class="o">=</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">DotLine</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">onHovered:</span> <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span> <span class="nx">root</span><span class="p">.</span><span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span> <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">ScatterSeries</span> <span class="p">{</span>
+      <span class="kd">id: vesselNow</span><span class="p">;</span>
+      <span class="k">axisXTop:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">;</span>
+      <span class="k">color:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">vesselColor</span><span class="p">;</span>
+
+      <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+      <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">(){</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">vesselColor</span><span class="p">;</span>
+        <span class="nx">borderWidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nx">markerSize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+        <span class="nx">markerShape</span> <span class="o">=</span> <span class="nx">ScatterSeries</span><span class="p">.</span><span class="nx">MarkerShapeCircle</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">onHovered:</span> <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span> <span class="nx">root</span><span class="p">.</span><span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span> <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">ScatterSeries</span> <span class="p">{</span>
+      <span class="kd">id: deployPos</span><span class="p">;</span>
+      <span class="k">axisXTop:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">;</span>
+      <span class="k">color:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">deployColor</span><span class="p">;</span>
+
+      <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+      <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">(){</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">deployColor</span><span class="p">;</span>
+        <span class="nx">borderWidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nx">markerSize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+        <span class="nx">markerShape</span> <span class="o">=</span> <span class="nx">ScatterSeries</span><span class="p">.</span><span class="nx">MarkerShapeRectangle</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">onHovered:</span> <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span> <span class="nx">root</span><span class="p">.</span><span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span> <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">vessel_deploy_position</span><span class="p">;</span>
+      <span class="k">onValueChanged:</span>
+      <span class="p">{</span>
+        <span class="nx">deployPos</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="nx">deployPos</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">ScatterSeries</span> <span class="p">{</span>
+      <span class="kd">id: collidePos</span><span class="p">;</span>
+      <span class="k">axisXTop:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">;</span>
+      <span class="k">color:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">deployColor</span><span class="p">;</span>
+
+      <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+      <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">(){</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishColor</span><span class="p">;</span>
+        <span class="nx">borderWidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nx">markerSize</span> <span class="o">=</span> <span class="mi">20</span><span class="p">;</span>
+        <span class="nx">markerShape</span> <span class="o">=</span> <span class="nx">ScatterSeries</span><span class="p">.</span><span class="nx">MarkerShapeRectangle</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="k">onHovered:</span> <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span> <span class="nx">root</span><span class="p">.</span><span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span> <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">fish_collide_position</span><span class="p">;</span>
+      <span class="k">onValueChanged:</span>
+      <span class="p">{</span>
+        <span class="nx">collidePos</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="nx">collidePos</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">ddsVesselBuffer</span><span class="p">;</span>
+      <span class="k">onNewData:</span>
+      <span class="p">{</span>
+        <span class="nx">ddsVesselBuffer</span><span class="p">.</span><span class="nx">updateSeries</span><span class="p">(</span><span class="nx">vesselTrack</span><span class="p">,</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">Y</span><span class="p">,</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">X</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">onRangeChanged:</span>
+      <span class="p">{</span>
+        <span class="c1">// Note that things are opposite (x, y is switched due to North is y, but x)</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">dim</span> <span class="o">==</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">X</span><span class="p">)</span>        <span class="p">{</span>
+          <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;Vessel&quot;</span><span class="p">,</span>
+                                     <span class="nx">ddsVesselBuffer</span><span class="p">.</span><span class="nx">rangeY</span><span class="p">,</span>
+                                     <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">range</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="nx">range</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="mi">50</span><span class="p">));</span>
+        <span class="p">}</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">dim</span> <span class="o">==</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">Y</span><span class="p">){</span>
+          <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;Vessel&quot;</span><span class="p">,</span>
+                                     <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">range</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="nx">range</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="mi">50</span><span class="p">),</span>
+                                     <span class="nx">ddsVesselBuffer</span><span class="p">.</span><span class="nx">rangeX</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">vesselNED</span><span class="p">.</span><span class="nx">ned</span><span class="p">;</span> <span class="c1">//ddsVesselNow;</span>
+      <span class="k">onValueChanged:</span>
+      <span class="p">{</span>
+        <span class="nx">vesselNow</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="nx">vesselNow</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+
+        <span class="nx">offX</span><span class="p">.</span><span class="nx">min</span> <span class="o">=</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">.</span><span class="nx">min</span> <span class="o">-</span> <span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+        <span class="nx">offX</span><span class="p">.</span><span class="nx">max</span> <span class="o">=</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">.</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="p">;</span>
+        <span class="nx">offY</span><span class="p">.</span><span class="nx">min</span> <span class="o">=</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">.</span><span class="nx">min</span> <span class="o">-</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
+        <span class="nx">offY</span><span class="p">.</span><span class="nx">max</span> <span class="o">=</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">.</span><span class="nx">max</span> <span class="o">-</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">;</span>
+        <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;VesselNow&quot;</span><span class="p">,</span>
+                                   <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="o">+</span><span class="mi">20</span><span class="p">),</span>
+                                   <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="o">+</span><span class="mi">20</span><span class="p">));</span>
+        <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;VesselNowBig&quot;</span><span class="p">,</span>
+                                   <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="o">-</span><span class="mi">250</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="o">+</span><span class="mi">250</span><span class="p">),</span>
+                                   <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">250</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="o">+</span><span class="mi">250</span><span class="p">));</span>
+
+        <span class="cm">/* With this the FOV grows.</span>
+<span class="cm">        var middleX = 2*(value.y - (plot.axisX.min +  (plot.axisX.max - plot.axisX.min)/2));</span>
+<span class="cm">        var rngX = Qt.point(plot.axisX.min + (middleX&lt;0)*middleX + 10,</span>
+<span class="cm">                           plot.axisX.max + (middleX&gt;0)*middleX - 10);</span>
+<span class="cm">        var middleY = 2*(value.y - (plot.axisX.min +  (plot.axisX.max - plot.axisX.min)/2));</span>
+<span class="cm">        var rngY = Qt.point(plot.axisY.min + (middleY&lt;0)*middleY + 10,</span>
+<span class="cm">                            plot.axisY.max + (middleY&gt;0)*middleY - 10);</span>
+
+<span class="cm">        plot.equalizer.registerBox(&quot;VesselInMiddle&quot;, rngX, rngY);</span>
+<span class="cm">        */</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">;</span>
+      <span class="k">onNewData:</span>
+      <span class="p">{</span>
+        <span class="c1">// remove old</span>
+        <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">.</span><span class="nx">updateSeries</span><span class="p">(</span><span class="nx">vesselFuture</span><span class="p">,</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">PosY</span><span class="p">,</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">PosX</span><span class="p">);</span>
+        <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">.</span><span class="nx">clearBuffers</span><span class="p">();</span> <span class="c1">// remove after consumption.</span>
+      <span class="p">}</span>
+      <span class="k">onRangeChanged:</span>
+      <span class="p">{</span>
+        <span class="c1">// Note that things are opposite (x, y is switched due to North is y, but x)</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">dim</span> <span class="o">==</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">PosX</span><span class="p">){</span>
+          <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;VesselFuture&quot;</span><span class="p">,</span>
+                                     <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">.</span><span class="nx">rangePosY</span><span class="p">,</span>
+                                     <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">range</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="nx">range</span><span class="p">.</span><span class="nx">y</span><span class="o">+</span><span class="mi">50</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="nx">dim</span> <span class="o">==</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">PosY</span><span class="p">){</span>
+          <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;VesselFuture&quot;</span><span class="p">,</span>
+                                     <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">range</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="nx">range</span><span class="p">.</span><span class="nx">y</span><span class="o">+</span><span class="mi">50</span><span class="p">),</span>
+                                     <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">.</span><span class="nx">rangePosX</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+
+    <span class="nx">LineSeries</span> <span class="p">{</span>
+      <span class="kd">id: fishTrack</span><span class="p">;</span>
+      <span class="k">name:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Fish&quot;</span><span class="p">);</span>
+      <span class="c1">// useOpenGL: true</span>
+      <span class="c1">// style: Qt.DotLine // no effect with openGL</span>
+      <span class="k">axisXTop:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">;</span>
+
+      <span class="k">onHovered:</span> <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span> <span class="nx">root</span><span class="p">.</span><span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span> <span class="p">}</span>
+      <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+      <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">(){</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishColor</span><span class="p">;</span>
+        <span class="nx">width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">LineSeries</span> <span class="p">{</span>
+      <span class="kd">id: fishFuture</span><span class="p">;</span>
+      <span class="k">name:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Fish future&quot;</span><span class="p">);</span>
+      <span class="k">axisXTop:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">;</span>
+
+      <span class="k">onHovered:</span> <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span> <span class="nx">root</span><span class="p">.</span><span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span> <span class="p">}</span>
+      <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+      <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">(){</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishColor</span><span class="p">;</span>
+        <span class="nx">width</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+        <span class="nx">style</span> <span class="o">=</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">DotLine</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">ScatterSeries</span> <span class="p">{</span>
+      <span class="kd">id: fishNow</span><span class="p">;</span>
+      <span class="k">axisXTop:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisX</span><span class="p">;</span>
+      <span class="k">axisY:</span> <span class="nx">plot</span><span class="p">.</span><span class="nx">axisY</span><span class="p">;</span>
+      <span class="k">color:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishColor</span><span class="p">;</span>
+
+      <span class="k">onHovered:</span> <span class="k">if</span><span class="p">(</span><span class="nx">state</span><span class="p">){</span> <span class="nx">root</span><span class="p">.</span><span class="nx">pointHovered</span><span class="p">(</span><span class="nx">point</span><span class="p">);</span> <span class="p">}</span>
+      <span class="k">Component.onCompleted:</span> <span class="nx">setStyle</span><span class="p">();</span>
+
+      <span class="kd">function</span> <span class="nx">setStyle</span><span class="p">(){</span>
+        <span class="nx">color</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishColor</span><span class="p">;</span>
+        <span class="nx">borderWidth</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="nx">markerSize</span> <span class="o">=</span> <span class="mi">12</span><span class="p">;</span>
+        <span class="nx">markerShape</span> <span class="o">=</span> <span class="nx">ScatterSeries</span><span class="p">.</span><span class="nx">MarkerShapeCircle</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">ddsFishBuffer</span><span class="p">;</span>
+      <span class="k">onNewData:</span>
+      <span class="p">{</span>
+        <span class="nx">ddsFishBuffer</span><span class="p">.</span><span class="nx">updateSeries</span><span class="p">(</span><span class="nx">fishTrack</span><span class="p">,</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">Y</span><span class="p">,</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">X</span><span class="p">);</span>
+      <span class="p">}</span>
+      <span class="k">onRangeChanged:</span>
+      <span class="p">{</span>
+        <span class="c1">// Note that things are opposite (x, y is switched due to North is y, but x)</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">dim</span> <span class="o">==</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">X</span><span class="p">)</span>
+          <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;Fish&quot;</span><span class="p">,</span> <span class="nx">ddsFishBuffer</span><span class="p">.</span><span class="nx">rangeY</span><span class="p">,</span> <span class="nx">range</span><span class="p">);</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">dim</span> <span class="o">==</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">Y</span><span class="p">)</span>
+          <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;Fish&quot;</span><span class="p">,</span> <span class="nx">range</span><span class="p">,</span> <span class="nx">ddsFishBuffer</span><span class="p">.</span><span class="nx">rangeX</span><span class="p">);</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">fishNED</span><span class="p">.</span><span class="nx">ned</span><span class="p">;</span>
+      <span class="k">onValueChanged:</span>
+      <span class="p">{</span>
+        <span class="nx">fishNow</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+        <span class="nx">fishNow</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+
+        <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;FishNow&quot;</span><span class="p">,</span>
+                                   <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="o">+</span><span class="mi">20</span><span class="p">),</span>
+                                   <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="o">+</span><span class="mi">20</span><span class="p">));</span>
+
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">Connections</span> <span class="p">{</span>
+      <span class="k">target:</span> <span class="nx">ddsFishTrajectoryBuffer</span><span class="p">;</span>
+      <span class="k">onNewData:</span>
+      <span class="p">{</span>
+        <span class="nx">ddsFishTrajectoryBuffer</span><span class="p">.</span><span class="nx">updateSeries</span><span class="p">(</span><span class="nx">fishFuture</span><span class="p">,</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">PosY</span><span class="p">,</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">PosX</span><span class="p">);</span>
+        <span class="nx">ddsFishTrajectoryBuffer</span><span class="p">.</span><span class="nx">clearBuffers</span><span class="p">();</span> <span class="c1">// remove after consumption.</span>
+
+      <span class="p">}</span>
+      <span class="k">onRangeChanged:</span>
+      <span class="p">{</span>
+        <span class="c1">// Note that things are opposite (x, y is switched due to North is y, but x)</span>
+        <span class="k">if</span><span class="p">(</span><span class="nx">dim</span> <span class="o">==</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">PosX</span><span class="p">){</span>
+          <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;FishFuture&quot;</span><span class="p">,</span>
+                                     <span class="nx">ddsFishTrajectoryBuffer</span><span class="p">.</span><span class="nx">rangePosY</span><span class="p">,</span>
+                                     <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">range</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="nx">range</span><span class="p">.</span><span class="nx">y</span><span class="o">+</span><span class="mi">50</span><span class="p">));</span>
+        <span class="p">}</span>
+
+        <span class="k">if</span><span class="p">(</span><span class="nx">dim</span> <span class="o">==</span> <span class="nx">FKIN</span><span class="p">.</span><span class="nx">PosY</span><span class="p">){</span>
+          <span class="nx">plot</span><span class="p">.</span><span class="nx">equalizer</span><span class="p">.</span><span class="nx">registerBox</span><span class="p">(</span><span class="s2">&quot;FishFuture&quot;</span><span class="p">,</span>
+                                     <span class="nx">Qt</span><span class="p">.</span><span class="nx">point</span><span class="p">(</span><span class="nx">range</span><span class="p">.</span><span class="nx">x</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="nx">range</span><span class="p">.</span><span class="nx">y</span><span class="o">+</span><span class="mi">50</span><span class="p">),</span>
+                                     <span class="nx">ddsFishTrajectoryBuffer</span><span class="p">.</span><span class="nx">rangePosX</span><span class="p">);</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+  <span class="p">}</span>
+  <span class="nx">ColumnLayout</span> <span class="p">{</span>
+    <span class="kd">id: infotain</span><span class="p">;</span>
+    <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignTop</span><span class="p">;</span>
+    <span class="k">Layout.topMargin:</span> <span class="mi">30</span><span class="p">;</span>
+    <span class="k">Layout.rightMargin:</span> <span class="mi">10</span><span class="p">;</span>
+
+    <span class="kd">function</span> <span class="nx">toDegrees</span><span class="p">(</span><span class="nx">rad</span><span class="p">){</span>
+      <span class="c1">// returns -180, 180.</span>
+      <span class="kd">var</span> <span class="nx">deg</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">atan2</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">sin</span><span class="p">(</span><span class="nx">rad</span><span class="p">),</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">cos</span><span class="p">(</span><span class="nx">rad</span><span class="p">))</span><span class="o">*</span><span class="mi">180</span><span class="o">/</span><span class="nb">Math</span><span class="p">.</span><span class="nx">PI</span><span class="p">;</span>
+      <span class="nx">deg</span> <span class="o">+=</span> <span class="p">(</span><span class="nx">deg</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span><span class="o">*</span><span class="mi">360</span><span class="p">;</span> <span class="c1">// maps negative rot to [180,360]</span>
+      <span class="k">return</span> <span class="nx">deg</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="kd">function</span> <span class="nx">toKnots</span><span class="p">(</span><span class="nx">mps</span><span class="p">){</span>
+      <span class="k">return</span> <span class="nx">mps</span><span class="o">*</span><span class="mf">3.6</span><span class="o">/</span><span class="mf">1.852</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">RowLayout</span> <span class="p">{</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignCenter</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">20</span><span class="p">;</span>
+      <span class="k">Layout.rightMargin:</span> <span class="mi">20</span><span class="p">;</span>
+
+      <span class="nx">Label</span> <span class="p">{</span>
+        <span class="k">text:</span> <span class="s2">&quot;\uf022&quot;</span><span class="p">;</span>
+        <span class="k">font:</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">iconFontBig</span><span class="p">;</span>
+        <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignRight</span> <span class="o">|</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignVCenter</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">Label</span> <span class="p">{</span>
+        <span class="kd">id: clock</span><span class="p">;</span>
+        <span class="k">font.pointSize:</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">numberFont</span><span class="p">.</span><span class="nx">pointSize</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="nx">property</span> <span class="nx">date</span> <span class="k">klokka:</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+        <span class="k">text:</span> <span class="nx">klokka</span><span class="p">.</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span> <span class="s2">&quot;hh:mm:ss&quot;</span><span class="p">);</span>
+        <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignCenter</span><span class="p">;</span>
+        <span class="nx">Timer</span> <span class="p">{</span>
+          <span class="k">interval:</span> <span class="mi">1000</span><span class="p">;</span>
+          <span class="k">running:</span> <span class="kc">true</span><span class="p">;</span>
+          <span class="k">repeat:</span> <span class="kc">true</span><span class="p">;</span>
+          <span class="k">onTriggered:</span> <span class="p">{</span>
+            <span class="kd">var</span> <span class="nx">time</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">;</span>
+            <span class="nx">clock</span><span class="p">.</span><span class="nx">klokka</span> <span class="o">=</span> <span class="nx">time</span><span class="p">;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">InfoDirectionMagnitude</span> <span class="p">{</span>
+      <span class="kd">id: wind</span><span class="p">;</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignRight</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">15</span><span class="p">;</span>
+      <span class="k">entity:</span> <span class="s2">&quot;\uee98&quot;</span><span class="p">;</span> <span class="c1">// wind</span>
+      <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Wind&quot;</span><span class="p">);</span>
+      <span class="k">arrow:</span> <span class="s2">&quot;\uea5b&quot;</span><span class="p">;</span> <span class="c1">// down-arrow since wind direction from where it originates</span>
+      <span class="k">unit:</span> <span class="s2">&quot;kn&quot;</span><span class="p">;</span>
+      <span class="k">colorFont:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">windColor</span><span class="p">;</span>
+      <span class="k">magnitude:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toKnots</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">windMagDir</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+      <span class="k">orientation:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toDegrees</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">windMagDir</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="nx">InfoDirectionMagnitude</span> <span class="p">{</span>
+      <span class="kd">id: current</span><span class="p">;</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignRight</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">15</span><span class="p">;</span>
+      <span class="k">entity:</span> <span class="s2">&quot;\uee97&quot;</span><span class="p">;</span> <span class="c1">// wind-waves</span>
+      <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Current&quot;</span><span class="p">);</span>
+      <span class="k">unit:</span> <span class="s2">&quot;kn&quot;</span><span class="p">;</span>
+      <span class="k">colorFont:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">currentColor</span><span class="p">;</span>
+      <span class="k">magnitude:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toKnots</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">currentMagDirDepth</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span>
+      <span class="k">orientation:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toDegrees</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">currentMagDirDepth</span><span class="p">.</span><span class="nx">y</span><span class="p">);</span>
+      <span class="k">extra:</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">currentMagDirDepth</span><span class="p">.</span><span class="nx">z</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; m&quot;</span><span class="p">;</span>
+
+    <span class="p">}</span>
+    <span class="nx">InfoDirectionMagnitude</span> <span class="p">{</span>
+      <span class="kd">id: currentDeep</span><span class="p">;</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignRight</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">15</span><span class="p">;</span>
+      <span class="k">entity:</span> <span class="s2">&quot;\uee97&quot;</span><span class="p">;</span> <span class="c1">// wind-waves</span>
+      <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Current at depth&quot;</span><span class="p">);</span>
+      <span class="k">unit:</span> <span class="s2">&quot;kn&quot;</span><span class="p">;</span>
+      <span class="k">colorFont:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">currentColor</span><span class="p">;</span>
+      <span class="k">magnitude:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toKnots</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fishCurrent</span><span class="p">.</span><span class="nx">length</span><span class="p">());</span>
+      <span class="k">orientation:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toDegrees</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">atan2</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">fishCurrent</span><span class="p">.</span><span class="nx">y</span><span class="p">,</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishCurrent</span><span class="p">.</span><span class="nx">x</span><span class="p">));</span>
+      <span class="k">extra:</span> <span class="nb">isNaN</span><span class="p">(</span><span class="nx">fishRelative</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">z</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;-&quot;</span> <span class="o">:</span>
+        <span class="nb">Number</span><span class="p">(</span><span class="nx">fishRelative</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">z</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; m&quot;</span><span class="p">;</span>
+
+    <span class="p">}</span>
+    <span class="nx">InfoDirectionMagnitude</span> <span class="p">{</span>
+      <span class="kd">id: vessel</span><span class="p">;</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignRight</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">15</span><span class="p">;</span>
+      <span class="k">entity:</span> <span class="s2">&quot;\uee34&quot;</span><span class="p">;</span> <span class="c1">// ship</span>
+      <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Ship: speed and course over ground&quot;</span><span class="p">);</span>
+      <span class="k">unit:</span> <span class="s2">&quot;kn&quot;</span><span class="p">;</span>
+      <span class="k">colorFont:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">vesselColor</span><span class="p">;</span>
+      <span class="k">magnitude:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toKnots</span><span class="p">(</span><span class="nx">ddsVesselPosInfo</span><span class="p">.</span><span class="nx">sog</span><span class="p">);</span>
+      <span class="k">orientation:</span> <span class="nx">ddsVesselPosInfo</span><span class="p">.</span><span class="nx">cog</span><span class="p">;</span>
+
+    <span class="p">}</span>
+    <span class="nx">InfoDirectionMagnitude</span> <span class="p">{</span>
+      <span class="kd">id: fish</span><span class="p">;</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignRight</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">5</span><span class="p">;</span>
+      <span class="k">entity:</span> <span class="s2">&quot;\ue850&quot;</span><span class="p">;</span> <span class="c1">// fish-2</span>
+      <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Fish: speed and course over ground&quot;</span><span class="p">);</span>
+      <span class="k">unit:</span> <span class="s2">&quot;kn&quot;</span><span class="p">;</span>
+      <span class="k">colorFont:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishColor</span><span class="p">;</span>
+      <span class="k">magnitude:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toKnots</span><span class="p">(</span><span class="nx">ddsFishPosInfo</span><span class="p">.</span><span class="nx">sog</span><span class="p">);</span>
+      <span class="k">orientation:</span> <span class="nx">ddsFishPosInfo</span><span class="p">.</span><span class="nx">cog</span><span class="p">;</span>
+      <span class="k">extra:</span> <span class="nb">isNaN</span><span class="p">(</span><span class="nx">fishRelative</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">z</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;-&quot;</span> <span class="o">:</span>
+        <span class="nb">Number</span><span class="p">(</span><span class="nx">fishRelative</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">z</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; m&quot;</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">ProgressBar</span> <span class="p">{</span>
+      <span class="c1">// Horizontal line</span>
+      <span class="k">implicitWidth:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+      <span class="k">value:</span> <span class="mf">1.0</span><span class="p">;</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignLeft</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">5</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="nx">RowLayout</span> <span class="p">{</span>
+      <span class="kd">id: debugItem</span><span class="p">;</span>
+      <span class="k">visible:</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="k">implicitWidth:</span> <span class="nx">parent</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
+      <span class="nx">Label</span> <span class="p">{</span>
+        <span class="kd">id: icon_</span><span class="p">;</span>
+        <span class="k">text:</span> <span class="s2">&quot;\ueec7&quot;</span><span class="p">;</span> <span class="c1">// bug</span>
+        <span class="k">font:</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">iconFontBig</span><span class="p">;</span>
+        <span class="k">Layout.rightMargin:</span> <span class="mi">10</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">Button</span> <span class="p">{</span>
+        <span class="kd">id: clearGraphs</span><span class="p">;</span>
+        <span class="k">text:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Clear buffers&quot;</span><span class="p">);</span>
+        <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignRight</span><span class="p">;</span>
+
+
+        <span class="k">onClicked:</span>
+        <span class="p">{</span>
+          <span class="nx">ddsVesselBuffer</span><span class="p">.</span><span class="nx">clearBuffers</span><span class="p">();</span>
+          <span class="nx">ddsFishBuffer</span><span class="p">.</span><span class="nx">clearBuffers</span><span class="p">();</span>
+          <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">.</span><span class="nx">clearBuffers</span><span class="p">();</span>
+          <span class="nx">ddsFishTrajectoryBuffer</span><span class="p">.</span><span class="nx">clearBuffers</span><span class="p">();</span>
+          <span class="c1">//fishNow.remove(0);</span>
+          <span class="c1">//vesselNow.remove(0);</span>
+
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">Label</span> <span class="p">{</span> <span class="k">Layout.fillHeight:</span> <span class="kc">true</span><span class="p">;</span> <span class="p">}</span> <span class="c1">// Empty Filler</span>
+
+    <span class="c1">// Captain&#39;s indicating fish speed and direction</span>
+
+    <span class="nx">InfoDirectionMagnitude</span> <span class="p">{</span>
+      <span class="kd">id: fish_input</span><span class="p">;</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignRight</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">20</span><span class="p">;</span>
+      <span class="k">entity:</span> <span class="s2">&quot;\ue850&quot;</span><span class="p">;</span> <span class="c1">// fish-2</span>
+      <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Captain&#39;s prediction of fish speed and course over ground&quot;</span><span class="p">);</span>
+      <span class="k">unit:</span> <span class="s2">&quot;kn&quot;</span><span class="p">;</span>
+      <span class="k">colorFont:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">manaulFishCtrl</span> <span class="o">?</span> <span class="k">root.fishColor :</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="nx">Material</span><span class="p">.</span><span class="nx">Grey</span><span class="p">);</span>
+      <span class="k">magnitude:</span> <span class="nx">infotain</span><span class="p">.</span><span class="nx">toKnots</span><span class="p">(</span><span class="nx">fishSpeedPred</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+      <span class="k">orientation:</span> <span class="nx">fishCoursePred</span><span class="p">.</span><span class="nx">value</span><span class="p">;</span>
+      <span class="k">extra:</span> <span class="nb">isNaN</span><span class="p">(</span><span class="nx">fishDepthPred</span><span class="p">.</span><span class="nx">value</span><span class="p">)</span> <span class="o">?</span> <span class="s2">&quot;-&quot;</span> <span class="o">:</span>
+        <span class="nb">Number</span><span class="p">(</span><span class="nx">fishDepthPred</span><span class="p">.</span><span class="nx">value</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span> <span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; m&quot;</span><span class="p">;</span>
+
+      <span class="c1">//visible: root.manualFishCtrl;</span>
+    <span class="p">}</span>
+
+    <span class="nx">ColumnLayout</span> <span class="p">{</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignCenter</span><span class="p">;</span>
+      <span class="k">Layout.bottomMargin:</span> <span class="mi">10</span><span class="p">;</span>
+      <span class="nx">RowLayout</span> <span class="p">{</span>
+        <span class="nx">ColumnLayout</span> <span class="p">{</span>
+          <span class="nx">RowLayout</span> <span class="p">{</span>
+            <span class="nx">Label</span> <span class="p">{</span> <span class="k">text:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Course&quot;</span><span class="p">);</span> <span class="p">}</span>
+            <span class="nx">Slider</span> <span class="p">{</span>
+              <span class="kd">id: fishCoursePred</span><span class="p">;</span>
+              <span class="k">from:</span> <span class="mi">0</span><span class="p">;</span>
+              <span class="k">value:</span> <span class="mi">0</span><span class="p">;</span>
+              <span class="k">to:</span> <span class="mi">360</span><span class="p">;</span>
+              <span class="k">stepSize:</span> <span class="mi">2</span><span class="p">;</span>
+              <span class="k">snapMode:</span> <span class="nx">Slider</span><span class="p">.</span><span class="nx">SnapOnRelease</span><span class="p">;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+          <span class="nx">RowLayout</span> <span class="p">{</span>
+            <span class="nx">Label</span> <span class="p">{</span> <span class="k">text:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Speed&quot;</span><span class="p">);</span> <span class="p">}</span>
+            <span class="nx">Slider</span> <span class="p">{</span>
+              <span class="kd">id: fishSpeedPred</span><span class="p">;</span>
+              <span class="k">from:</span> <span class="mi">0</span><span class="p">;</span>
+              <span class="k">value:</span> <span class="mi">2</span><span class="p">;</span>
+              <span class="k">to:</span> <span class="mi">4</span><span class="p">;</span>
+              <span class="k">stepSize:</span> <span class="mf">0.05</span><span class="p">;</span>
+              <span class="k">snapMode:</span> <span class="nx">Slider</span><span class="p">.</span><span class="nx">SnapOnRelease</span><span class="p">;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+          <span class="nx">RowLayout</span> <span class="p">{</span>
+            <span class="nx">Label</span> <span class="p">{</span> <span class="k">text:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Depth&quot;</span><span class="p">);</span> <span class="p">}</span>
+            <span class="nx">Slider</span> <span class="p">{</span>
+              <span class="kd">id: fishDepthPred</span><span class="p">;</span>
+              <span class="k">from:</span> <span class="mi">0</span><span class="p">;</span>
+              <span class="k">value:</span> <span class="mi">50</span><span class="p">;</span>
+              <span class="k">to:</span> <span class="mi">120</span><span class="p">;</span>
+              <span class="k">stepSize:</span> <span class="mi">1</span><span class="p">;</span>
+              <span class="k">snapMode:</span> <span class="nx">Slider</span><span class="p">.</span><span class="nx">SnapOnRelease</span><span class="p">;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="nx">ColumnLayout</span> <span class="p">{</span>
+
+          <span class="nx">Label</span> <span class="p">{</span>
+            <span class="k">font:</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">iconFontHuge</span><span class="p">;</span>
+            <span class="k">text:</span> <span class="s2">&quot;\ue850&quot;</span><span class="p">;</span> <span class="c1">// fish</span>
+            <span class="k">color:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">manualFishCtrl</span> <span class="o">?</span> <span class="k">root.fishColor :</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="nx">Material</span><span class="p">.</span><span class="nx">Grey</span><span class="p">);</span>
+            <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignCenter</span><span class="p">;</span>
+            <span class="nx">property</span> <span class="nx">string</span> <span class="k">toolTipText:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Manual fish input&quot;</span><span class="p">);</span>
+            <span class="k">ToolTip.text:</span> <span class="nx">toolTipText</span><span class="p">;</span>
+            <span class="k">ToolTip.visible:</span> <span class="nx">toolTipText</span> <span class="o">?</span> <span class="k">ma_fish.containsMouse :</span> <span class="kc">false</span><span class="p">;</span>
+            <span class="nx">MouseArea</span> <span class="p">{</span>
+              <span class="kd">id: ma_fish</span><span class="p">;</span>
+              <span class="k">anchors.fill:</span> <span class="nx">parent</span><span class="p">;</span>
+              <span class="k">hoverEnabled:</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+          <span class="nx">Switch</span> <span class="p">{</span>
+            <span class="kd">id: manualFish</span><span class="p">;</span> <span class="k">rotation:</span> <span class="mi">270</span><span class="p">;</span>
+            <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignCenter</span><span class="p">;</span>
+
+            <span class="k">onToggled:</span>
+            <span class="p">{</span>
+              <span class="k">if</span><span class="p">(</span><span class="nx">checked</span><span class="p">)</span>
+                <span class="nx">fish_input</span><span class="p">.</span><span class="nx">colorFont</span> <span class="o">=</span> <span class="nx">root</span><span class="p">.</span><span class="nx">fishColor</span><span class="p">;</span>
+              <span class="k">else</span>
+                <span class="nx">fish_input</span><span class="p">.</span><span class="nx">colorFont</span> <span class="o">=</span> <span class="nx">Material</span><span class="p">.</span><span class="nx">color</span><span class="p">(</span><span class="nx">Material</span><span class="p">.</span><span class="nx">Grey</span><span class="p">);</span>
+
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">InfoPlanning</span> <span class="p">{</span>
+      <span class="kd">id: plan</span><span class="p">;</span>
+      <span class="k">entity:</span> <span class="s2">&quot;\uf020&quot;</span><span class="p">;</span> <span class="c1">// ef8a</span>
+      <span class="k">title:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Path Planner&quot;</span><span class="p">);</span>
+      <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Duration since new path&quot;</span><span class="p">);</span>
+      <span class="k">running:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span><span class="p">;</span>
+      <span class="k">down:</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="k">expected:</span> <span class="mi">4000</span><span class="p">;</span> <span class="c1">// expected period of optimization</span>
+
+      <span class="nx">Connections</span> <span class="p">{</span>
+        <span class="k">target:</span> <span class="nx">root</span><span class="p">;</span>
+        <span class="k">onTriggerReset:</span> <span class="nx">plan</span><span class="p">.</span><span class="nx">reseted</span><span class="p">();</span>
+      <span class="p">}</span>
+
+    <span class="p">}</span>
+
+    <span class="nx">RowLayout</span> <span class="p">{</span>
+      <span class="nx">FkinDecisionIndicator</span> <span class="p">{</span>
+        <span class="kd">id: recommendedRotIndicator</span><span class="p">;</span>
+
+        <span class="k">value:</span> <span class="nx">vessel_rot_desired</span><span class="p">.</span><span class="nx">val</span><span class="p">;</span>
+        <span class="k">running:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span><span class="p">;</span>
+        <span class="k">entity:</span> <span class="s2">&quot;\ue81b&quot;</span><span class="p">;</span> <span class="c1">// ship-wheel</span>
+        <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Recommended rate of turn, deg/sec&quot;</span><span class="p">);</span>
+        <span class="k">unit:</span> <span class="s2">&quot; \u00b0/s&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+
+      <span class="nx">FkinDecisionIndicator</span> <span class="p">{</span>
+        <span class="kd">id: recommendedSettingTime</span><span class="p">;</span>
+
+        <span class="c1">// TODO: Need a timer that counts down until received setting time point</span>
+        <span class="nx">property</span> <span class="kr">double</span> <span class="k">count:</span> <span class="mf">34.230</span><span class="p">;</span>
+        <span class="k">valueText:</span> <span class="o">!</span><span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span> <span class="o">?</span> <span class="s2">&quot;00:00&quot;</span> <span class="o">:</span>
+          <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">recommendedSettingTime</span><span class="p">.</span><span class="nx">count</span><span class="o">*</span><span class="mi">1000</span><span class="p">).</span><span class="nx">toLocaleTimeString</span><span class="p">(</span>
+            <span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span> <span class="s2">&quot;mm:ss&quot;</span><span class="p">);</span>
+        <span class="k">running:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span><span class="p">;</span>
+        <span class="k">entity:</span> <span class="s2">&quot;\uebb1&quot;</span><span class="p">;</span> <span class="c1">// cannon-firing, \ueeca :bullet</span>
+        <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Countdown to deploy&quot;</span><span class="p">);</span>
+        <span class="k">unit:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">RowLayout</span> <span class="p">{</span>
+      <span class="kd">id: mapPosition</span><span class="p">;</span>
+      <span class="nx">Label</span> <span class="p">{</span>
+        <span class="k">text:</span> <span class="s2">&quot;\uef8a&quot;</span><span class="p">;</span>
+        <span class="k">font:</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">iconFontBig</span><span class="p">;</span>
+        <span class="k">Layout.rightMargin:</span> <span class="mi">10</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">Label</span> <span class="p">{</span>
+        <span class="k">font:</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">numberFont</span><span class="p">;</span>
+        <span class="k">text:</span> <span class="nb">isNaN</span><span class="p">(</span><span class="nx">vesselNED</span><span class="p">.</span><span class="nx">ned</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="nx">root</span><span class="p">.</span><span class="nx">mouseActive</span> <span class="o">?</span> <span class="s2">&quot;&quot;</span> <span class="o">:</span>
+          <span class="nb">Number</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">mouseTip</span><span class="p">.</span><span class="nx">y</span> <span class="o">-</span> <span class="nx">vesselNED</span><span class="p">.</span><span class="nx">ned</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">(</span>
+            <span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot;, &quot;</span> <span class="o">+</span>
+          <span class="nb">Number</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">mouseTip</span><span class="p">.</span><span class="nx">x</span> <span class="o">-</span> <span class="nx">vesselNED</span><span class="p">.</span><span class="nx">ned</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="p">).</span><span class="nx">toLocaleString</span><span class="p">(</span>
+            <span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; m&quot;</span><span class="p">;</span>
+        <span class="k">Layout.preferredWidth:</span> <span class="mi">200</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">Label</span> <span class="p">{</span>
+        <span class="k">font:</span> <span class="nx">fkinStyle</span><span class="p">.</span><span class="nx">numberFont</span><span class="p">;</span>
+        <span class="k">text:</span> <span class="nb">isNaN</span><span class="p">(</span><span class="nx">vesselNED</span><span class="p">.</span><span class="nx">ned</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span> <span class="o">||</span> <span class="o">!</span><span class="nx">root</span><span class="p">.</span><span class="nx">mouseActive</span> <span class="o">?</span> <span class="s2">&quot;&quot;</span> <span class="o">:</span>
+          <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Distance: &quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nb">Number</span><span class="p">(</span><span class="nx">Qt</span><span class="p">.</span><span class="nx">vector2d</span><span class="p">(</span><span class="nx">root</span><span class="p">.</span><span class="nx">mouseTip</span><span class="p">.</span><span class="nx">y</span> <span class="o">-</span> <span class="nx">vesselNED</span><span class="p">.</span><span class="nx">ned</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">x</span><span class="p">,</span>
+                             <span class="nx">root</span><span class="p">.</span><span class="nx">mouseTip</span><span class="p">.</span><span class="nx">x</span> <span class="o">-</span> <span class="nx">vesselNED</span><span class="p">.</span><span class="nx">ned</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">y</span><span class="p">).</span><span class="nx">length</span><span class="p">())</span>
+          <span class="p">.</span><span class="nx">toLocaleString</span><span class="p">(</span><span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span><span class="s1">&#39;f&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; m&quot;</span><span class="p">;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, SINTEF Ocean.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb1e840d0>
+
+<br /><br />
+<table>
+  <tr>
+    <td width="120" style="vertical-align:middle;text-align:center">
+      <img alt="FHF" style="border-width:0" width="100" src="../_static/FHF-black-txt.png" />
+    </td>
+    <td>
+      This work was funded by <a href="https://www.fhf.no/fhf/about-fhf-english">FHF &ndash; Norwegian Seafood Research Fund</a> with <a href="https://www.fhf.no/prosjekter/prosjektbasen/901350/">Grant No. 901350</a>.<br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td width="90" style="vertical-align:middle;text-align:center">
+      <img alt="GNU General Public License, Version 3.0" style="border-width:0" width="90" src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" />
+    </td>
+    <td>
+      This program is free software: you can redistribute it and/or modify
+      it under the terms of the GNU General Public License as published by
+      the Free Software Foundation, either version 3 of the License, or
+      (at your option) any later version.<br /><br />
+
+      This program is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      GNU General Public License for more details.<br /><br />
+
+      You should have received a copy of the GNU General Public License
+      along with this program.  If not, see <a rel="license" href="https://www.gnu.org/licenses/">gnu.org/licenses</a>.
+    </td>
+  </tr>
+</table>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,613 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Private API &mdash; balder  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Namespace fkin::Dds" href="namespace_fkin__Dds.html" />
+    <link rel="prev" title="Build instructions" href="../rst/installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #00457c" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> balder
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#component-overview">Component overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#screendumps-of-application">Screendumps of application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/intro.html#usage">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#running-the-application">Running the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#todo-typical-usage">TODO Typical usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/signals.html">Data sharing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/signals.html#signal-overview">Signal overview</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer zone</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../rst/installation.html">Build instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#configuration-options-and-targets">Configuration options and targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#linux">Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#prerequisites-debian-based">Prerequisites (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#documentation-prerequisites-optional">Documentation prerequisites <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#building-and-running-debian-based">Building and running (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#packaging-into-artifacts">Packaging into artifacts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#documentation-prerequisites-on-windows-optional">Documentation prerequisites on Windows <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#building-and-running">Building and running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#packaging-into-installer-and-archive">Packaging into installer and archive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#android">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Private API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#items-listing">Items listing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_fkin__Dds.html">Namespace fkin::Dds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_ratatosk.html">Namespace ratatosk</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#classes-and-structs">Classes and Structs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="classbalder.html">Class balder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinControls.html">Class FkinControls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinDdsTopics.html">Class FkinDdsTopics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinDecisionIndicator.html">Class FkinDecisionIndicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinFooter.html">Class FkinFooter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinInfoDash.html">Class FkinInfoDash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinPurseDashboard.html">Class FkinPurseDashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinSettings.html">Class FkinSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinStyle.html">Class FkinStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinTimeSeries.html">Class FkinTimeSeries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classInfoDirectionMagnitude.html">Class InfoDirectionMagnitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classInfoPlanning.html">Class InfoPlanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNlpInfo.html">Class NlpInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNorthEast.html">Class NorthEast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRemoteProgramCommands.html">Class RemoteProgramCommands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRemoteProgramGroup.html">Class RemoteProgramGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSplash.html">Class Splash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTabIconButton.html">Class TabIconButton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTimeChart.html">Class TimeChart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTransformToNED.html">Class TransformToNED</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">balder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Private API</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="namespace_fkin__Dds.html" class="btn btn-neutral float-right" title="Namespace fkin::Dds" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+      
+      
+        <a href="../rst/installation.html" class="btn btn-neutral float-left" title="Build instructions" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="private-api">
+<h1>Private API<a class="headerlink" href="#private-api" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="class-hierarchy">
+<h2>Class Hierarchy<a class="headerlink" href="#class-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="treeView" id="class-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li>Class <a href="classbalder.html#exhale-class-classbalder">balder</a></li><li>Class <a href="classFkinControls.html#exhale-class-classFkinControls">FkinControls</a></li><li>Class <a href="classFkinDdsTopics.html#exhale-class-classFkinDdsTopics">FkinDdsTopics</a></li><li>Class <a href="classFkinDecisionIndicator.html#exhale-class-classFkinDecisionIndicator">FkinDecisionIndicator</a></li><li>Class <a href="classFkinFooter.html#exhale-class-classFkinFooter">FkinFooter</a></li><li>Class <a href="classFkinInfoDash.html#exhale-class-classFkinInfoDash">FkinInfoDash</a></li><li>Class <a href="classFkinPurseDashboard.html#exhale-class-classFkinPurseDashboard">FkinPurseDashboard</a></li><li>Class <a href="classFkinSettings.html#exhale-class-classFkinSettings">FkinSettings</a></li><li>Class <a href="classFkinStyle.html#exhale-class-classFkinStyle">FkinStyle</a></li><li>Class <a href="classFkinTimeSeries.html#exhale-class-classFkinTimeSeries">FkinTimeSeries</a></li><li>Class <a href="classInfoDirectionMagnitude.html#exhale-class-classInfoDirectionMagnitude">InfoDirectionMagnitude</a></li><li>Class <a href="classInfoPlanning.html#exhale-class-classInfoPlanning">InfoPlanning</a></li><li>Class <a href="classNlpInfo.html#exhale-class-classNlpInfo">NlpInfo</a></li><li>Class <a href="classNorthEast.html#exhale-class-classNorthEast">NorthEast</a></li><li>Class <a href="classRemoteProgramCommands.html#exhale-class-classRemoteProgramCommands">RemoteProgramCommands</a></li><li>Class <a href="classRemoteProgramGroup.html#exhale-class-classRemoteProgramGroup">RemoteProgramGroup</a></li><li>Class <a href="classSplash.html#exhale-class-classSplash">Splash</a></li><li>Class <a href="classTabIconButton.html#exhale-class-classTabIconButton">TabIconButton</a></li><li>Class <a href="classTimeChart.html#exhale-class-classTimeChart">TimeChart</a></li><li class="lastChild">Class <a href="classTransformToNED.html#exhale-class-classTransformToNED">TransformToNED</a></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView class-treeView --></div>
+<div class="section" id="file-hierarchy">
+<h2>File Hierarchy<a class="headerlink" href="#file-hierarchy" title="Permalink to this headline">¶</a></h2>
+<ul class="treeView" id="file-treeView">
+  <li>
+    <ul class="collapsibleList">
+      <li class="lastChild">Directory <a href="dir_src.html#dir-src">src</a><ul><li class="lastChild">Directory <a href="dir_src_qml.html#dir-src-qml">qml</a><ul><li>Directory <a href="dir_src_qml_balder.html#dir-src-qml-balder">balder</a><ul><li class="lastChild">File <a href="file_src_qml_balder_balder.qml.html#file-src-qml-balder-balder.qml">balder.qml</a></li></ul></li><li class="lastChild">Directory <a href="dir_src_qml_components.html#dir-src-qml-components">components</a><ul><li>File <a href="file_src_qml_components_FkinControls.qml.html#file-src-qml-components-FkinControls.qml">FkinControls.qml</a></li><li>File <a href="file_src_qml_components_FkinDdsTopics.qml.html#file-src-qml-components-FkinDdsTopics.qml">FkinDdsTopics.qml</a></li><li>File <a href="file_src_qml_components_FkinDecisionIndicator.qml.html#file-src-qml-components-FkinDecisionIndicator.qml">FkinDecisionIndicator.qml</a></li><li>File <a href="file_src_qml_components_FkinFooter.qml.html#file-src-qml-components-FkinFooter.qml">FkinFooter.qml</a></li><li>File <a href="file_src_qml_components_FkinInfoDash.qml.html#file-src-qml-components-FkinInfoDash.qml">FkinInfoDash.qml</a></li><li>File <a href="file_src_qml_components_FkinPurseDashboard.qml.html#file-src-qml-components-FkinPurseDashboard.qml">FkinPurseDashboard.qml</a></li><li>File <a href="file_src_qml_components_FkinSettings.qml.html#file-src-qml-components-FkinSettings.qml">FkinSettings.qml</a></li><li>File <a href="file_src_qml_components_FkinStyle.qml.html#file-src-qml-components-FkinStyle.qml">FkinStyle.qml</a></li><li>File <a href="file_src_qml_components_FkinTimeSeries.qml.html#file-src-qml-components-FkinTimeSeries.qml">FkinTimeSeries.qml</a></li><li>File <a href="file_src_qml_components_InfoDirectionMagnitude.qml.html#file-src-qml-components-InfoDirectionMagnitude.qml">InfoDirectionMagnitude.qml</a></li><li>File <a href="file_src_qml_components_InfoPlanning.qml.html#file-src-qml-components-InfoPlanning.qml">InfoPlanning.qml</a></li><li>File <a href="file_src_qml_components_NlpInfo.qml.html#file-src-qml-components-NlpInfo.qml">NlpInfo.qml</a></li><li>File <a href="file_src_qml_components_NorthEast.qml.html#file-src-qml-components-NorthEast.qml">NorthEast.qml</a></li><li>File <a href="file_src_qml_components_RemoteProgramCommands.qml.html#file-src-qml-components-RemoteProgramCommands.qml">RemoteProgramCommands.qml</a></li><li>File <a href="file_src_qml_components_RemoteProgramGroup.qml.html#file-src-qml-components-RemoteProgramGroup.qml">RemoteProgramGroup.qml</a></li><li>File <a href="file_src_qml_components_Splash.qml.html#file-src-qml-components-Splash.qml">Splash.qml</a></li><li>File <a href="file_src_qml_components_TabIconButton.qml.html#file-src-qml-components-TabIconButton.qml">TabIconButton.qml</a></li><li>File <a href="file_src_qml_components_TimeChart.qml.html#file-src-qml-components-TimeChart.qml">TimeChart.qml</a></li><li class="lastChild">File <a href="file_src_qml_components_TransformToNED.qml.html#file-src-qml-components-TransformToNED.qml">TransformToNED.qml</a></li></ul></li></ul></li></ul></li>
+    </ul>
+  </li><!-- only tree view element -->
+</ul><!-- /treeView file-treeView --></div>
+<div class="section" id="items-listing">
+<h2>Items listing<a class="headerlink" href="#items-listing" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="namespaces">
+<h3>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_fkin__Dds.html">Namespace fkin::Dds</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="namespace_ratatosk.html">Namespace ratatosk</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="classes-and-structs">
+<h3>Classes and Structs<a class="headerlink" href="#classes-and-structs" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classbalder.html">Class balder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classbalder.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classbalder.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classbalder.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinControls.html">Class FkinControls</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinControls.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinControls.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinControls.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinDdsTopics.html">Class FkinDdsTopics</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinDdsTopics.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinDdsTopics.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinDdsTopics.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinDecisionIndicator.html">Class FkinDecisionIndicator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinDecisionIndicator.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinDecisionIndicator.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinDecisionIndicator.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinFooter.html">Class FkinFooter</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinFooter.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinFooter.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinFooter.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinInfoDash.html">Class FkinInfoDash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinInfoDash.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinInfoDash.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinInfoDash.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinPurseDashboard.html">Class FkinPurseDashboard</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinPurseDashboard.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinPurseDashboard.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinPurseDashboard.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinSettings.html">Class FkinSettings</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinSettings.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinSettings.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinSettings.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinStyle.html">Class FkinStyle</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinStyle.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinStyle.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinStyle.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classFkinTimeSeries.html">Class FkinTimeSeries</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classFkinTimeSeries.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classFkinTimeSeries.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classFkinTimeSeries.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classInfoDirectionMagnitude.html">Class InfoDirectionMagnitude</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classInfoDirectionMagnitude.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classInfoDirectionMagnitude.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classInfoDirectionMagnitude.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classInfoPlanning.html">Class InfoPlanning</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classInfoPlanning.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classInfoPlanning.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classInfoPlanning.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classNlpInfo.html">Class NlpInfo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classNlpInfo.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classNlpInfo.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classNlpInfo.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classNorthEast.html">Class NorthEast</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classNorthEast.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classNorthEast.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classNorthEast.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classRemoteProgramCommands.html">Class RemoteProgramCommands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classRemoteProgramCommands.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classRemoteProgramCommands.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classRemoteProgramCommands.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classRemoteProgramGroup.html">Class RemoteProgramGroup</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classRemoteProgramGroup.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classRemoteProgramGroup.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classRemoteProgramGroup.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classSplash.html">Class Splash</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classSplash.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classSplash.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classSplash.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classTabIconButton.html">Class TabIconButton</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classTabIconButton.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classTabIconButton.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classTabIconButton.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classTimeChart.html">Class TimeChart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classTimeChart.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classTimeChart.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classTimeChart.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="classTransformToNED.html">Class TransformToNED</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="classTransformToNED.html#inheritance-relationships">Inheritance Relationships</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="classTransformToNED.html#base-type">Base Type</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="classTransformToNED.html#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="namespace_fkin__Dds.html" class="btn btn-neutral float-right" title="Namespace fkin::Dds" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../rst/installation.html" class="btn btn-neutral float-left" title="Build instructions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, SINTEF Ocean.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb1bb9730>
+
+<br /><br />
+<table>
+  <tr>
+    <td width="120" style="vertical-align:middle;text-align:center">
+      <img alt="FHF" style="border-width:0" width="100" src="../_static/FHF-black-txt.png" />
+    </td>
+    <td>
+      This work was funded by <a href="https://www.fhf.no/fhf/about-fhf-english">FHF &ndash; Norwegian Seafood Research Fund</a> with <a href="https://www.fhf.no/prosjekter/prosjektbasen/901350/">Grant No. 901350</a>.<br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td width="90" style="vertical-align:middle;text-align:center">
+      <img alt="GNU General Public License, Version 3.0" style="border-width:0" width="90" src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" />
+    </td>
+    <td>
+      This program is free software: you can redistribute it and/or modify
+      it under the terms of the GNU General Public License as published by
+      the Free Software Foundation, either version 3 of the License, or
+      (at your option) any later version.<br /><br />
+
+      This program is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      GNU General Public License for more details.<br /><br />
+
+      You should have received a copy of the GNU General Public License
+      along with this program.  If not, see <a rel="license" href="https://www.gnu.org/licenses/">gnu.org/licenses</a>.
+    </td>
+  </tr>
+</table>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,482 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Class FkinPurseDashboard &mdash; balder  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class FkinSettings" href="classFkinSettings.html" />
+    <link rel="prev" title="Class FkinInfoDash" href="classFkinInfoDash.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #00457c" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> balder
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#component-overview">Component overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#screendumps-of-application">Screendumps of application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/intro.html#usage">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#running-the-application">Running the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#todo-typical-usage">TODO Typical usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/signals.html">Data sharing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/signals.html#signal-overview">Signal overview</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer zone</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../rst/installation.html">Build instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#configuration-options-and-targets">Configuration options and targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#linux">Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#prerequisites-debian-based">Prerequisites (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#documentation-prerequisites-optional">Documentation prerequisites <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#building-and-running-debian-based">Building and running (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#packaging-into-artifacts">Packaging into artifacts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#documentation-prerequisites-on-windows-optional">Documentation prerequisites on Windows <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#building-and-running">Building and running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#packaging-into-installer-and-archive">Packaging into installer and archive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#android">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="library-api.html">Private API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library-api.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library-api.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library-api.html#items-listing">Items listing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library-api.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_fkin__Dds.html">Namespace fkin::Dds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_ratatosk.html">Namespace ratatosk</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="library-api.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="classbalder.html">Class balder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinControls.html">Class FkinControls</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinDdsTopics.html">Class FkinDdsTopics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinDecisionIndicator.html">Class FkinDecisionIndicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinFooter.html">Class FkinFooter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinInfoDash.html">Class FkinInfoDash</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class FkinPurseDashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinSettings.html">Class FkinSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinStyle.html">Class FkinStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinTimeSeries.html">Class FkinTimeSeries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classInfoDirectionMagnitude.html">Class InfoDirectionMagnitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classInfoPlanning.html">Class InfoPlanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNlpInfo.html">Class NlpInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNorthEast.html">Class NorthEast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRemoteProgramCommands.html">Class RemoteProgramCommands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRemoteProgramGroup.html">Class RemoteProgramGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSplash.html">Class Splash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTabIconButton.html">Class TabIconButton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTimeChart.html">Class TimeChart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTransformToNED.html">Class TransformToNED</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">balder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library-api.html">Private API</a> &raquo;</li>
+        
+      <li>Class FkinPurseDashboard</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="classFkinSettings.html" class="btn btn-neutral float-right" title="Class FkinSettings" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+      
+      
+        <a href="classFkinInfoDash.html" class="btn btn-neutral float-left" title="Class FkinInfoDash" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fkinpursedashboard">
+<span id="exhale-class-classfkinpursedashboard"></span><h1>Class FkinPurseDashboard<a class="headerlink" href="#class-fkinpursedashboard" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_qml_components_FkinPurseDashboard.qml.html#file-src-qml-components-fkinpursedashboard-qml"><span class="std std-ref">File FkinPurseDashboard.qml</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">RowLayout</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv418FkinPurseDashboard">
+<span id="_CPPv318FkinPurseDashboard"></span><span id="_CPPv218FkinPurseDashboard"></span><span id="FkinPurseDashboard"></span><span class="target" id="classFkinPurseDashboard"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FkinPurseDashboard</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">RowLayout</span></span><a class="headerlink" href="#_CPPv418FkinPurseDashboard" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Main dashboard component. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard4initE14ddsParticipant">
+<span id="_CPPv3N18FkinPurseDashboard4initE14ddsParticipant"></span><span id="_CPPv2N18FkinPurseDashboard4initE14ddsParticipant"></span><span id="FkinPurseDashboard::init__ddsParticipant"></span><span class="target" id="classFkinPurseDashboard_1a7cefbd6f838720f4111693fd42f0fe32"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">ddsParticipant</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard4initE14ddsParticipant" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Initialize DDS member variables. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-signals">Signals</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard12triggerResetEv">
+<span id="_CPPv3N18FkinPurseDashboard12triggerResetEv"></span><span id="_CPPv2N18FkinPurseDashboard12triggerResetEv"></span><span id="FkinPurseDashboard::triggerReset"></span><span class="target" id="classFkinPurseDashboard_1a2aca06bf59c3dfbbded9f402f5e5ed1f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">triggerReset</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard12triggerResetEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Indicates a reset, i.e. a new trajectory is to be visualized. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard12themeChangedEv">
+<span id="_CPPv3N18FkinPurseDashboard12themeChangedEv"></span><span id="_CPPv2N18FkinPurseDashboard12themeChangedEv"></span><span id="FkinPurseDashboard::themeChanged"></span><span class="target" id="classFkinPurseDashboard_1aeaa894380463dc9337ae64baae9d3a50"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">themeChanged</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard12themeChangedEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Indicate that the theme has changed and a redraw is needed. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard12pointHoveredE5point">
+<span id="_CPPv3N18FkinPurseDashboard12pointHoveredE5point"></span><span id="_CPPv2N18FkinPurseDashboard12pointHoveredE5point"></span><span id="FkinPurseDashboard::pointHovered__point"></span><span class="target" id="classFkinPurseDashboard_1a098706268c449769afc2243c8532153d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pointHovered</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">point</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pnt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard12pointHoveredE5point" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Mouse hovered above a point pnt. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard9originNEDE">
+<span id="_CPPv3N18FkinPurseDashboard9originNEDE"></span><span id="_CPPv2N18FkinPurseDashboard9originNEDE"></span><span id="FkinPurseDashboard::originNED__vector2d"></span><span class="target" id="classFkinPurseDashboard_1abbd46ca2ec3ec362d3e25efae2cfe363"></span><span class="n"><span class="pre">vector2d</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">originNED</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard9originNEDE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>(lat,lon) origin of NED </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard14plannerRunningE">
+<span id="_CPPv3N18FkinPurseDashboard14plannerRunningE"></span><span id="_CPPv2N18FkinPurseDashboard14plannerRunningE"></span><span id="FkinPurseDashboard::plannerRunning__b"></span><span class="target" id="classFkinPurseDashboard_1a38468517772c400c43f98ee3e12ce882"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plannerRunning</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard14plannerRunningE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Is the purse path planner running. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard14ddsInitializedE">
+<span id="_CPPv3N18FkinPurseDashboard14ddsInitializedE"></span><span id="_CPPv2N18FkinPurseDashboard14ddsInitializedE"></span><span id="FkinPurseDashboard::ddsInitialized__b"></span><span class="target" id="classFkinPurseDashboard_1a7e67181a35d46bfaae66f135eeff542c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ddsInitialized</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard14ddsInitializedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Has the DDS member variables been initialized. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard18currentMagDirDepthE">
+<span id="_CPPv3N18FkinPurseDashboard18currentMagDirDepthE"></span><span id="_CPPv2N18FkinPurseDashboard18currentMagDirDepthE"></span><span id="FkinPurseDashboard::currentMagDirDepth__vector3d"></span><span class="target" id="classFkinPurseDashboard_1a816e659646c196a5a38ab52fdb5d985f"></span><span class="n"><span class="pre">vector3d</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentMagDirDepth</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard18currentMagDirDepthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Temporary “fake” properties for current and wind indicators, x: m/s, y: radians, z: m. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard10windMagDirE">
+<span id="_CPPv3N18FkinPurseDashboard10windMagDirE"></span><span id="_CPPv2N18FkinPurseDashboard10windMagDirE"></span><span id="FkinPurseDashboard::windMagDir__vector2d"></span><span class="target" id="classFkinPurseDashboard_1abf6da705e926b84ecfc04d3d8bd81eba"></span><span class="n"><span class="pre">vector2d</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">windMagDir</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard10windMagDirE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Wind magnitude and direction. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard11fishCurrentE">
+<span id="_CPPv3N18FkinPurseDashboard11fishCurrentE"></span><span id="_CPPv2N18FkinPurseDashboard11fishCurrentE"></span><span id="FkinPurseDashboard::fishCurrent__vector2d"></span><span class="target" id="classFkinPurseDashboard_1aeb5f32363cbbde5e4211dc3599befaaf"></span><span class="n"><span class="pre">vector2d</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fishCurrent</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard11fishCurrentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sea current at fish school depth, magnitude direction (?) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard10seaCurrentE">
+<span id="_CPPv3N18FkinPurseDashboard10seaCurrentE"></span><span id="_CPPv2N18FkinPurseDashboard10seaCurrentE"></span><span id="FkinPurseDashboard::seaCurrent__vector2d"></span><span class="target" id="classFkinPurseDashboard_1a60f6b5b2056cfedd04d6074c48081f59"></span><span class="n"><span class="pre">vector2d</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seaCurrent</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard10seaCurrentE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Sea current at surface, also published dds. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard8mouseTipE">
+<span id="_CPPv3N18FkinPurseDashboard8mouseTipE"></span><span id="_CPPv2N18FkinPurseDashboard8mouseTipE"></span><span id="FkinPurseDashboard::mouseTip__point"></span><span class="target" id="classFkinPurseDashboard_1a85d1b2844f3b25d557b36f6b5a7567e3"></span><span class="n"><span class="pre">point</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mouseTip</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard8mouseTipE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Coordinate of mouse hover. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard11mouseActiveE">
+<span id="_CPPv3N18FkinPurseDashboard11mouseActiveE"></span><span id="_CPPv2N18FkinPurseDashboard11mouseActiveE"></span><span id="FkinPurseDashboard::mouseActive__b"></span><span class="target" id="classFkinPurseDashboard_1a9e39ecaa5cfa417ed376b0835a1c8da4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">mouseActive</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard11mouseActiveE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Helper boolean for active mouse hover. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard14manualFishCtrlE">
+<span id="_CPPv3N18FkinPurseDashboard14manualFishCtrlE"></span><span id="_CPPv2N18FkinPurseDashboard14manualFishCtrlE"></span><span id="FkinPurseDashboard::manualFishCtrl__b"></span><span class="target" id="classFkinPurseDashboard_1aff573e2254c2fb851e15c1b537c9fd29"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">manualFishCtrl</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard14manualFishCtrlE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Switch to indicate if manual fish parameters are to be used, not from measurements. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard11vesselColorE">
+<span id="_CPPv3N18FkinPurseDashboard11vesselColorE"></span><span id="_CPPv2N18FkinPurseDashboard11vesselColorE"></span><span id="FkinPurseDashboard::vesselColor__color"></span><span class="target" id="classFkinPurseDashboard_1a939188aed7125617fa4c078614db64ff"></span><span class="n"><span class="pre">color</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vesselColor</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard11vesselColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Color of displayed vessel. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard11deployColorE">
+<span id="_CPPv3N18FkinPurseDashboard11deployColorE"></span><span id="_CPPv2N18FkinPurseDashboard11deployColorE"></span><span id="FkinPurseDashboard::deployColor__color"></span><span class="target" id="classFkinPurseDashboard_1abe1b41d197e470b628a6a5914787b6bb"></span><span class="n"><span class="pre">color</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deployColor</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard11deployColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Color of deployment graph. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard9fishColorE">
+<span id="_CPPv3N18FkinPurseDashboard9fishColorE"></span><span id="_CPPv2N18FkinPurseDashboard9fishColorE"></span><span id="FkinPurseDashboard::fishColor__color"></span><span class="target" id="classFkinPurseDashboard_1a2b3649a27566e4fe5401194c8cf8b9bf"></span><span class="n"><span class="pre">color</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fishColor</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard9fishColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Color of fish trajectory. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard9windColorE">
+<span id="_CPPv3N18FkinPurseDashboard9windColorE"></span><span id="_CPPv2N18FkinPurseDashboard9windColorE"></span><span id="FkinPurseDashboard::windColor__color"></span><span class="target" id="classFkinPurseDashboard_1a738f969d544e41577fbb4541bd445468"></span><span class="n"><span class="pre">color</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">windColor</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard9windColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Color of wind indication. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N18FkinPurseDashboard12currentColorE">
+<span id="_CPPv3N18FkinPurseDashboard12currentColorE"></span><span id="_CPPv2N18FkinPurseDashboard12currentColorE"></span><span id="FkinPurseDashboard::currentColor__color"></span><span class="target" id="classFkinPurseDashboard_1a5093045f941ce7e121e7e1119dae9da6"></span><span class="n"><span class="pre">color</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentColor</span></span></span><a class="headerlink" href="#_CPPv4N18FkinPurseDashboard12currentColorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Color of sea current indication. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="classFkinSettings.html" class="btn btn-neutral float-right" title="Class FkinSettings" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classFkinInfoDash.html" class="btn btn-neutral float-left" title="Class FkinInfoDash" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, SINTEF Ocean.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb210b310>
+
+<br /><br />
+<table>
+  <tr>
+    <td width="120" style="vertical-align:middle;text-align:center">
+      <img alt="FHF" style="border-width:0" width="100" src="../_static/FHF-black-txt.png" />
+    </td>
+    <td>
+      This work was funded by <a href="https://www.fhf.no/fhf/about-fhf-english">FHF &ndash; Norwegian Seafood Research Fund</a> with <a href="https://www.fhf.no/prosjekter/prosjektbasen/901350/">Grant No. 901350</a>.<br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td width="90" style="vertical-align:middle;text-align:center">
+      <img alt="GNU General Public License, Version 3.0" style="border-width:0" width="90" src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" />
+    </td>
+    <td>
+      This program is free software: you can redistribute it and/or modify
+      it under the terms of the GNU General Public License as published by
+      the Free Software Foundation, either version 3 of the License, or
+      (at your option) any later version.<br /><br />
+
+      This program is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      GNU General Public License for more details.<br /><br />
+
+      You should have received a copy of the GNU General Public License
+      along with this program.  If not, see <a rel="license" href="https://www.gnu.org/licenses/">gnu.org/licenses</a>.
+    </td>
+  </tr>
+</table>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

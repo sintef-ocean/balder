@@ -1,0 +1,541 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Class FkinDdsTopics &mdash; balder  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/icon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class FkinDecisionIndicator" href="classFkinDecisionIndicator.html" />
+    <link rel="prev" title="Class FkinControls" href="classFkinControls.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #00457c" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> balder
+          
+
+          
+            
+            <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/intro.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#component-overview">Component overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#screendumps-of-application">Screendumps of application</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/intro.html#usage">Usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#running-the-application">Running the application</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#todo-typical-usage">TODO Typical usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/signals.html">Data sharing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/signals.html#signal-overview">Signal overview</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Developer zone</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../rst/installation.html">Build instructions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#configuration-options-and-targets">Configuration options and targets</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#linux">Linux</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#prerequisites-debian-based">Prerequisites (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#documentation-prerequisites-optional">Documentation prerequisites <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#building-and-running-debian-based">Building and running (debian-based)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#packaging-into-artifacts">Packaging into artifacts</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#windows">Windows</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#documentation-prerequisites-on-windows-optional">Documentation prerequisites on Windows <em>(optional)</em></a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#building-and-running">Building and running</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rst/installation.html#packaging-into-installer-and-archive">Packaging into installer and archive</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#android">Android</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/installation.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="library-api.html">Private API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library-api.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library-api.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library-api.html#items-listing">Items listing</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library-api.html#namespaces">Namespaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="namespace_fkin__Dds.html">Namespace fkin::Dds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_ratatosk.html">Namespace ratatosk</a></li>
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="library-api.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="classbalder.html">Class balder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinControls.html">Class FkinControls</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class FkinDdsTopics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinDecisionIndicator.html">Class FkinDecisionIndicator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinFooter.html">Class FkinFooter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinInfoDash.html">Class FkinInfoDash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinPurseDashboard.html">Class FkinPurseDashboard</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinSettings.html">Class FkinSettings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinStyle.html">Class FkinStyle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classFkinTimeSeries.html">Class FkinTimeSeries</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classInfoDirectionMagnitude.html">Class InfoDirectionMagnitude</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classInfoPlanning.html">Class InfoPlanning</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNlpInfo.html">Class NlpInfo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classNorthEast.html">Class NorthEast</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRemoteProgramCommands.html">Class RemoteProgramCommands</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classRemoteProgramGroup.html">Class RemoteProgramGroup</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classSplash.html">Class Splash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTabIconButton.html">Class TabIconButton</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTimeChart.html">Class TimeChart</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classTransformToNED.html">Class TransformToNED</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">balder</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content style-external-links">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="library-api.html">Private API</a> &raquo;</li>
+        
+      <li>Class FkinDdsTopics</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+      
+        <a href="classFkinDecisionIndicator.html" class="btn btn-neutral float-right" title="Class FkinDecisionIndicator" accesskey="n">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+      
+      
+        <a href="classFkinControls.html" class="btn btn-neutral float-left" title="Class FkinControls" accesskey="p"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+      
+  </div>
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="class-fkinddstopics">
+<span id="exhale-class-classfkinddstopics"></span><h1>Class FkinDdsTopics<a class="headerlink" href="#class-fkinddstopics" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_src_qml_components_FkinDdsTopics.qml.html#file-src-qml-components-fkinddstopics-qml"><span class="std std-ref">File FkinDdsTopics.qml</span></a></p></li>
+</ul>
+<div class="section" id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">Item</span></code></p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv413FkinDdsTopics">
+<span id="_CPPv313FkinDdsTopics"></span><span id="_CPPv213FkinDdsTopics"></span><span id="FkinDdsTopics"></span><span class="target" id="classFkinDdsTopics"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FkinDdsTopics</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">Item</span></span><a class="headerlink" href="#_CPPv413FkinDdsTopics" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This component holds topic names and ids for DDS member variables in use. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-properties">Properties</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics6idTestE">
+<span id="_CPPv3N13FkinDdsTopics6idTestE"></span><span id="_CPPv2N13FkinDdsTopics6idTestE"></span><span id="FkinDdsTopics::idTest__string"></span><span class="target" id="classFkinDdsTopics_1a94b105966c9b5453c823d70fb8824d7f"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idTest</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics6idTestE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>id string for testing (not in use?), </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics14idPursePlannerE">
+<span id="_CPPv3N13FkinDdsTopics14idPursePlannerE"></span><span id="_CPPv2N13FkinDdsTopics14idPursePlannerE"></span><span id="FkinDdsTopics::idPursePlanner__string"></span><span class="target" id="classFkinDdsTopics_1acf74274c9fa05a8260b731aee9a341d9"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idPursePlanner</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics14idPursePlannerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Id string for purse planner signals. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics8commandsE">
+<span id="_CPPv3N13FkinDdsTopics8commandsE"></span><span id="_CPPv2N13FkinDdsTopics8commandsE"></span><span id="FkinDdsTopics::commands__string"></span><span class="target" id="classFkinDdsTopics_1aeac49ea336d80c4c280b01124724acb9"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commands</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics8commandsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Common topic for program commands sinspekto::DdsCommandPublisher, id changes for different applications. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics16commandResponsesE">
+<span id="_CPPv3N13FkinDdsTopics16commandResponsesE"></span><span id="_CPPv2N13FkinDdsTopics16commandResponsesE"></span><span id="FkinDdsTopics::commandResponses__string"></span><span class="target" id="classFkinDdsTopics_1afa55981b34b519905f14af189f883f25"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">commandResponses</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics16commandResponsesE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Common topic for program command responses sinspekto::DdsCommandSubscriber. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics18stateNotificationsE">
+<span id="_CPPv3N13FkinDdsTopics18stateNotificationsE"></span><span id="_CPPv2N13FkinDdsTopics18stateNotificationsE"></span><span id="FkinDdsTopics::stateNotifications__string"></span><span class="target" id="classFkinDdsTopics_1ae5b478d235a21d2a2c8f6ecafa91f4d0"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">stateNotifications</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics18stateNotificationsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Common topic for program state notifications sinspekto::DdsStateNotification. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics10purseStatsE">
+<span id="_CPPv3N13FkinDdsTopics10purseStatsE"></span><span id="_CPPv2N13FkinDdsTopics10purseStatsE"></span><span id="FkinDdsTopics::purseStats__string"></span><span class="target" id="classFkinDdsTopics_1a097ac93a5ea1e92e6f680131c561aa56"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">purseStats</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics10purseStatsE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for sinspekto::DdsOptiStatusSubscriber, optimization statistics. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics11purseConfigE">
+<span id="_CPPv3N13FkinDdsTopics11purseConfigE"></span><span id="_CPPv2N13FkinDdsTopics11purseConfigE"></span><span id="FkinDdsTopics::purseConfig__string"></span><span class="target" id="classFkinDdsTopics_1a59ab50da9773c6bf2cb3656e131064cf"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">purseConfig</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics11purseConfigE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for sinspekto::DdsNlpConfigSubscriber, nlp configuration. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics16vesselTrajectoryE">
+<span id="_CPPv3N13FkinDdsTopics16vesselTrajectoryE"></span><span id="_CPPv2N13FkinDdsTopics16vesselTrajectoryE"></span><span id="FkinDdsTopics::vesselTrajectory__string"></span><span class="target" id="classFkinDdsTopics_1aee4f1b7525d4d0b64905cb574d4dc880"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vesselTrajectory</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics16vesselTrajectoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsKinematis2DBuffer, suggested vessel trajectory. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics14fishTrajectoryE">
+<span id="_CPPv3N13FkinDdsTopics14fishTrajectoryE"></span><span id="_CPPv2N13FkinDdsTopics14fishTrajectoryE"></span><span id="FkinDdsTopics::fishTrajectory__string"></span><span class="target" id="classFkinDdsTopics_1afdd4b166be760904ff088a993c61341e"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fishTrajectory</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics14fishTrajectoryE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsKinematis2DBuffer, expected fish trajectory. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics16vesselRotDesiredE">
+<span id="_CPPv3N13FkinDdsTopics16vesselRotDesiredE"></span><span id="_CPPv2N13FkinDdsTopics16vesselRotDesiredE"></span><span id="FkinDdsTopics::vesselRotDesired__string"></span><span class="target" id="classFkinDdsTopics_1aea3f34f0e4adf16c6c801e25f167bed5"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vesselRotDesired</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics16vesselRotDesiredE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDoubleValSubscriber, commanded heading rate. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics14deployPositionE">
+<span id="_CPPv3N13FkinDdsTopics14deployPositionE"></span><span id="_CPPv2N13FkinDdsTopics14deployPositionE"></span><span id="FkinDdsTopics::deployPosition__string"></span><span class="target" id="classFkinDdsTopics_1a20b350059ee934ffac32d0744e70c2d9"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deployPosition</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics14deployPositionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDouble2Subscriber, expected deploy position. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics15collidePositionE">
+<span id="_CPPv3N13FkinDdsTopics15collidePositionE"></span><span id="_CPPv2N13FkinDdsTopics15collidePositionE"></span><span id="FkinDdsTopics::collidePosition__string"></span><span class="target" id="classFkinDdsTopics_1abafb5d3c465b45ac0c511603f22e64d9"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">collidePosition</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics15collidePositionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDouble2Subscriber, expected position for fish colliding with purse. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics13vesselPosInfoE">
+<span id="_CPPv3N13FkinDdsTopics13vesselPosInfoE"></span><span id="_CPPv2N13FkinDdsTopics13vesselPosInfoE"></span><span id="FkinDdsTopics::vesselPosInfo__string"></span><span class="target" id="classFkinDdsTopics_1a43f364b13018b98758b8c56289caa52b"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vesselPosInfo</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics13vesselPosInfoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskPosInfoSubscriber. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics13localNedTopicE">
+<span id="_CPPv3N13FkinDdsTopics13localNedTopicE"></span><span id="_CPPv2N13FkinDdsTopics13localNedTopicE"></span><span id="FkinDdsTopics::localNedTopic__string"></span><span class="target" id="classFkinDdsTopics_1a8c143e13000f9c4b2e2e508a3acf8e33"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">localNedTopic</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics13localNedTopicE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsIdVec3dPublisher, vesselPosInfo in NED coordinates. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics9gpsOriginE">
+<span id="_CPPv3N13FkinDdsTopics9gpsOriginE"></span><span id="_CPPv2N13FkinDdsTopics9gpsOriginE"></span><span id="FkinDdsTopics::gpsOrigin__string"></span><span class="target" id="classFkinDdsTopics_1a24cb7092d0634d2155fb8df796638fc9"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gpsOrigin</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics9gpsOriginE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDouble2Publisher, TEMPORARY to forcefully set a gps origin instead from pos info topic. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics18vesselSettingSpeedE">
+<span id="_CPPv3N13FkinDdsTopics18vesselSettingSpeedE"></span><span id="_CPPv2N13FkinDdsTopics18vesselSettingSpeedE"></span><span id="FkinDdsTopics::vesselSettingSpeed__string"></span><span class="target" id="classFkinDdsTopics_1a628f2843889aad71611e12561cfa6c8e"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vesselSettingSpeed</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics18vesselSettingSpeedE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsIdVec1d, setting speed m/s. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics19vesselSettingRadiusE">
+<span id="_CPPv3N13FkinDdsTopics19vesselSettingRadiusE"></span><span id="_CPPv2N13FkinDdsTopics19vesselSettingRadiusE"></span><span id="FkinDdsTopics::vesselSettingRadius__string"></span><span class="target" id="classFkinDdsTopics_1a64d0adc018463ec585e6e5494c988cfa"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vesselSettingRadius</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics19vesselSettingRadiusE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsIdVec2d, setting radii, [m, m]. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics17aimPointArcLengthE">
+<span id="_CPPv3N13FkinDdsTopics17aimPointArcLengthE"></span><span id="_CPPv2N13FkinDdsTopics17aimPointArcLengthE"></span><span id="FkinDdsTopics::aimPointArcLength__string"></span><span class="target" id="classFkinDdsTopics_1ae4ea88457a0f2bd129b2aab24d5ef016"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aimPointArcLength</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics17aimPointArcLengthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Toppic for DdsIdVec1, aim distance, m. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics10fishMarginE">
+<span id="_CPPv3N13FkinDdsTopics10fishMarginE"></span><span id="_CPPv2N13FkinDdsTopics10fishMarginE"></span><span id="FkinDdsTopics::fishMargin__string"></span><span class="target" id="classFkinDdsTopics_1a23ea4f6ae602c01131c8c58783a07be2"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fishMargin</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics10fishMarginE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics14currentSurfaceE">
+<span id="_CPPv3N13FkinDdsTopics14currentSurfaceE"></span><span id="_CPPv2N13FkinDdsTopics14currentSurfaceE"></span><span id="FkinDdsTopics::currentSurface__string"></span><span class="target" id="classFkinDdsTopics_1ace6be6228a89e306d7bc533369b61842"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentSurface</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics14currentSurfaceE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDouble2Publisher, sea surface current. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics11currentFishE">
+<span id="_CPPv3N13FkinDdsTopics11currentFishE"></span><span id="_CPPv2N13FkinDdsTopics11currentFishE"></span><span id="FkinDdsTopics::currentFish__string"></span><span class="target" id="classFkinDdsTopics_1abb508cbb7b1fc633b4c2e96d605828e8"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">currentFish</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics11currentFishE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDouble2Publisher, sea current at fish depth. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics6idFishE">
+<span id="_CPPv3N13FkinDdsTopics6idFishE"></span><span id="_CPPv2N13FkinDdsTopics6idFishE"></span><span id="FkinDdsTopics::idFish__string"></span><span class="target" id="classFkinDdsTopics_1a22da934536a5a59f7b61428f680aa615"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idFish</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics6idFishE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Id string for fish model. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics9fishDepthE">
+<span id="_CPPv3N13FkinDdsTopics9fishDepthE"></span><span id="_CPPv2N13FkinDdsTopics9fishDepthE"></span><span id="FkinDdsTopics::fishDepth__string"></span><span class="target" id="classFkinDdsTopics_1a0df6675c69f3322e2cd4dbc9ef6029be"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fishDepth</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics9fishDepthE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsIdVec1dPublisher, depth of fish (manual or from input) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics22fishVelocityOverGroundE">
+<span id="_CPPv3N13FkinDdsTopics22fishVelocityOverGroundE"></span><span id="_CPPv2N13FkinDdsTopics22fishVelocityOverGroundE"></span><span id="FkinDdsTopics::fishVelocityOverGround__string"></span><span class="target" id="classFkinDdsTopics_1af58010f520590979752f6b970f9487ad"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fishVelocityOverGround</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics22fishVelocityOverGroundE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDouble2Publisher, Fish velocity over ground (either manual or from input) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics11fishPosInfoE">
+<span id="_CPPv3N13FkinDdsTopics11fishPosInfoE"></span><span id="_CPPv2N13FkinDdsTopics11fishPosInfoE"></span><span id="FkinDdsTopics::fishPosInfo__string"></span><span class="target" id="classFkinDdsTopics_1a0a44d482d56e0734e9942d34dd675564"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fishPosInfo</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics11fishPosInfoE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskPosInfoSubscriber. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics15fishRelativePosE">
+<span id="_CPPv3N13FkinDdsTopics15fishRelativePosE"></span><span id="_CPPv2N13FkinDdsTopics15fishRelativePosE"></span><span id="FkinDdsTopics::fishRelativePos__string"></span><span class="target" id="classFkinDdsTopics_1ae85a139aa9cc5fbd604bfc4dccf76c2e"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">fishRelativePos</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics15fishRelativePosE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDouble3Subscriber, fish position relative to vessel. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics10idLeadlineE">
+<span id="_CPPv3N13FkinDdsTopics10idLeadlineE"></span><span id="_CPPv2N13FkinDdsTopics10idLeadlineE"></span><span id="FkinDdsTopics::idLeadline__string"></span><span class="target" id="classFkinDdsTopics_1a6d5e67988bdf146aad2fbda3fe0603c5"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">idLeadline</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics10idLeadlineE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Id string for leadline model. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics18leadlineParametersE">
+<span id="_CPPv3N13FkinDdsTopics18leadlineParametersE"></span><span id="_CPPv2N13FkinDdsTopics18leadlineParametersE"></span><span id="FkinDdsTopics::leadlineParameters__string"></span><span class="target" id="classFkinDdsTopics_1a8ed56f52d58f477978535a2d4679e8cd"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">leadlineParameters</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics18leadlineParametersE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsIdVec2dPublisher, (tau, z_d) parameters for leadline model. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics16leadlineResponseE">
+<span id="_CPPv3N13FkinDdsTopics16leadlineResponseE"></span><span id="_CPPv2N13FkinDdsTopics16leadlineResponseE"></span><span id="FkinDdsTopics::leadlineResponse__string"></span><span class="target" id="classFkinDdsTopics_1a919f8158eae4f8ed91549b340f898eb8"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">leadlineResponse</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics16leadlineResponseE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsIdVec1dBuffer, sink response trajectory for a time horizon. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics10leadMarginE">
+<span id="_CPPv3N13FkinDdsTopics10leadMarginE"></span><span id="_CPPv2N13FkinDdsTopics10leadMarginE"></span><span id="FkinDdsTopics::leadMargin__string"></span><span class="target" id="classFkinDdsTopics_1aab64de2b85cda7bc45724db28666c41b"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">leadMargin</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics10leadMarginE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for DdsIdVec1d, lead margin below fish at collision, m. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="classFkinDecisionIndicator.html" class="btn btn-neutral float-right" title="Class FkinDecisionIndicator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classFkinControls.html" class="btn btn-neutral float-left" title="Class FkinControls" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, SINTEF Ocean.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb2253670>
+
+<br /><br />
+<table>
+  <tr>
+    <td width="120" style="vertical-align:middle;text-align:center">
+      <img alt="FHF" style="border-width:0" width="100" src="../_static/FHF-black-txt.png" />
+    </td>
+    <td>
+      This work was funded by <a href="https://www.fhf.no/fhf/about-fhf-english">FHF &ndash; Norwegian Seafood Research Fund</a> with <a href="https://www.fhf.no/prosjekter/prosjektbasen/901350/">Grant No. 901350</a>.<br /><br />
+    </td>
+  </tr>
+  <tr>
+    <td width="90" style="vertical-align:middle;text-align:center">
+      <img alt="GNU General Public License, Version 3.0" style="border-width:0" width="90" src="https://upload.wikimedia.org/wikipedia/commons/9/93/GPLv3_Logo.svg" />
+    </td>
+    <td>
+      This program is free software: you can redistribute it and/or modify
+      it under the terms of the GNU General Public License as published by
+      the Free Software Foundation, either version 3 of the License, or
+      (at your option) any later version.<br /><br />
+
+      This program is distributed in the hope that it will be useful,
+      but WITHOUT ANY WARRANTY; without even the implied warranty of
+      MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+      GNU General Public License for more details.<br /><br />
+
+      You should have received a copy of the GNU General Public License
+      along with this program.  If not, see <a rel="license" href="https://www.gnu.org/licenses/">gnu.org/licenses</a>.
+    </td>
+  </tr>
+</table>
+
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
