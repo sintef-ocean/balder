@@ -48,6 +48,8 @@ jobs:
           conan config set general.revisions_enabled=1
       - name: Conan build
         run: |
+          mkdir build
+          cd build
           conan install .. `
             -s build_type=${{ matrix.build_type }} `
             -s compiler.version=${{ matrix.compiler_version }} `

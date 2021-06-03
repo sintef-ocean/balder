@@ -38,7 +38,7 @@ class BalderConan(ConanFile):
     requires = (
       "opensplice-ce/[>=6.9]@sintef/stable",
       "qt/5.15.2@bincrafters/stable",
-      "sinspekto/0.4.0@kluster/testing"
+      "sinspekto/0.4.0@sintef/stable"
     )
     build_subfolder = "build_subfolder"
     _cmake = None
