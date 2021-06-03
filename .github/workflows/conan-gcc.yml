@@ -67,6 +67,7 @@ jobs:
             -s compiler.version=${{ matrix.compiler_version }} \
             -o balder:with_doc=${{ matrix.with_doc }} \
             -b missing -b outdated
+          conan upload --all -c -r sintef qt/* --retry 5 --retry-wait 30
           conan build ..
           source activate_run.sh
           conan package ..

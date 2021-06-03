@@ -1,5 +1,5 @@
 (require 'package)
-(defvar my-packages '(ox-rst))
+(defvar my-packages '(ox-rst  org-ref))
 (add-to-list 'package-archives
 	     '("melpa" . "https://melpa.org/packages/"))
 
