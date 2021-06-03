@@ -69,7 +69,7 @@ jobs:
             -b missing -b outdated
           conan upload --all -c -r sintef qt/* --retry 5 --retry-wait 30
           conan build ..
-          pwd
-          ls -lah
-          . activate_run.sh
+          export BUILD_DIR=${PWD}
+          echo ${BUILD_DIR}
+          . ${BUILD_DIR}/activate_run.sh
           conan package ..
