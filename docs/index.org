@@ -1,0 +1,35 @@
+* Purse seine deployment decision support
+Documentation created: {{{time(%F %H:%M)}}}
+
+#+BEGIN_EXPORT rst
+
+.. toctree::
+   :maxdepth: 3
+   :caption: Overview
+   :glob:
+
+   rst/intro.rst
+   rst/signals.rst
+
+#+END_EXPORT
+
+
+#+BEGIN_src emacs-lisp :results drawer :exports results  :wrap EXPORT rst
+(make-variable-buffer-local 'with-api-doc)
+(if with-api-doc
+  ".. toctree::
+     :maxdepth: 3
+     :caption: Developer zone
+     :glob:
+
+     rst/installation.rst
+     api/library-api
+
+:ref:`genindex`
+~~~~~~~~~~~~~~~~"
+  "   rst/installation.rst")
+#+end_src
+
+#+RESULTS:
+#+begin_EXPORT rst
+#+end_EXPORT

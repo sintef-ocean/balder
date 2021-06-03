@@ -1,0 +1,93 @@
+FROM debian:buster-slim as builder-base
+MAINTAINER Joakim Haugen <joakim.haugen@sintef.no>
+
+# Java update-alternatives assumes these folders present
+RUN seq 1 8 | xargs -I{} mkdir -p /usr/share/man/man{}
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+ apt-utils \
+ build-essential \
+ cmake \
+ curl \
+ doxygen \
+ emacs-nox \
+ git \
+ gnupg \
+ graphviz \
+ kbd \
+ libboost-all-dev \
+ libyaml-cpp-dev \
+ libqt5charts5-dev \
+ libqt5waylandclient5-dev \
+ pkg-config \
+ plantuml \
+ python3-pip \
+ qt5-default \
+ qtdeclarative5-dev \
+ qttools5-dev \
+ qttools5-dev-tools \
+ qml-module-qtquick2 \
+ qml-module-qtcharts \
+ qml-module-qtquick-controls2 \
+ qml-module-qtquick-layouts \
+ qml-module-qtquick-shapes \
+ qml-module-qtquick-window2 \
+ wget \
+ && \
+ rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install setuptools wheel
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  libxml2-dev \
+  libxslt1-dev \
+  python3-lxml \
+  && \
+  rm -rf /var/lib/apt/lists/*
+
+RUN pip3 install \
+  breathe \
+  doc2dash \
+  doxyqml \
+  exhale \
+  sphinx \
+  sphinx-rtd-theme \
+  sphinxcontrib-plantuml
+
+# Install newerest version of plantuml for C4 model
+RUN wget https://sourceforge.net/projects/plantuml/files/plantuml.jar
+RUN mv plantuml.jar /usr/share/plantuml/
+
+ARG CACHE_BUST=unknown
+ADD docs/emacs-install-pkgs.el /
+RUN emacs -Q --batch -l emacs-install-pkgs.el
+
+FROM builder-base as gitlab-builder
+
+ARG APTLY_URL
+ARG APTLY_USR
+ARG APTLY_PWD
+ARG APTLY_PREFIX
+ARG APTLY_DIST
+ARG APTLY_COMP
+
+RUN wget https://sourceforge.net/projects/plantuml/files/plantuml.jar
+RUN mv plantuml.jar /usr/share/plantuml/
+
+RUN wget http://${APTLY_USR}:${APTLY_PWD}@${APTLY_URL}/gpg-key.pub \
+  && apt-key add gpg-key.pub \
+  && rm gpg-key.pub
+RUN echo "deb http://${APTLY_URL}${APTLY_PREFIX} ${APTLY_DIST} ${APTLY_COMP}" > /etc/apt/sources.list.d/kluster.list
+RUN echo "machine ${APTLY_URL} login ${APTLY_USR} password ${APTLY_PWD}" >> /etc/apt/auth.conf
+
+RUN apt-get -q update \
+  && apt-get install -y \
+  opensplice-hde \
+  kluster-scripts \
+  sinspekto-dev \
+  && \
+  rm -rf /var/lib/apt/lists/*
+
+#ENV LD_LIBRARY_PATH=/opt/lib:/opt/opensplice-hde/lib \
+#  PATH=${PATH:+${PATH}:}/opt/bin \
+#  CMAKE_PREFIX_PATH=/opt

@@ -1,0 +1,15 @@
+<RCC>
+  <qresource prefix="/">
+    <file>icons/LogoFkinColor.png</file>
+    <file>icons/LogoFkinNegative.png</file>
+    <file>icons/FkinLogo.png</file>
+    <file>images/sintef-white-txt.png</file>
+    <file>images/sintef-blue-txt.png</file>
+    <file>images/FHF-white-txt.png</file>
+    <file>images/FHF-black-txt.png</file>
+    <file>qtquickcontrols2.conf</file>
+    <file>fonts/PublicSans-VariableFont_wght.ttf</file>
+    <file>fonts/Oswald-VariableFont_wght.ttf</file>
+    <file>fonts/icofont/fonts/icofont.ttf</file>
+  </qresource>
+</RCC>

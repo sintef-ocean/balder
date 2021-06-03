@@ -1,0 +1,68 @@
+' Person(alias, label, [desc])
+' Person_Ext(alias, label, [desc])
+' System(alias, label, [desc])
+' System_Ext(alias, label, [desc])
+' SystemDb(alias, label, [desc])
+' SystemDb_Ext(alias, label, [desc])
+' Enterprise_Boundary(alias, label)
+' System_Bundary(alias, label)
+' Rel(from, to, label, [desc])
+' Rel_Back(from, to, label, [desc])
+' Rel_Neighbor(from, to, label, [desc])
+' Rel_Back_Neighbor(from, to, label [desc])
+' Containers: Container, ContainerDb, Container_Boundary
+' Components: Component, ComponentDb
+
+
+skinparam defaultFontName  Helvetica
+'skinparam monochrome true
+'skinparam backgroundColor transparent
+skinparam backgroundColor white
+
+
+skinparam activity {
+  ArrowColor Black
+  BorderColor Black
+  BorderThickness 1
+}
+
+skinparam actor {
+  BorderColor Black
+}
+
+skinparam usecase {
+  ArrowColor Black
+  BorderColor Black
+  BorderThickness 1
+}
+
+skinparam class {
+  ArrowColor Black
+
+  BorderColor Black
+  BorderThickness 1
+}
+
+
+skinparam object {
+  ArrowColor Black
+  BorderColor Black
+}
+
+skinparam package {
+  BorderColor Black
+}
+
+skinparam note {
+  BorderColor Black
+}
+
+skinparam state {
+  ArrowColor Black
+  BorderColor Black
+}
+
+
+skinparam interface {
+  BorderColor Black
+}

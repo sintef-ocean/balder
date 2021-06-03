@@ -1,0 +1,48 @@
+FROM debian:buster-slim
+
+# All qt packages are installed as dependencies in the sinspekto.deb package
+# They are installed at the top to avoid repeated installation when sinspekto.deb changes
+RUN apt-get update && apt-get install -y --no-install-recommends \
+  apt-utils \
+  gnupg \
+  kbd \
+  libgles2-mesa \
+  libqt5charts5 \
+  libqt5core5a \
+  libqt5gui5 \
+  libqt5qml5 \
+  libqt5widgets5 \
+  libqt5waylandclient5 \
+  qml-module-qtquick2 \
+  qml-module-qtcharts \
+  qml-module-qtquick-controls2 \
+  qml-module-qtquick-layouts \
+  qml-module-qtquick-shapes \
+  qml-module-qtquick-window2 \
+  qtwayland5 \
+  wget \
+  && \
+  rm -rf /var/lib/apt/lists/*
+
+ARG APTLY_URL
+ARG APTLY_USR
+ARG APTLY_PWD
+ARG APTLY_PREFIX
+ARG APTLY_DIST
+ARG APTLY_COMP
+ARG CACHE_BUST=unknown
+RUN wget http://${APTLY_USR}:${APTLY_PWD}@${APTLY_URL}/gpg-key.pub \
+  && apt-key add gpg-key.pub \
+  && rm gpg-key.pub
+RUN echo "deb http://${APTLY_URL}${APTLY_PREFIX} ${APTLY_DIST} ${APTLY_COMP}" > /etc/apt/sources.list.d/kluster.list
+RUN echo "machine ${APTLY_URL} login ${APTLY_USR} password ${APTLY_PWD}" >> /etc/apt/auth.conf
+
+RUN apt-get -q update \
+  && apt-get install -y \
+  balder-runtime \
+  && rm -rf /var/lib/apt/lists/*
+
+ENV PATH=${PATH:+${PATH}:}/opt/bin
+RUN chmod +s /bin/chvt
+
+#ENV LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/lib

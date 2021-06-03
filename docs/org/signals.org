@@ -1,0 +1,106 @@
+* Data sharing
+
+  Communication of signals and data between software systems, which is indicated in
+  cref:fig:containers, is achieved using a data distribution service standard [[https://www.omg.org/spec/DDS/About-DDS/][OMG DDS]].
+  In the following, we provide an overview of the various signals. This overview also
+  includes the interface definition language (IDL) types used for the
+  different signals. The IDL types are defined in the companion project =RatatoskIDL=.
+
+  #+BEGIN_SRC plantuml :exports results :file ../static/container.svg
+      !include ../static/style.puml
+      !include  <C4/C4_Container.puml>
+      LAYOUT_WITH_LEGEND()
+
+      title [Container diagram]  Balder
+
+      Person(cap, "Captain", "Purse seine master")
+
+      System_Boundary(balder, "Balder") {
+        Container(gui, "GUI Application", "Container: Qt QML", "Shows suggested deployment trajectory;\nDisplays estimated leadline sink depth\nProvides interface for user preferences")
+      }
+
+      System(mimir, "Mimir", "Path planning")
+      System(stim, "Mimir", "Leadline Estimator")
+      System(ratatosk, "Ratatosk", "Vessel instrument data")
+      ContainerDb(logger, "Data store", "Saves vessel data to database [netCDF]")
+      System_Ext(vessel, "Vessel", "Instrument data sources")
+
+
+      Rel(cap, balder, "Views")
+      Rel_U(mimir, gui, "Sends optimized trajectories [DDS]")
+      Rel_U(stim, gui, "Sends leadline depths [DDS]")
+      Rel_Neighbor(stim, mimir, "Provides leadline estimate [DDS]")
+      Rel_Back(mimir, ratatosk, "Provides vessel data [DDS]")
+      Rel_Back(stim, ratatosk,  "Provides environment data DDS]")
+      Rel_Neighbor(ratatosk, logger, "Shares available data [DDS]")
+      Rel_Back(ratatosk, vessel, "Various proprietary data formats")
+
+   #+END_SRC
+
+  #+CAPTION: Container diagram for Balder.
+  #+NAME: fig:containers
+  #+ATTR_RST: :align center :scale 55
+  #+RESULTS:
+  [[file:../static/container.svg]]
+
+** Signal overview
+
+   The diagram in cref:fig:containers only give a high-level view of the data sharing between the different systems.
+   With focus on the two algorithm systems /Mimir: Leadline/ and /Mimir: Path planner/, we provide a more complete signal list in cref:tab:flow.
+   /Source/ is a signal originator, it is the system that sends out the signal. /Target/ is an intended signal receiver.
+   The DCPS DDS interface (data-centric publish-subscribe) is designed to allow multiple recipients -- one-to-many.
+   /Causality/ is one of /input/, /output/, /parameter/ and describes the variable type.
+   In our case, the /variability/ for /parameter/ in the table is always tunable, that is, they can be changed while algorithms are running.
+   Please consult the documentation for the respective system/algorithm on how to specify the DDS topic and other settings in their configuration files.
+   In the case of /Balder/, the DDS topic names are specified in @@rst::cpp:class:`FkinDdsTopics`@@.
+   Note that /Name/ in the table below is _not_ the topic name of a signal. It is the variable named used in the /Mimir/ configuration file.
+
+   #+caption: Overview of signal flow between systems.
+   #+name: tab:flow
+   | Name                        | Causality | IDL type                      | (S)ource/(T)arget                                    |
+   |-----------------------------+-----------+-------------------------------+------------------------------------------------------|
+   | *Mimir: Leadline*           |           |                               |                                                      |
+   | =command=                   | input     | =fkin::Command=               | S: Balder                                            |
+   | =command=                   | output    | =fkin::CommandResponse=       | T: Balder                                            |
+   | =notifier=                  | output    | =fkin::ProcessStateAutomaton= | T: Balder                                            |
+   | =parameters=                | parameter | =fkin::IdVec2d=               | S: Balder,                                           |
+   |                             |           |                               | Mimir: Path planner                                  |
+   | =depth=                     | output    | =fkin::BatchIdVec1d=          | T: Balder                                            |
+   |                             |           |                               |                                                      |
+   | *Mimir: Path planner*       |           |                               |                                                      |
+   | =command=                   | input     | =fkin::Command=               | S: Balder                                            |
+   | =command=                   | output    | =fkin::CommandResponse=       | T: Balder                                            |
+   | =notifier=                  | output    | =fkin::ProcessStateAutomaton= | T: Balder                                            |
+   | =setting_speed_U_v=         | parameter | =fkin::IdVec1d=               | S: Balder                                            |
+   | =setting_radii=             | parameter | =fkin::IdVec2d=               | S: Balder                                            |
+   | =aim_distance_D_s=          | parameter | =fkin::IdVec1d=               | S: Balder                                            |
+   | =fish_margin_d_f=           | parameter | =fkin::IdVec1d=               | S: Balder                                            |
+   | =sink_margin_z_min=         | parameter | =fkin::IdVec1d=               | S: Balder                                            |
+   | =leadline_tau_ll_z_d=       | parameter | =fkin::IdVec2d=               | S: Balder                                            |
+   | =current_surface=           | parameter | =ratatosk::types::Double2=    | S: Ratatosk                                          |
+   | =current_fish=              | parameter | =ratatosk::types::Double2=    | S: Ratatosk                                          |
+   | =fish_velocity_over_ground= | parameter | =ratatosk::types::Double2=    | S: Ratatosk, Balder[fn:: The user can set manually.] |
+   | =fish_depth_z_s=            | parameter | =fkin::IdVec1d=               | S: Ratatosk, Balder                                  |
+   | =GPS_origin=                | input     | =ratatosk::types::Double2=    | S: Balder  [fn:: Calculated from =vessel_pos_info=.] |
+   | =vessel_pos_info=           | input     | =ratatosk::types::PosInfo=    | S: Ratatosk                                          |
+   | =vessel_gyro_info=          | input     | =ratatosk::types::PosInfo=    | S: Ratatosk                                          |
+   | =fish_pos_info=             | input     | =ratatosk::types::PosInfo=    | S: Ratatosk                                          |
+   | =fish_relative_pos=         | input     | =ratatosk::types::Double3=    | S: Ratatosk                                          |
+   | =keep_solution=             | input     | =fkin::Bit=                   | S: Balder                                            |
+   | =trajectory_vessel=         | output    | =fkin::BatchKinematics2D=     | T: Balder                                            |
+   | =trajectory_vessel_rot=     | output    | =fkin::BatchIdVec1D=          | T: Balder                                            |
+   | =trajectory_fish=           | output    | =fkin::BatchKinematics2D=     | T: Balder                                            |
+   | =nlp_config=                | output    | =fkin::NlpConfig=             | T: Balder                                            |
+   | =nlp_stats=                 | output    | =fkin::OptiStats=             | T: Balder                                            |
+   | =vessel_speed=              | output    | =ratatosk::types::DoubleVal=  | T: Balder                                            |
+   | =vessel_course_rate=        | output    | =ratatosk::types::DoubleVal=  | T: Balder                                            |
+   | =deploy_position=           | output    | =ratatosk::types::Double2=    | T: Balder                                            |
+   | =collide_position=          | output    | =ratatosk::types::Double2=    | T: Balder                                            |
+   | =deploy_time=               | output    | =ratatosk::types::DoubleVal=  | T: Balder                                            |
+
+   #+begin_note
+   Balder currently does not support user configuration of topic names. Future
+   improvements include moving @@rst::cpp:class:`FkinDdsTopics`@@ outside the compiled
+   program, so that it can be loaded at runtime. This would allow configuration of
+   topics without recompilation.
+   #+end_note

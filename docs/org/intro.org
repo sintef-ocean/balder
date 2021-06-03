@@ -1,0 +1,166 @@
+* Introduction
+
+  /Balder/ is a graphical user application that provides decision support for the captain
+  in purse seining before gear deployment.
+
+  Balder makes use of real-time data and model predictive control algorithms to predict a
+  deployment trajectory for the purse seine. The deployment trajectory is devised by
+  taking into account expected sink depth/speed of the gear and use a prescribed
+  trajectory of the fish school. Environment conditions such as sea currents are also
+  taken into consideration. cref:fig:context shows a context diagram for Balder.
+
+  #+BEGIN_SRC plantuml :exports results :file ../static/context.svg
+    !include ../static/style.puml
+    !include  <C4/C4_Context.puml>
+    !include  <C4/C4_Container.puml>
+    LAYOUT_WITH_LEGEND()
+
+    title [System Context]  Balder
+
+    Person(cap, "Captain", "Purse seine master")
+
+    System(balder, "Balder", "Graphical user application")
+    System(mimir, "Mimir", "Path planning")
+    System(stim, "Mimir", "Leadline Estimator")
+    System(ratatosk, "Ratatosk", "Vessel instrument data")
+    ContainerDb(logger, "Data store", "Saves vessel data to database")
+    System_Ext(vessel, "Vessel", "Instrument data sources")
+
+
+    Rel(cap, balder, "Views suggested deployment trajectory")
+    Rel_U(mimir, balder, "Sends suggested deployment trajectories")
+    Rel_U(stim, balder, "Sends expected leadline depths")
+    Rel_Neighbor(stim, mimir, "Provides leadline estimate")
+    Rel_Back(mimir, ratatosk, "Provides vessel data")
+    Rel_Back(stim, ratatosk,  "Provides environment data")
+    Rel_Neighbor(ratatosk, logger, "Shares available data")
+    Rel_Back(ratatosk, vessel, "Provides sensor data")
+
+   #+END_SRC
+
+   #+CAPTION: System context for Balder.
+   #+NAME: fig:context
+   #+ATTR_RST: :align center :scale 50
+   #+RESULTS:
+   [[file:../static/context.svg]]
+
+** Component overview
+
+   There are several visual components that display key information to the user, see overview in cref:fig:components.
+   The application is written with Qt modeling language ([[https://doc.qt.io/qt-5/qtqml-index.html][QML]]) and the main entrypoint is @@rst::cpp:class:`balder`@@.
+   Each component are written using QML classes to declaratively describe the graphical user interface.
+   The main QML classes are indicated within square brackets under each component in cref:fig:components.
+   Details for these classes can be found in @@rst::doc:`API Reference <../api/library-api>`@@ and within links to the corresponding =.qml= files.
+
+   #+BEGIN_SRC plantuml :exports results :file ../static/component.svg
+      !include ../static/style.puml
+      !include  <C4/C4_Component.puml>
+
+      'LAYOUT_AS_SKETCH()
+      'LAYOUT_WITH_LEGEND()
+
+      title [Component diagram]  Balder
+
+      System_Boundary(balder, "Balder") {
+        Container_Boundary(gui, "GUI Application") {
+          Component(dash, "Main view", "FkinPurseDashboard", "Purse planner dashboard")
+          Component(conf, "Configuration view", "FkinSettings", "User configuration")
+          Component(algorithm, "Algorithm view", "NlpInfo, RemoteProgramCommands", "Control and status pane for algorithms")
+          Component(traj, "Map plot", "NorthEast", "Displays suggested trajectories for vessel, fish school and deployment")
+          Component(environment, "Environment info", "InfoDirectionMagnitude, InfoPlanning, FkinDecisionIndicator", "Displays information about fish school, environment and purse deployment")
+          Component(leadline, "Leadline", "TimeChart", "Shows estimated sink depth for leadline under current ambient conditions")
+          Component(settings, "Purse planner preferences", "Various components", "Provides elements that can changes key parameters of the path planner")
+        }
+      }
+
+      System_Ext(mimir, "Mimir", "Path planning")
+      System_Ext(stim, "Mimir", "Depth Estimator")
+      Rel_D(dash, traj, "Displays")
+      Rel_D(dash, environment, "Displays")
+      Rel_D(conf, leadline, "Displays")
+      Rel_D(conf, settings, "Displays")
+      Rel_U(mimir, traj, "Sends optimized trajectories [DDS]")
+      Rel_U(stim, leadline, "Sends leadline depths [DDS]")
+      Rel(settings, mimir, "Provides user settings to path planner [DDS]")
+      Rel(mimir,algorithm, "Sends statistics about algorithms [DDS]")
+      Rel_Neighbor(stim, mimir, "Provides leadline estimate [DDS]")
+
+    #+END_SRC
+
+    #+CAPTION: Component diagram for Balder.
+    #+NAME: fig:components
+    #+ATTR_RST: :align center :scale 90
+    #+RESULTS:
+    [[file:../static/component.svg]]
+
+** Screendumps of application
+
+   Below we provide screendumps of three central panel views listed in cref:fig:components:
+   - cref:fig:gui_main shows the purse planner dashboard,
+   - cref:fig:gui_config shows the user configuration,
+   - cref:fig:gui_algorithm show the control and status pane for algorithm.
+
+   #+caption: Screenshot of main view.
+   #+name: fig:gui_main
+   #+ATTR_RST: :align center
+   [[../static/gui_dash.png]]
+
+   #+caption: Screenshot of configuration view.
+   #+name: fig:gui_config
+   #+ATTR_RST: :align center
+   [[../static/gui_config.png]]
+
+   #+caption: Screenshot of algorithm view.
+   #+name: fig:gui_algorithm
+   #+ATTR_RST: :align center
+   [[../static/gui_algorithm.png]]
+
+* Usage
+** Running the application
+
+   Once installed, the application should be available as /balder/ on the system path or on the start menu.
+
+   /Balder/ has support for English (EN) and Norwegian (NO). By default it should load the
+   language specified by the operating system, but can be set explicitly by passing =EN= or
+   =NO= to the command line option as follows:
+   #+begin_src bash :results output :shebang "#!/bin/bash"
+   balder --language NO
+   balder --language EN
+   #+end_src
+
+** Typical usage session
+
+   A typical user session can consist of the following steps:
+
+   1. Start algorithms; status is indicated as in cref:fig:alg_start.
+      - If all input signals are available, the algorithm should provide suggested trajectories regularly.
+      - Note that the first iteration may take some extra time (cold start)
+   2. User preferences are configured.
+      - Possible settings are as indicated in cref:fig:config.
+      - The user can change setting speed, ellipse shape, aim point, fish margin, leadline sink margin, and leadline sinking coefficients.
+      - Please refer to [[https://sintef-ocean.github.io/mimir][Mimir algorithm]] for details on user preferences
+   3. The user navigates to the main dashboard to view suggested setting trajectory, see cref:fig:dash1.
+      - The user has the opportunity to override fish movement and depth
+   4. The user indicates when he/she wants to keep a suggested trajectory, see cref:fig:dash2.
+      - The planning algorithm will keep the displayed trajectory and only update course rate and countdown deployment
+      - When the user rejects the trajectory a new one is provided regularly
+
+   #+caption: Step 1: Start algorithms.
+   #+name: fig:alg_start
+   #+ATTR_RST: :align center
+   [[../static/step1.png]]
+
+   #+caption: Step 2: Configure preferences.
+   #+name: fig:config
+   #+ATTR_RST: :align center
+   [[../static/step2.png]]
+
+   #+caption: Step 3: Dashboard with suggested setting trajectory.
+   #+name: fig:dash1
+   #+ATTR_RST: :align center
+   [[../static/step3.png]]
+
+   #+caption: Step 4: Dashboard with kept setting trajectory.
+   #+name: fig:dash2
+   #+ATTR_RST: :align center
+   [[../static/step4.png]]

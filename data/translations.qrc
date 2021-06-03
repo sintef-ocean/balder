@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file>fkin_no.qm</file>
+    <file>fkin_en.qm</file>
+  </qresource>
+</RCC>

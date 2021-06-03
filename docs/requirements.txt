@@ -1,0 +1,8 @@
+breathe
+Sphinx >= 4.0.0
+doxyqml
+exhale
+sphinx-rtd-theme
+sphinxcontrib-plantuml
+sphinxcontrib-svg2pdfconverter
+doc2dash

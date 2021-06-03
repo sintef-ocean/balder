@@ -1,0 +1,5 @@
+include(android_balder)
+
+[settings]
+os.api_level=29
+arch=x86_64

@@ -1,0 +1,27 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="balder.qml">balder/balder.qml</file>
+    <file alias="fkinHelpers.js">js/fkinHelpers.js</file>
+    <file alias="FkinControls.qml">components/FkinControls.qml</file>
+    <file alias="FkinDdsTopics.qml">components/FkinDdsTopics.qml</file>
+    <file alias="FkinDecisionIndicator.qml">components/FkinDecisionIndicator.qml</file>
+    <file alias="FkinFooter.qml">components/FkinFooter.qml</file>
+    <file alias="FkinInfoDash.qml">components/FkinInfoDash.qml</file>
+    <file alias="FkinPurseDashboard.qml">components/FkinPurseDashboard.qml</file>
+    <file alias="FkinSettings.qml">components/FkinSettings.qml</file>
+    <file alias="FkinStyle.qml">components/FkinStyle.qml</file>
+    <file alias="FkinTimeSeries.qml">components/FkinTimeSeries.qml</file>
+    <file alias="InfoDirectionMagnitude.qml">components/InfoDirectionMagnitude.qml</file>
+    <file alias="InfoPlanning.qml">components/InfoPlanning.qml</file>
+    <file alias="NlpInfo.qml">components/NlpInfo.qml</file>
+    <file alias="NorthEast.qml">components/NorthEast.qml</file>
+    <file alias="RemoteProgramCommands.qml">components/RemoteProgramCommands.qml</file>
+    <file alias="RemoteProgramGroup.qml">components/RemoteProgramGroup.qml</file>
+    <file alias="Splash.qml">components/Splash.qml</file>
+    <file alias="TabIconButton.qml">components/TabIconButton.qml</file>
+    <file alias="TimeChart.qml">components/TimeChart.qml</file>
+    <file alias="TransformToNED.qml">components/TransformToNED.qml</file>
+    <!-- file alias="Style.qml">Style.qml</file -->
+    <!-- file>qmldir</file -->
+  </qresource>
+</RCC>

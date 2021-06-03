@@ -1,0 +1,114 @@
+#!/bin/bash
+
+# Following this plugin spec:
+# https://github.com/linuxdeploy/linuxdeploy/wiki/Plugin-system
+
+# Options parsing:
+# https://stackoverflow.com/a/29754866
+
+# saner programming env: these switches turn some bugs into errors
+set -o errexit -o pipefail -o noclobber -o nounset
+
+plugin=plugin-ospl
+
+# -allow a command to fail with !’s side effect on errexit
+# -use return value from ${PIPESTATUS[0]}, because ! hosed $?
+! getopt --test > /dev/null
+if [[ ${PIPESTATUS[0]} -ne 4 ]]; then
+    echo 'ERROR: ${plugin}   I’m sorry, `getopt --test` failed in this environment.'
+    exit 1
+fi
+
+OPTIONS=h,v
+LONGOPTS=appdir:,plugin-api-version,plugin-type,help
+
+# -regarding ! and PIPESTATUS see above
+# -temporarily store output to be able to check for errors
+# -activate quoting/enhanced mode (e.g. by writing out “--options”)
+# -pass arguments only via   -- "$@"   to separate them correctly
+! PARSED=$(getopt --options=$OPTIONS --longoptions=$LONGOPTS --name "$0" -- "$@")
+if [[ ${PIPESTATUS[0]} -ne 0 ]]; then
+    # e.g. return value is 1
+    #  then getopt has complained about wrong arguments to stdout
+    exit 2
+fi
+# read getopt’s output this way to handle the quoting right:
+eval set -- "$PARSED"
+
+helptext="$0 {OPTIONS}
+
+  linuxdeploy plugin ospl
+
+  OPTIONS:
+
+    --appdir=[appdir path]   Path to existing AppDir (required)
+    --plugin-type            Print plugin type and exit
+    --plugin-api-version     Print plugin API version and exit
+
+  ENVIRONMENT:
+    OSPL_ENV_FILE            Path to ospl_env.sh to bundle (required)
+
+  Plugin to bundle hook ospl_env.sh in AppDir."
+
+appdir=
+v=
+# now enjoy the options in order and nicely split until we see --
+while true; do
+    case "$1" in
+        -v)
+            v=y
+            shift
+            ;;
+        -h|--help)
+            echo "${helptext}"
+            exit 0
+            ;;
+        --appdir)
+            appdir="$2"
+            shift 2
+            ;;
+        --plugin-api-version)
+            echo "0"
+            exit 0
+            ;;
+        --plugin-type)
+            echo "input"
+            exit 0
+            ;;
+        --)
+            shift
+            break
+            ;;
+        *)
+            echo "Programming error $1"
+            exit 3
+            ;;
+    esac
+done
+
+# handle non-optional arguments
+if [[ -z ${appdir} ]]; then
+    echo "ERROR: ${plugin}   An AppDir must be specified with --appdir."
+    exit 4
+fi
+
+env_file=${OSPL_ENV_FILE:-}
+[[ -z ${v} ]] || echo "DEBUG: ${plugin}   Check environment variable"
+if [[ -z ${env_file} ]]; then
+    echo "ERROR: ${plugin}   Environment variable OSPL_ENV_FILE must be specified"
+    exit 4
+fi
+
+if [[ -f ${env_file} ]]; then
+    [[ -z ${v} ]] || echo "DEBUG: ${plugin}   Make directory ${appdir}/apprun-hooks"
+    mkdir -p "${appdir}/apprun-hooks" || \
+     (echo "ERROR: ${plugin}   Could not make directory: ${appdir}" && exit 1)
+    [[ -z ${v} ]] || echo "DEBUG: ${plugin}   Copy file ${env_file} to ${appdir}/apprun-hooks"
+    cp ${env_file} ${appdir}/apprun-hooks/ || \
+     (echo "ERROR: ${plugin}   Could not copy file: ${env_file}" && exit 1)
+else
+    echo "ERROR: ${plugin}   File specified by OSPL_ENV_FILE does not exist: ${env_file}"
+    exit 4
+fi
+
+echo "${plugin} Copied ${env_file} to ${appdir}/apprun-hooks"

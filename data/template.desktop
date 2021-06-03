@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=${HUMAN_APP_NAME}
+Exec=bash -c ". /opt/opensplice-rts/release.com && ${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_BINDIR}/${APP_NAME}"
+Comment="Visualization for Purse Sense Decision Support"
+Icon=${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_DATADIR}/${CMAKE_PROJECT_NAME}/FkinLogo.png
+Type=Application
+Categories=Development;X-Fishery;X-SINTEF Ocean;X-MICT;X-Decision Support;

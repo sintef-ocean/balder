@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=balder
+Exec=balder
+Comment="Visualization for Purse Sense Decision Support"
+Icon=FkinLogo
+Type=Application
+Categories=Development;X-Fishery;X-SINTEF Ocean;X-MICT;X-Decision Support;

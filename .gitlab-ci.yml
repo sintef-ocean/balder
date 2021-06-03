@@ -1,0 +1,333 @@
+variables: &global-variables
+  ARTIFACTORY_REPO: kluster
+  APTLY_REPO: sintef-testing
+  APTLY_DIST: buster
+  APTLY_COMP: testing
+  OSPL_HOME: /opt/opensplice-hde
+  CONAN_SYSREQUIRES_MODE: enabled
+  CONAN_SYSREQUIRES_SUDO: 1
+  CONAN_NON_INTERACTIVE: 1
+  CONAN_LOGIN_USERNAME: ${KLUSTER_ARTIFACTORY_USER}
+  CONAN_PASSWORD: ${KLUSTER_ARTIFACTORY_PASSWORD}
+  KLUSTER_REMOTE: ${KLUSTER_ARTIFACTORY_URL}/artifactory/api/conan/conan-local
+  APPIMAGE_EXTRACT_AND_RUN: 1
+
+stages:
+  - builder_build
+  - build
+  - test
+  - deploy
+  - test_repo
+
+.armhfspec:
+  image: ${KLUSTER_REGISTRY_URL}/balder/builder/buster/armhf
+  tags:
+    - armhf
+
+.amd64spec:
+  image: ${KLUSTER_REGISTRY_URL}/balder/builder/buster/amd64
+  tags:
+    - amd64
+
+.conanlinuxspec:
+  image: conanio/gcc8
+  tags:
+    - amd64
+
+.winspec:
+  image: localhost:5000/kluster2004
+  tags:
+    - windows
+
+.build:setup:
+  before_script:
+    - conan remote add kluster http://${KLUSTER_REMOTE}
+    - conan remote add sintef https://artifactory.smd.sintef.no/artifactory/api/conan/conan-local
+    - conan remote add bincrafters https://bincrafters.jfrog.io/artifactory/api/conan/public-conan
+    - conan user ${CONAN_LOGIN_USERNAME} -p -r kluster
+    - conan config set general.revisions_enabled=1
+
+
+#=========================================
+# Docker image runner spawns job within
+
+.builder_build:buster:
+  image: docker:19.03.8
+  stage: builder_build
+  script:
+    - >
+       ARCH=`uname -m` &&
+       if [ "$ARCH" == "x86_64" ]; then
+       ARCHITECTURE="amd64";
+       elif [ "$ARCH" == "armv7l" ]; then
+       ARCHITECTURE="armhf";
+       elif [ "$ARCH" == "arm64" ]; then
+       ARCHITECTURE="arm64";
+       else
+       ARCHITECTURE="${ARCH}";
+       fi
+    - >
+       docker build -f tools/docker/gitlab-builder.df -t balder/builder/buster/${ARCHITECTURE}
+       --target gitlab-builder
+       --build-arg APTLY_USR=${KLUSTER_APTLY_USER}
+       --build-arg APTLY_PWD=${KLUSTER_APTLY_PASSWORD}
+       --build-arg APTLY_URL=${KLUSTER_APTLY_URL}
+       --build-arg APTLY_PREFIX=/${APTLY_REPO}
+       --build-arg APTLY_DIST=${APTLY_DIST}
+       --build-arg APTLY_COMP=${APTLY_COMP}
+       --build-arg CACHE_BUST=$(date +%Y%m%d-%H%M%S)
+       .
+    - docker login -u ${KLUSTER_REGISTRY_USER} -p ${KLUSTER_REGISTRY_PASSWORD} ${KLUSTER_REGISTRY_URL}
+    - docker tag balder/builder/buster/${ARCHITECTURE} ${KLUSTER_REGISTRY_URL}/balder/builder/buster/${ARCHITECTURE}
+    - docker push ${KLUSTER_REGISTRY_URL}/balder/builder/buster/${ARCHITECTURE}
+  rules:
+    - changes:
+      - tools/docker/gitlab-builder.df
+    - if: '$CI_COMMIT_MESSAGE =~ /.*build builder.*/i'
+
+builder_build:buster:armhf:
+  extends: .builder_build:buster
+  tags:
+    - armhf
+
+builder_build:buster:amd64:
+  extends: .builder_build:buster
+  tags:
+    - amd64
+
+#=============== WINDOWS ===============
+
+build:conan:windows:
+  stage: build
+  variables:
+    <<: *global-variables
+  extends:
+    - .winspec
+    - .build:setup
+  script:
+    - python -m pip install --upgrade pip setuptools wheel
+    - python -m pip install --upgrade conan
+    - python -m pip install -r docs/requirements.txt --upgrade
+    - emacs -Q --batch -l docs/emacs-install-pkgs.el
+    - conan profile new default --detect
+    - mkdir build
+    - cd build
+    - conan install ..
+        -o balder:with_doc=True
+        -o balder:with_CICD=True
+        --build missing
+    - conan upload --all -c -r kluster qt/5* --retry 5 --retry-wait 30
+    - conan build ..
+    - conan package ..
+    - cmake --build . --target upload --config Release
+
+#================ LINUX ================
+
+build:conan:linux:
+  stage: build
+  variables:
+    <<: *global-variables
+  extends:
+    - .conanlinuxspec
+    - .build:setup
+  script:
+    - sudo python -m pip install --upgrade pip setuptools wheel
+    - sudo python -m pip install --upgrade conan
+    - sudo apt-get update && sudo apt-get install -y imagemagick
+    - sudo apt-get -y install doxygen emacs-nox graphviz plantuml wget
+    - wget https://sourceforge.net/projects/plantuml/files/plantuml.jar
+    - sudo mv plantuml.jar /usr/share/plantuml/
+    - echo "To work around pesky gnutls issue Emacs, install newer emacs"
+    - sudo apt-get install -y software-properties-common
+    - sudo add-apt-repository -y ppa:kelleyk/emacs
+    - sudo apt-get update && sudo apt-get install -y emacs26-nox
+    - sudo update-alternatives --set emacs /usr/bin/emacs26
+    - echo "Workaround steps complete"
+    - emacs -Q --batch -l docs/emacs-install-pkgs.el
+    - sudo python -m pip install -r docs/requirements.txt --upgrade
+    - echo Installed prerequisites
+    - conan profile new default --detect
+    - conan profile update settings.compiler.libcxx=libstdc++11 default
+    - mkdir build && cd build
+    - conan install ..
+        -o balder:with_doc=True
+        -o balder:with_CICD=True
+        --build missing
+    - conan build ..
+    - source activate_run.sh
+    - conan package ..
+    - cmake --build . --target upload_appimage
+
+#=============== ANDROID ===============
+
+.android:conan:
+  stage: build
+  extends:
+    - .conanlinuxspec
+    - .build:setup
+  script:
+    - sudo python -m pip install --upgrade pip setuptools wheel
+    - sudo python -m pip install --upgrade conan
+    - sudo apt-get update && sudo apt-get install -y gawk bison flex
+    - mkdir build_help && pushd build_help
+    - conan install "android-cmdline-tools/[>=6858069]@joakimono/testing"
+        --generator virtualenv
+        --profile=../tools/profiles/android_${ARCH}_${API_LEVEL}
+        --build missing
+    - . activate.sh
+    - popd && mkdir build_and && cd build_and
+    - conan install ..
+        --profile ../tools/profiles/android_${ARCH}_${API_LEVEL}
+        -o balder:with_CICD=True
+        --build missing
+    - conan build ..
+    - conan package ..
+    - cmake --build . --target upload_apk
+
+android:amd64:
+  extends:
+    - .android:conan
+  variables:
+    <<: *global-variables
+    ARCH: amd64
+    API_LEVEL: api28
+
+#=========================================
+# Simple build of Release
+
+.build:balder:
+  stage: build
+  script:
+    - apt-get update
+    - apt-get install -y kluster-scripts sinspekto-dev
+    - python3 -m pip install -r docs/requirements.txt --upgrade
+    - mkdir build
+    - cd build
+    - cmake -DCMAKE_BUILD_TYPE=Release -DWITH_DOC=ON ..
+    - cmake --build .
+  artifacts:
+    paths:
+      - build/
+    expire_in: 3 hrs
+
+
+build:balder:amd64:
+  extends:
+    - .build:balder
+    - .amd64spec
+
+build:balder:armhf:
+  extends:
+    - .build:balder
+    - .armhfspec
+
+#=========================================
+# Deploy artifacts to artifactory
+
+.artifactory:balder:
+  stage: deploy
+  variables:
+    <<: *global-variables
+    ARTIFACTORY_REPO: sintef
+  script:
+    - >
+       ARCH=`uname -m` &&
+       if [ "$ARCH" == "x86_64" ]; then
+       B_TARGET="docs_deploy";
+       else
+       B_TARGET="upload";
+       fi
+    - apt-get update
+    - apt-get install -y kluster-scripts sinspekto-dev
+    - python3 -m pip install -r docs/requirements.txt --upgrade
+    - cd build
+    - cmake -DCMAKE_BUILD_TYPE=Release -DWITH_DOC=ON ..
+    - cmake --build . --target ${B_TARGET}
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "master"
+
+
+artifactory:balder:amd64:
+  dependencies:
+    - build:balder:amd64
+  extends:
+    - .artifactory:balder
+    - .amd64spec
+
+artifactory:balder:armhf:
+  dependencies:
+    - build:balder:armhf
+  extends:
+    - .artifactory:balder
+    - .armhfspec
+
+
+#=========================================
+# Deploy packages to aptly xx-testing
+
+.aptly_testing:balder:
+  stage: deploy
+  variables:
+    <<: *global-variables
+    APTLY_REPO: sintef-testing
+    APTLY_COMP: testing
+  script:
+    - apt-get update
+    - apt-get install -y kluster-scripts sinspekto-dev
+    - python3 -m pip install -r docs/requirements.txt --upgrade
+    - cd build
+    - cmake -DCMAKE_BUILD_TYPE=Release -DWITH_DOC=ON ..
+    - cmake --build . --target deploy
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "master"
+
+
+aptly_testing:balder:amd64:
+  dependencies:
+    - build:balder:amd64
+  extends:
+    - .aptly_testing:balder
+    - .amd64spec
+
+aptly_testing:balder:armhf:
+  dependencies:
+    - build:balder:armhf
+  extends:
+    - .aptly_testing:balder
+    - .armhfspec
+
+#=========================================
+# Deploy packages to aptly xx-release
+
+.aptly_release:balder:
+  stage: deploy
+  variables:
+    <<: *global-variables
+    APTLY_REPO: sintef-release
+    APTLY_COMP: release
+  script:
+    - apt-get update
+    - apt-get install -y kluster-scripts sinspekto-dev
+    - python3 -m pip install -r docs/requirements.txt --upgrade
+    - cd build
+    - cmake -DCMAKE_BUILD_TYPE=Release -DWITH_DOC=ON ..
+    - cmake --build . --target deploy
+  rules:
+    - if: $CI_COMMIT_TAG
+      when: manual
+    - if: '$CI_COMMIT_MESSAGE =~ /.deploy release.*/i'
+
+
+aptly_release:balder:amd64:
+  dependencies:
+    - build:balder:amd64
+  extends:
+    - .aptly_release:balder
+    - .amd64spec
+
+aptly_release:balder:armhf:
+  dependencies:
+    - build:balder:armhf
+  extends:
+    - .aptly_release:balder
+    - .armhfspec
