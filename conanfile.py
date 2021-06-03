@@ -5,9 +5,9 @@ import os
 class BalderConan(ConanFile):
     name = "balder"
     license = "GPLv3"
-    url = "https://gitlab.kluster.no/sintef/fkin/balder"
+    url = "https://github.com/sintef-ocean/balder"
     author = "SINTEF Ocean"
-    homepage = "https://gitlab.kluster.no/sintef/fkin/balder"
+    homepage = "https://sintef-ocean.github.io/balder"
     description = \
         "Balder is a decision support application for purse seining"
     topics = ("Qt", "QML", "DDS", "OpenSplice", "sinspekto", "Decision support")

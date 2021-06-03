@@ -69,5 +69,5 @@ jobs:
             -b missing -b outdated
           conan upload --all -c -r sintef qt/* --retry 5 --retry-wait 30
           conan build ..
-          source activate_run.sh
+          . activate_run.sh
           conan package ..

@@ -56,10 +56,10 @@ jobs:
           mkdir build
           cd build
           conan install .. -o balder:with_doc=True --build missing
-          cmake -DWITH_DOC=ON -DCMAKE_INSTALL_PREFIX=$BALDER_INSTALL ..
+          cmake -DWITH_DOC=ON -DCMAKE_INSTALL_PREFIX=install ..
           cmake --build . --target doc
           cmake -DCOMPONENT=doc -P cmake_install.cmake
-          mv $BALDER_INSTALL/share/doc/balder/html/* public/
+          mv install/share/doc/balder/html/* ../public/
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         if: github.ref == 'refs/heads/main'
