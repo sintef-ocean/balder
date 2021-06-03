@@ -41,6 +41,7 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script src="../_static/mathwork.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -109,7 +110,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="intro.html#usage">Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#running-the-application">Running the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#todo-typical-usage">TODO Typical usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#typical-usage-session">Typical usage session</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="signals.html">Data sharing</a><ul>
@@ -226,12 +227,13 @@
       <li>Build instructions</li>
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-    
+
+<li class="wy-breadcrumbs-aside">
+  <a href="https://github.com/sintef-ocean/balder" class="fa fa-github"> Source on GitHub</a>
+  <a href="https://docs.sintef.io" class="icon icon-home"> docs.sintef.io</a>
+</li>
+
+
   </ul>
 
   
@@ -257,7 +259,8 @@ generator. The application requires <code class="docutils literal notranslate"><
 <p>The <strong>recommended</strong> approach to build the application is with the help of <a class="reference external" href="https://conan.io/">conan</a>. <code class="docutils literal notranslate"><span class="pre">conan</span></code> is
 a python tool, and once installed, you need to set the following conan remotes.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m pip install conan
-conan remote add sintef https://conan.sintef.io/public
+
+conan remote add sintef https://artifactory.smd.sintef.no/api/conan/conan-local
 conan remote add bincrafters https://api.bintray.com/conan/bincrafters/public-conan
 conan config <span class="nb">set</span> general.revisions_enabled<span class="o">=</span><span class="m">1</span>
 </pre></div>
@@ -617,7 +620,7 @@ again.</p></li>
     
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb20cf1f0>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7f628bfcf6d0>
 
 <br /><br />
 <table>

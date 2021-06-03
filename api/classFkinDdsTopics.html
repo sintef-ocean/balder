@@ -41,6 +41,7 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script src="../_static/mathwork.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -109,7 +110,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/intro.html#usage">Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#running-the-application">Running the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#todo-typical-usage">TODO Typical usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#typical-usage-session">Typical usage session</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/signals.html">Data sharing</a><ul>
@@ -228,12 +229,13 @@
       <li>Class FkinDdsTopics</li>
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-    
+
+<li class="wy-breadcrumbs-aside">
+  <a href="https://github.com/sintef-ocean/balder" class="fa fa-github"> Source on GitHub</a>
+  <a href="https://docs.sintef.io" class="icon icon-home"> docs.sintef.io</a>
+</li>
+
+
   </ul>
 
   
@@ -304,6 +306,12 @@
 </dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics12keepSolutionE">
+<span id="_CPPv3N13FkinDdsTopics12keepSolutionE"></span><span id="_CPPv2N13FkinDdsTopics12keepSolutionE"></span><span id="FkinDdsTopics::keepSolution__string"></span><span class="target" id="classFkinDdsTopics_1a072eda1a8d330732a61e24d32f5064be"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">keepSolution</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics12keepSolutionE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Indicator on whether to keep or reject a received trajectory from purse planner. </p>
+</dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics10purseStatsE">
 <span id="_CPPv3N13FkinDdsTopics10purseStatsE"></span><span id="_CPPv2N13FkinDdsTopics10purseStatsE"></span><span id="FkinDdsTopics::purseStats__string"></span><span class="target" id="classFkinDdsTopics_1a097ac93a5ea1e92e6f680131c561aa56"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">purseStats</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics10purseStatsE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Topic for sinspekto::DdsOptiStatusSubscriber, optimization statistics. </p>
@@ -343,6 +351,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics15collidePositionE">
 <span id="_CPPv3N13FkinDdsTopics15collidePositionE"></span><span id="_CPPv2N13FkinDdsTopics15collidePositionE"></span><span id="FkinDdsTopics::collidePosition__string"></span><span class="target" id="classFkinDdsTopics_1abafb5d3c465b45ac0c511603f22e64d9"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">collidePosition</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics15collidePositionE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Topic for RatatoskDouble2Subscriber, expected position for fish colliding with purse. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N13FkinDdsTopics10deployTimeE">
+<span id="_CPPv3N13FkinDdsTopics10deployTimeE"></span><span id="_CPPv2N13FkinDdsTopics10deployTimeE"></span><span id="FkinDdsTopics::deployTime__string"></span><span class="target" id="classFkinDdsTopics_1a21d264956210c0e5fb0aabbaf95ea02a"></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deployTime</span></span></span><a class="headerlink" href="#_CPPv4N13FkinDdsTopics10deployTimeE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Topic for RatatoskDoubleValSubscriber, expected deploy time. </p>
 </dd></dl>
 
 <dl class="cpp var">
@@ -483,7 +497,7 @@
     
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb2253670>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7f628cf42ed0>
 
 <br /><br />
 <table>

@@ -41,6 +41,7 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script src="../_static/mathwork.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -109,7 +110,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="#usage">Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#running-the-application">Running the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#todo-typical-usage">TODO Typical usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#typical-usage-session">Typical usage session</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="signals.html">Data sharing</a><ul>
@@ -226,12 +227,13 @@
       <li>Introduction</li>
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-    
+
+<li class="wy-breadcrumbs-aside">
+  <a href="https://github.com/sintef-ocean/balder" class="fa fa-github"> Source on GitHub</a>
+  <a href="https://docs.sintef.io" class="icon icon-home"> docs.sintef.io</a>
+</li>
+
+
   </ul>
 
   
@@ -270,7 +272,7 @@ Each component are written using QML classes to declaratively describe the graph
 The main QML classes are indicated within square brackets under each component in <a class="reference internal" href="#fig-components"><span class="std std-numref">Figure 2</span></a>.
 Details for these classes can be found in <a class="reference internal" href="../api/library-api.html"><span class="doc">API Reference</span></a> and within links to the corresponding <code class="docutils literal notranslate"><span class="pre">.qml</span></code> files.</p>
 <div class="figure align-center" id="id2">
-<span id="fig-components"></span><a class="reference internal image-reference" href="../_images/component.svg"><img alt="../_images/component.svg" height="678" src="../_images/component.svg" width="1073" /></a>
+<span id="fig-components"></span><a class="reference internal image-reference" href="../_images/component.svg"><img alt="../_images/component.svg" height="828" src="../_images/component.svg" width="1057" /></a>
 <p class="caption"><span class="caption-number">Figure 2 </span><span class="caption-text">Component diagram for Balder.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
 </div>
 </div>
@@ -309,11 +311,11 @@ balder --language EN
 </pre></div>
 </div>
 </div>
-<div class="section" id="todo-typical-usage">
-<h2>TODO Typical usage<a class="headerlink" href="#todo-typical-usage" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="typical-usage-session">
+<h2>Typical usage session<a class="headerlink" href="#typical-usage-session" title="Permalink to this headline">¶</a></h2>
 <p>A typical user session can consist of the following steps:</p>
 <ol class="arabic simple">
-<li><p>Start algorithms, when they are running, it is indicated as in cref fig TBD1.</p>
+<li><p>Start algorithms; status is indicated as in <a class="reference internal" href="#fig-alg-start"><span class="std std-numref">Figure 6</span></a>.</p>
 <ul class="simple">
 <li><p>If all input signals are available, the algorithm should provide suggested trajectories regularly.</p></li>
 <li><p>Note that the first iteration may take some extra time (cold start)</p></li>
@@ -321,17 +323,39 @@ balder --language EN
 </li>
 <li><p>User preferences are configured.</p>
 <ul class="simple">
-<li><p>Possible settings are as indicated in cref fig TBD2.</p></li>
-<li><p>Should provide one line descriptions of each setting</p></li>
+<li><p>Possible settings are as indicated in <a class="reference internal" href="#fig-config"><span class="std std-numref">Figure 7</span></a>.</p></li>
+<li><p>The user can change setting speed, ellipse shape, aim point, fish margin, leadline sink margin, and leadline sinking coefficients.</p></li>
+<li><p>Please refer to <a class="reference external" href="https://sintef-ocean.github.io/mimir">Mimir algorithm</a> for details on user preferences</p></li>
 </ul>
 </li>
-<li><p>The user navigates to the main dashboard to view decision support output cref fig TBD3</p>
+<li><p>The user navigates to the main dashboard to view suggested setting trajectory, see <a class="reference internal" href="#fig-dash1"><span class="std std-numref">Figure 8</span></a>.</p>
 <ul class="simple">
-<li><p>Describe each view briefly</p></li>
-<li><p>Indicate that the user has the opportunity to override the fish school movement and depth cref fig TBD4</p></li>
+<li><p>The user has the opportunity to override fish movement and depth</p></li>
+</ul>
+</li>
+<li><p>The user indicates when he/she wants to keep a suggested trajectory, see <a class="reference internal" href="#fig-dash2"><span class="std std-numref">Figure 9</span></a>.</p>
+<ul class="simple">
+<li><p>The planning algorithm will keep the displayed trajectory and only update course rate and countdown deployment</p></li>
+<li><p>When the user rejects the trajectory a new one is provided regularly</p></li>
 </ul>
 </li>
 </ol>
+<div class="figure align-center" id="id6">
+<span id="fig-alg-start"></span><img alt="../_images/step1.png" src="../_images/step1.png" />
+<p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text">Step 1: Start algorithms.</span><a class="headerlink" href="#id6" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id7">
+<span id="fig-config"></span><img alt="../_images/step2.png" src="../_images/step2.png" />
+<p class="caption"><span class="caption-number">Figure 7 </span><span class="caption-text">Step 2: Configure preferences.</span><a class="headerlink" href="#id7" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id8">
+<span id="fig-dash1"></span><img alt="../_images/step3.png" src="../_images/step3.png" />
+<p class="caption"><span class="caption-number">Figure 8 </span><span class="caption-text">Step 3: Dashboard with suggested setting trajectory.</span><a class="headerlink" href="#id8" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="id9">
+<span id="fig-dash2"></span><img alt="../_images/step4.png" src="../_images/step4.png" />
+<p class="caption"><span class="caption-number">Figure 9 </span><span class="caption-text">Step 4: Dashboard with kept setting trajectory.</span><a class="headerlink" href="#id9" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 </div>
 
@@ -360,7 +384,7 @@ balder --language EN
     
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb213d1f0>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7f628c0f3350>
 
 <br /><br />
 <table>

@@ -41,6 +41,7 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script src="../_static/mathwork.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -107,7 +108,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/intro.html#usage">Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#running-the-application">Running the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#todo-typical-usage">TODO Typical usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#typical-usage-session">Typical usage session</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/signals.html">Data sharing</a><ul>
@@ -224,12 +225,13 @@
       <li>Program Listing for File FkinPurseDashboard.qml</li>
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-    
+
+<li class="wy-breadcrumbs-aside">
+  <a href="https://github.com/sintef-ocean/balder" class="fa fa-github"> Source on GitHub</a>
+  <a href="https://docs.sintef.io" class="icon icon-home"> docs.sintef.io</a>
+</li>
+
+
   </ul>
 
   
@@ -305,10 +307,11 @@
 
   <span class="kd">function</span> <span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">){</span>
 
+    <span class="c1">// The if buffer size is too small, you will not get all data..</span>
     <span class="nx">ddsVesselTrajectoryBuffer</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span>
-      <span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">vesselTrajectory</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">idPursePlanner</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+      <span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">vesselTrajectory</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">idPursePlanner</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
     <span class="nx">ddsFishTrajectoryBuffer</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span>
-      <span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">fishTrajectory</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">idPursePlanner</span><span class="p">,</span> <span class="mi">500</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+      <span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">fishTrajectory</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">idPursePlanner</span><span class="p">,</span> <span class="mi">3000</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
 
     <span class="nx">ddsVesselPosInfo</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">vesselPosInfo</span><span class="p">);</span>
     <span class="nx">vesselNED</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">vesselPosInfo</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">localNedTopic</span><span class="p">,</span> <span class="s2">&quot;vessel&quot;</span><span class="p">);</span>
@@ -332,6 +335,12 @@
 
     <span class="nx">vessel_deploy_position</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">deployPosition</span><span class="p">);</span>
     <span class="nx">fish_collide_position</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">collidePosition</span><span class="p">);</span>
+    <span class="nx">vessel_deploy_time</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">deployTime</span><span class="p">);</span>
+
+    <span class="nx">keepSuggestion</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">ddsParticipant</span><span class="p">,</span> <span class="nx">topic</span><span class="p">.</span><span class="nx">keepSolution</span><span class="p">,</span> <span class="nx">keeper</span><span class="p">.</span><span class="nx">keepIt</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+
+
 
     <span class="p">}</span>
 
@@ -347,6 +356,7 @@
     <span class="nx">RatatoskDoubleValSubscriber</span> <span class="p">{</span> <span class="kd">id: vessel_rot_desired</span><span class="p">;</span> <span class="p">}</span>
     <span class="nx">RatatoskDouble2Subscriber</span> <span class="p">{</span> <span class="kd">id: vessel_deploy_position</span><span class="p">;</span> <span class="p">}</span>
     <span class="nx">RatatoskDouble2Subscriber</span> <span class="p">{</span> <span class="kd">id: fish_collide_position</span><span class="p">;</span> <span class="p">}</span>
+    <span class="nx">RatatoskDoubleValSubscriber</span> <span class="p">{</span> <span class="kd">id: vessel_deploy_time</span><span class="p">;</span> <span class="p">}</span>
 
     <span class="nx">RatatoskDouble2Publisher</span> <span class="p">{</span> <span class="kd">id: gpsOrigin</span><span class="p">;</span> <span class="p">}</span>
     <span class="nx">RatatoskDouble2Publisher</span> <span class="p">{</span> <span class="kd">id: currentSurface</span><span class="p">;</span> <span class="k">value:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">seaCurrent</span><span class="p">;</span> <span class="p">}</span>
@@ -956,7 +966,7 @@
             <span class="nx">Label</span> <span class="p">{</span> <span class="k">text:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Speed&quot;</span><span class="p">);</span> <span class="p">}</span>
             <span class="nx">Slider</span> <span class="p">{</span>
               <span class="kd">id: fishSpeedPred</span><span class="p">;</span>
-              <span class="k">from:</span> <span class="mi">0</span><span class="p">;</span>
+              <span class="k">from:</span> <span class="mf">0.05</span><span class="p">;</span>
               <span class="k">value:</span> <span class="mi">2</span><span class="p">;</span>
               <span class="k">to:</span> <span class="mi">4</span><span class="p">;</span>
               <span class="k">stepSize:</span> <span class="mf">0.05</span><span class="p">;</span>
@@ -1035,19 +1045,57 @@
         <span class="k">unit:</span> <span class="s2">&quot; \u00b0/s&quot;</span><span class="p">;</span>
       <span class="p">}</span>
 
+
       <span class="nx">FkinDecisionIndicator</span> <span class="p">{</span>
         <span class="kd">id: recommendedSettingTime</span><span class="p">;</span>
-
-        <span class="c1">// TODO: Need a timer that counts down until received setting time point</span>
-        <span class="nx">property</span> <span class="kr">double</span> <span class="k">count:</span> <span class="mf">34.230</span><span class="p">;</span>
-        <span class="k">valueText:</span> <span class="o">!</span><span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span> <span class="o">?</span> <span class="s2">&quot;00:00&quot;</span> <span class="o">:</span>
-          <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">recommendedSettingTime</span><span class="p">.</span><span class="nx">count</span><span class="o">*</span><span class="mi">1000</span><span class="p">).</span><span class="nx">toLocaleTimeString</span><span class="p">(</span>
-            <span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span> <span class="s2">&quot;mm:ss&quot;</span><span class="p">);</span>
-        <span class="k">running:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span><span class="p">;</span>
         <span class="k">entity:</span> <span class="s2">&quot;\uebb1&quot;</span><span class="p">;</span> <span class="c1">// cannon-firing, \ueeca :bullet</span>
         <span class="k">description:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Countdown to deploy&quot;</span><span class="p">);</span>
         <span class="k">unit:</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
+        <span class="k">running:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span><span class="p">;</span>
 
+        <span class="nx">Connections</span> <span class="p">{</span>
+          <span class="k">target:</span> <span class="nx">vessel_deploy_time</span><span class="p">;</span>
+          <span class="k">onValChanged:</span>
+          <span class="p">{</span>
+            <span class="nx">recommendedSettingTime</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="nx">val</span><span class="p">;</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="nx">property</span> <span class="kr">double</span> <span class="k">count:</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">valueText:</span> <span class="o">!</span><span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span> <span class="o">?</span> <span class="s2">&quot;00:00&quot;</span> <span class="o">:</span>
+          <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="nx">recommendedSettingTime</span><span class="p">.</span><span class="nx">count</span><span class="o">*</span><span class="mi">1000</span><span class="p">).</span><span class="nx">toLocaleTimeString</span><span class="p">(</span>
+            <span class="nx">Qt</span><span class="p">.</span><span class="nx">locale</span><span class="p">(),</span> <span class="s2">&quot;mm:ss&quot;</span><span class="p">);</span>
+
+        <span class="nx">Timer</span> <span class="p">{</span>
+          <span class="kd">id: settingTimer</span><span class="p">;</span>
+          <span class="k">interval:</span> <span class="mi">500</span><span class="p">;</span>
+          <span class="k">running:</span> <span class="nx">root</span><span class="p">.</span><span class="nx">plannerRunning</span><span class="p">;</span>
+          <span class="k">repeat:</span> <span class="kc">true</span><span class="p">;</span>
+          <span class="k">onTriggered:</span>
+          <span class="p">{</span>
+            <span class="nx">recommendedSettingTime</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="nx">recommendedSettingTime</span><span class="p">.</span><span class="nx">count</span> <span class="o">-</span> <span class="nx">settingTimer</span><span class="p">.</span><span class="nx">interval</span><span class="o">/</span><span class="mi">1000</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="nx">recommendedSettingTime</span><span class="p">.</span><span class="nx">count</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">){</span>
+              <span class="nx">recommendedSettingTime</span><span class="p">.</span><span class="nx">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+            <span class="p">}</span>
+          <span class="p">}</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="nx">RowLayout</span> <span class="p">{</span>
+      <span class="k">Layout.alignment:</span> <span class="nx">Qt</span><span class="p">.</span><span class="nx">AlignCenter</span><span class="p">;</span>
+      <span class="kd">id: keeper</span><span class="p">;</span>
+      <span class="nx">property</span> <span class="nx">bool</span> <span class="k">keepIt:</span> <span class="kc">false</span><span class="p">;</span>
+      <span class="nx">DdsBitPublisher</span> <span class="p">{</span>
+        <span class="kd">id: keepSuggestion</span><span class="p">;</span>
+      <span class="p">}</span>
+      <span class="nx">Button</span> <span class="p">{</span>
+        <span class="kd">id: keepTrajectory</span><span class="p">;</span>
+        <span class="k">text:</span> <span class="nx">keeper</span><span class="p">.</span><span class="nx">keepIt</span> <span class="o">?</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Reject&quot;</span><span class="p">)</span> <span class="o">:</span> <span class="nx">qsTr</span><span class="p">(</span><span class="s2">&quot;Keep&quot;</span><span class="p">);</span>
+        <span class="k">Layout.fillWidth:</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="k">onClicked:</span> <span class="p">{</span>
+          <span class="nx">keepSuggestion</span><span class="p">.</span><span class="nx">signal</span> <span class="o">=</span> <span class="o">!</span><span class="nx">keeper</span><span class="p">.</span><span class="nx">keepIt</span><span class="p">;</span>
+          <span class="nx">keeper</span><span class="p">.</span><span class="nx">keepIt</span> <span class="o">=</span> <span class="o">!</span><span class="nx">keeper</span><span class="p">.</span><span class="nx">keepIt</span><span class="p">;</span>
+        <span class="p">}</span>
       <span class="p">}</span>
     <span class="p">}</span>
 
@@ -1102,7 +1150,7 @@
     
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb1e840d0>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7f628c675110>
 
 <br /><br />
 <table>

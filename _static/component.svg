@@ -1,24 +1,24 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="754px" preserveAspectRatio="none" style="width:1193px;height:754px;" version="1.1" viewBox="0 0 1193 754" width="1193px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="Helvetica" font-size="18" lengthAdjust="spacing" textLength="264" x="458" y="16.708">[Component diagram]  Balder</text><!--MD5=[462aa9c0645f51f50e072365fef67477]
-cluster balder--><rect fill="#FFFFFF" height="546" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="1043" x="7" y="27.9531"/><text fill="#000000" font-family="Helvetica" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="84" x="486.5" y="42.9482">«boundary»</text><text fill="#444444" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="56" x="500.5" y="61.1016">Balder</text><text fill="#444444" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="62" x="497.5" y="76.0137">[System]</text><!--MD5=[11b63f87f9efce6fda9831b98bfa73ba]
-cluster gui--><rect fill="#FFFFFF" height="447" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="995" x="31" y="102.9531"/><text fill="#000000" font-family="Helvetica" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="84" x="486.5" y="117.9482">«boundary»</text><text fill="#444444" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="133" x="462" y="136.1016">GUI Application</text><text fill="#444444" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="80" x="488.5" y="151.0137">[Container]</text><!--MD5=[201c4c264cab2ea339fbf09154019f28]
-entity dash--><rect fill="#85BBF0" height="99.1563" style="stroke:#78A8D8;stroke-width:1.5;" width="198" x="561" y="184.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="617.5" y="206.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="87" x="616.5" y="223.7734">Main view</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="137" x="591.5" y="238.6855">[FkinPurseDashboard]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="662" y="254.5107"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="174" x="575" y="270.8076">Purse planner dashboard</text><!--MD5=[00b4040e603364f3b74d798c0912c1e4]
-entity conf--><rect fill="#85BBF0" height="99.1563" style="stroke:#78A8D8;stroke-width:1.5;" width="185" x="191.5" y="184.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="241.5" y="206.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="165" x="201.5" y="223.7734">Configuration view</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="241" y="238.6855">[FkinSettings]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="286" y="254.5107"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="126" x="223" y="270.8076">User configuration</text><!--MD5=[ad1b6dc57716247de80283970c4ee265]
-entity algorithm--><rect fill="#85BBF0" height="129.4219" style="stroke:#78A8D8;stroke-width:1.5;" width="216" x="794" y="169.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="859.5" y="191.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="131" x="836.5" y="208.7734">Algorithm view</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="873.5" y="223.6855">[NlpInfo,</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="173" x="815.5" y="237.6543">RemoteProgramCommands]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="904" y="253.4795"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="188" x="808" y="269.7764">Control and status pane for</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="72" x="866" y="286.0732">algorithms</text><!--MD5=[f6e4132c789baf120fb83092938d1740]
-entity traj--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="203" x="807.5" y="387.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="866.5" y="409.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="77" x="870.5" y="426.7734">Map plot</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="873" y="441.6855">[NorthEast]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="911" y="457.5107"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="136" x="841" y="473.8076">Displays suggested</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="179" x="817.5" y="490.1045">trajectories for vessel, fish</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="162" x="828" y="506.4014">school and deployment</text><!--MD5=[cd13be72703caeb4bd49745d204d2e90]
-entity environment--><rect fill="#85BBF0" height="159.6875" style="stroke:#78A8D8;stroke-width:1.5;" width="219" x="553.5" y="373.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="620.5" y="395.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="150" x="588" y="412.7734">Environment info</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="155" x="583.5" y="427.6855">[InfoDirectionMagnitude,</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="81" x="620.5" y="441.6543">InfoPlanning,</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="138" x="594" y="455.623">FkinDecisionIndicator]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="665" y="471.4482"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="182" x="572" y="487.7451">Displays information about</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="199" x="563.5" y="504.042">fish school, environment and</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="126" x="600" y="520.3389">purse deployment</text><!--MD5=[2cd06a1c5cb39652d174dd3124094b9a]
-entity leadline--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="220" x="47" y="387.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="114.5" y="409.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="72" x="121" y="426.7734">Leadline</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="120.5" y="441.6855">[TimeChart]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="159" y="457.5107"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="196" x="61" y="473.8076">Shows estimated sink depth</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="174" x="68" y="490.1045">for leadline under current</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="132" x="91" y="506.4014">ambient conditions</text><!--MD5=[44df82fb778fec0901a72cffa7010adb]
-entity settings--><rect fill="#85BBF0" height="150.375" style="stroke:#78A8D8;stroke-width:1.5;" width="216" x="302" y="378.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="367.5" y="400.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="124" x="345" y="417.7734">Purse planner</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="109" x="355.5" y="436.3984">preferences</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="137" x="341.5" y="451.3105">[Various components]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="412" y="467.1357"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="188" x="316" y="483.4326">Provides elements that can</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="188" x="314" y="499.7295">changes key parameters of</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="114" x="353" y="516.0264">the path planner</text><!--MD5=[9559819944d120df6b7fb58c78a1e9cc]
-entity mimir--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="135" x="642.5" y="662.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="115" x="652.5" y="684.0918">«external_system»</text><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="48" x="686" y="701.7734">Mimir</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="712" y="718.542"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="94" x="665" y="734.8389">Path planning</text><!--MD5=[a08a7ddfa378281c366a12a88461b934]
-entity stim--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="136" x="286" y="662.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="115" x="296.5" y="684.0918">«external_system»</text><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="48" x="330" y="701.7734">Mimir</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="356" y="718.542"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="112" x="300" y="734.8389">Depth Estimator</text><!--MD5=[a5b17d9b17b85fc30120ffa60d6108f0]
-link dash to traj--><path d="M715.57,283.9931 C748.63,312.8731 791.16,350.0231 827.92,382.1331 " fill="none" id="dash-to-traj" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="834.24,387.6431,830.1823,380.1242,826.2388,384.6463,834.24,387.6431" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="778" y="341.0918">Displays</text><!--MD5=[80b69982cbce96a03cf8b1f7918b3f22]
-link dash to environment--><path d="M660.67,283.9931 C661,308.0331 661.41,337.8131 661.8,365.6431 " fill="none" id="dash-to-environment" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="661.91,373.8231,664.8098,365.7863,658.8102,365.8612,661.91,373.8231" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="662" y="341.0918">Displays</text><!--MD5=[3f6fa4043fc1cd80d649bdf7b25c1c6f]
-link conf to leadline--><path d="M255.66,283.9931 C239.07,312.3931 217.82,348.7931 199.29,380.5331 " fill="none" id="conf-to-leadline" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="195.13,387.6431,201.7627,382.2573,196.5859,379.2241,195.13,387.6431" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="230" y="341.0918">Displays</text><!--MD5=[ea3333a5527db3e6ff682e4f23b32e08]
-link conf to settings--><path d="M312.12,283.9931 C327.09,309.8431 345.91,342.3131 363.03,371.8731 " fill="none" id="conf-to-settings" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="367.11,378.9131,365.7007,370.4861,360.5072,373.4907,367.11,378.9131" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="344" y="341.0918">Displays</text><!--MD5=[d7bed26df08d5edd31babab16ccfa814]
-reverse link traj to mimir--><path d="M851.85,526.6031 C816.7,570.6731 772.87,625.6231 743.31,662.6831 " fill="none" id="traj-backto-mimir" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="856.98,520.1831,849.6484,524.5703,854.3409,528.3093,856.98,520.1831" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="118" x="800" y="609.0918">Sends optimized</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="126" x="798" y="623.0605">trajectories [DDS]</text><!--MD5=[313ca6d855af5402d4ea236c40571ca2]
-reverse link leadline to stim--><path d="M205.29,527.0231 C228.36,560.1331 256.99,599.3931 285,632.9531 C293.29,642.8831 302.65,653.1331 311.73,662.6631 " fill="none" id="leadline-backto-stim" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="200.46,520.0631,202.5658,528.3436,207.4912,524.9172,200.46,520.0631" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="105" x="286" y="609.0918">Sends leadline</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="93" x="294" y="623.0605">depths [DDS]</text><!--MD5=[bdb7e7157bb320970840ff79a1ea4f1c]
-link settings to mimir--><path d="M479.2,529.0931 C497.11,547.0431 516.78,565.7231 536,581.9531 C568.15,609.1031 606.13,636.3431 638.4,658.2231 " fill="none" id="settings-to-mimir" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="645.19,662.8031,640.2356,655.8423,636.8802,660.8163,645.19,662.8031" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="97" x="610" y="602.0918">Provides user</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="115" x="601" y="616.0605">settings to path</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="98" x="611.5" y="630.0293">planner [DDS]</text><!--MD5=[9e7e9d6dadab101f099009b3a26ac0e9]
-link mimir to algorithm--><path d="M777.78,701.3231 C854.89,693.5831 976.75,667.6331 1028,581.9531 C1075.45,502.6131 1061.35,460.1731 1028,373.9531 C1018.28,348.8131 1001.63,325.4331 983.57,305.3031 " fill="none" id="mimir-to-algorithm" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="977.92,299.1531,981.1282,307.0719,985.544,303.0098,977.92,299.1531" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="114" x="1063" y="444.5918">Sends statistics</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="122" x="1059" y="458.5605">about algorithms</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="39" x="1102.5" y="472.5293">[DDS]</text><!--MD5=[53ee4277ac9e1a2f8a8383dd4a177b13]
-link stim to mimir--><path d="M422.22,705.4531 C482.79,705.4531 571.2,705.4531 634.01,705.4531 " fill="none" id="stim-to-mimir" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="642.31,705.4531,634.31,702.4531,634.31,708.4531,642.31,705.4531" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="122" x="469.25" y="685.5918">Provides leadline</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="106" x="479.25" y="699.5605">estimate [DDS]</text><!--MD5=[983e68662f6a474ee75e630ec4daccaa]
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="920px" preserveAspectRatio="none" style="width:1175px;height:920px;background:#FFFFFF;" version="1.1" viewBox="0 0 1175 920" width="1175px" zoomAndPan="magnify"><defs/><g><text fill="#000000" font-family="Helvetica" font-size="18" lengthAdjust="spacing" textLength="264" x="449" y="16.708">[Component diagram]  Balder</text><!--MD5=[462aa9c0645f51f50e072365fef67477]
+cluster balder--><rect fill="#FFFFFF" height="714" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="995" x="7" y="27.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="6" font-style="italic" lengthAdjust="spacing" textLength="38" x="485.5" y="35.5225">«boundary»</text><text fill="#444444" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="56" x="476.5" y="54.8047">Balder</text><text fill="#444444" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="55" x="477" y="69.7168">[System]</text><!--MD5=[11b63f87f9efce6fda9831b98bfa73ba]
+cluster gui--><rect fill="#FFFFFF" height="653" style="stroke:#444444;stroke-width:1.0;stroke-dasharray:7.0,7.0;" width="979" x="15" y="80.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="6" font-style="italic" lengthAdjust="spacing" textLength="38" x="485.5" y="88.5225">«boundary»</text><text fill="#444444" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="133" x="438" y="107.8047">GUI Application</text><text fill="#444444" font-family="Helvetica" font-size="12" lengthAdjust="spacing" textLength="71" x="469" y="122.7168">[Container]</text><!--MD5=[201c4c264cab2ea339fbf09154019f28]
+entity dash--><rect fill="#85BBF0" height="99.1563" style="stroke:#78A8D8;stroke-width:1.5;" width="198" x="537" y="148.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="593.5" y="170.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="87" x="592.5" y="187.7734">Main view</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="137" x="567.5" y="202.6855">[FkinPurseDashboard]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="638" y="218.5107"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="174" x="551" y="234.8076">Purse planner dashboard</text><!--MD5=[00b4040e603364f3b74d798c0912c1e4]
+entity conf--><rect fill="#85BBF0" height="99.1563" style="stroke:#78A8D8;stroke-width:1.5;" width="185" x="137.5" y="148.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="187.5" y="170.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="165" x="147.5" y="187.7734">Configuration view</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="86" x="187" y="202.6855">[FkinSettings]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="232" y="218.5107"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="126" x="169" y="234.8076">User configuration</text><!--MD5=[ad1b6dc57716247de80283970c4ee265]
+entity algorithm--><rect fill="#85BBF0" height="129.4219" style="stroke:#78A8D8;stroke-width:1.5;" width="216" x="770" y="133.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="835.5" y="155.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="131" x="812.5" y="172.7734">Algorithm view</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="53" x="849.5" y="187.6855">[NlpInfo,</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="173" x="791.5" y="201.6543">RemoteProgramCommands]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="880" y="217.4795"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="188" x="784" y="233.7764">Control and status pane for</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="72" x="842" y="250.0732">algorithms</text><!--MD5=[f6e4132c789baf120fb83092938d1740]
+entity traj--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="203" x="783.5" y="579.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="842.5" y="601.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="77" x="846.5" y="618.7734">Map plot</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="72" x="849" y="633.6855">[NorthEast]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="887" y="649.5107"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="136" x="817" y="665.8076">Displays suggested</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="179" x="793.5" y="682.1045">trajectories for vessel, fish</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="162" x="804" y="698.4014">school and deployment</text><!--MD5=[cd13be72703caeb4bd49745d204d2e90]
+entity environment--><rect fill="#85BBF0" height="159.6875" style="stroke:#78A8D8;stroke-width:1.5;" width="219" x="529.5" y="565.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="596.5" y="587.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="150" x="564" y="604.7734">Environment info</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="155" x="559.5" y="619.6855">[InfoDirectionMagnitude,</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="81" x="596.5" y="633.6543">InfoPlanning,</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="138" x="570" y="647.623">FkinDecisionIndicator]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="641" y="663.4482"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="182" x="548" y="679.7451">Displays information about</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="199" x="539.5" y="696.042">fish school, environment and</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="126" x="576" y="712.3389">purse deployment</text><!--MD5=[2cd06a1c5cb39652d174dd3124094b9a]
+entity leadline--><rect fill="#85BBF0" height="131.75" style="stroke:#78A8D8;stroke-width:1.5;" width="220" x="23" y="579.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="90.5" y="601.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="72" x="97" y="618.7734">Leadline</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="73" x="96.5" y="633.6855">[TimeChart]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="135" y="649.5107"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="196" x="37" y="665.8076">Shows estimated sink depth</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="174" x="44" y="682.1045">for leadline under current</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="132" x="67" y="698.4014">ambient conditions</text><!--MD5=[44df82fb778fec0901a72cffa7010adb]
+entity settings--><rect fill="#85BBF0" height="150.375" style="stroke:#78A8D8;stroke-width:1.5;" width="216" x="278" y="570.9531"/><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="85" x="343.5" y="592.0918">«component»</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="124" x="321" y="609.7734">Purse planner</text><text fill="#000000" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="109" x="331.5" y="628.3984">preferences</text><text fill="#000000" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="137" x="317.5" y="643.3105">[Various components]</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="388" y="659.1357"/><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="188" x="292" y="675.4326">Provides elements that can</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="188" x="290" y="691.7295">changes key parameters of</text><text fill="#000000" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="114" x="329" y="708.0264">the path planner</text><!--MD5=[9559819944d120df6b7fb58c78a1e9cc]
+entity mimir--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="135" x="618.5" y="828.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="115" x="628.5" y="850.0918">«external_system»</text><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="48" x="662" y="867.7734">Mimir</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="688" y="884.542"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="94" x="641" y="900.8389">Path planning</text><!--MD5=[a08a7ddfa378281c366a12a88461b934]
+entity stim--><rect fill="#999999" height="85.1875" style="stroke:#8A8A8A;stroke-width:1.5;" width="136" x="262" y="828.9531"/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" font-style="italic" lengthAdjust="spacing" textLength="115" x="272.5" y="850.0918">«external_system»</text><text fill="#FFFFFF" font-family="Helvetica" font-size="16" font-weight="bold" lengthAdjust="spacing" textLength="48" x="306" y="867.7734">Mimir</text><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="0" x="332" y="884.542"/><text fill="#FFFFFF" font-family="Helvetica" font-size="14" lengthAdjust="spacing" textLength="112" x="276" y="900.8389">Depth Estimator</text><!--MD5=[a5b17d9b17b85fc30120ffa60d6108f0]
+link dash to traj--><path d="M724.7901,247.9595 C774.6685,277.2467 827,311.1452 827,324.4531 C827,324.4531 827,324.4531 827,504.4531 C827,527.4901 833.6632,551.1665 842.4727,572.4023 " fill="none" id="dash-to-traj" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="845.6708,579.8068,845.2528,571.2731,839.7446,573.6521,845.6708,579.8068" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="828" y="398.0918">Displays</text><!--MD5=[80b69982cbce96a03cf8b1f7918b3f22]
+link dash to environment--><path d="M636.5759,248.1228 C636.7982,271.3146 637,299.2961 637,324.4531 C637,324.4531 637,324.4531 637,504.4531 C637,521.7105 637.1506,540.1506 637.3691,557.8252 " fill="none" id="dash-to-environment" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="637.474,565.8851,640.3696,557.8467,634.3701,557.9249,637.474,565.8851" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="638" y="398.0918">Displays</text><!--MD5=[3f6fa4043fc1cd80d649bdf7b25c1c6f]
+link conf to leadline--><path d="M189.4802,248.062 C175.3703,270.1042 163,297.2002 163,324.4531 C163,324.4531 163,324.4531 163,504.4531 C163,526.5948 159.4412,550.27 154.7751,571.7957 " fill="none" id="conf-to-leadline" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="153.0104,579.6221,157.6965,572.4779,151.8434,571.1582,153.0104,579.6221" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="164" y="398.0918">Displays</text><!--MD5=[ea3333a5527db3e6ff682e4f23b32e08]
+link conf to settings--><path d="M290.7983,248.1118 C309.8501,269.1919 326,295.5773 326,324.4531 C326,324.4531 326,324.4531 326,504.4531 C326,524.182 331.005,544.3181 338.1238,562.9806 " fill="none" id="conf-to-settings" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="341.2958,570.883,341.0998,562.3413,335.5316,564.5764,341.2958,570.883" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="60" x="327" y="398.0918">Displays</text><!--MD5=[d7bed26df08d5edd31babab16ccfa814]
+reverse link traj to mimir--><path d="M821.1178,718.3422 C788.9622,754.7798 751.0891,797.6964 723.6341,828.8074 " fill="none" id="traj-backto-mimir" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="826.638,712.0869,819.0952,716.1002,823.5939,720.0703,826.638,712.0869" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="118" x="788" y="775.0918">Sends optimized</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="126" x="786" y="789.0605">trajectories [DDS]</text><!--MD5=[313ca6d855af5402d4ea236c40571ca2]
+reverse link leadline to stim--><path d="M192.2559,718.7087 C213.5785,744.3709 238.0401,773.2283 261,798.9531 C269.7934,808.8055 279.4471,819.1978 288.6751,828.9411 " fill="none" id="leadline-backto-stim" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="186.9054,712.257,189.7032,720.33,194.3216,716.4997,186.9054,712.257" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="105" x="262" y="775.0918">Sends leadline</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="93" x="270" y="789.0605">depths [DDS]</text><!--MD5=[bdb7e7157bb320970840ff79a1ea4f1c]
+link settings to mimir--><path d="M484.2804,721.0023 C493.639,728.0979 502.9929,735.1704 512,741.9531 C548.2385,769.2422 588.9024,799.5251 621.8018,823.9412 " fill="none" id="settings-to-mimir" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="628.2745,828.7435,623.6373,821.5674,620.0622,826.386,628.2745,828.7435" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="97" x="593" y="768.0918">Provides user</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="115" x="584" y="782.0605">settings to path</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="98" x="594.5" y="796.0293">planner [DDS]</text><!--MD5=[9e7e9d6dadab101f099009b3a26ac0e9]
+link mimir to algorithm--><path d="M753.6221,856.3825 C801.7192,844.2918 867.0934,825.0269 921,798.9531 C998.5513,761.4427 1040,732.0997 1040,645.9531 C1040,324.4531 1040,324.4531 1040,324.4531 C1040,291.9347 1019.4103,266.5882 992.9117,247.4328 " fill="none" id="mimir-to-algorithm" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="986.0563,242.6956,990.9321,249.7118,994.3432,244.7757,986.0563,242.6956" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="114" x="1045" y="443.0918">Sends statistics</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="122" x="1041" y="457.0605">about algorithms</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="39" x="1084.5" y="471.0293">[DDS]</text><!--MD5=[53ee4277ac9e1a2f8a8383dd4a177b13]
+link stim to mimir--><path d="M398.2192,871.4531 C458.7938,871.4531 547.1966,871.4531 610.0125,871.4531 " fill="none" id="stim-to-mimir" style="stroke:#666666;stroke-width:1.0;"/><polygon fill="#666666" points="618.3139,871.4531,610.3139,868.4531,610.3139,874.4531,618.3139,871.4531" style="stroke:#666666;stroke-width:1.0;"/><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="122" x="445.25" y="851.5918">Provides leadline</text><text fill="#666666" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacing" textLength="106" x="455.25" y="865.5605">estimate [DDS]</text><!--MD5=[7464c8ace9e28cd20ee4e92d65c870f3]
 @startuml
 !include ../static/style.puml
 !include  <C4/C4_Component.puml>
@@ -112,6 +112,10 @@ skinparam interface {
 
 
 
+
+
+
+
 skinparam defaultTextAlignment center
 
 skinparam wrapWidth 200
@@ -142,13 +146,60 @@ skinparam Arrow {
     FontSize 12
 }
 
+skinparam package {
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
+    FontStyle plain
+    BackgroundColor #FFFFFF
+}
+
 skinparam rectangle<<boundary>> {
     Shadowing false
-    StereotypeFontSize 0
+    StereotypeFontSize 6
+    StereotypeFontColor #FFFFFF
     FontColor #444444
     BorderColor #444444
+    BackgroundColor #FFFFFF
     BorderStyle dashed
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -184,8 +235,32 @@ skinparam rectangle<<person>> {
     BackgroundColor #08427B
     BorderColor #073B6F
 }
+skinparam database<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
+skinparam queue<<person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #08427B
+    BorderColor #073B6F
+}
 
 skinparam rectangle<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam database<<external_person>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #686868
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_person>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
     BackgroundColor #686868
@@ -198,6 +273,18 @@ skinparam rectangle<<system>> {
     BackgroundColor #1168BD
     BorderColor #3C7FC0
 }
+skinparam database<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
+skinparam queue<<system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #1168BD
+    BorderColor #3C7FC0
+}
 
 skinparam rectangle<<external_system>> {
     StereotypeFontColor #FFFFFF
@@ -205,6 +292,21 @@ skinparam rectangle<<external_system>> {
     BackgroundColor #999999
     BorderColor #8A8A8A
 }
+skinparam database<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+skinparam queue<<external_system>> {
+    StereotypeFontColor #FFFFFF
+    FontColor #FFFFFF
+    BackgroundColor #999999
+    BorderColor #8A8A8A
+}
+
+
+
 
 sprite $person [48x48/16] {
 000000000000000000000000000000000000000000000000
@@ -257,6 +359,65 @@ sprite $person [48x48/16] {
 000000000000000000000000000000000000000000000000
 }
 
+sprite $person2 [48x48/16] {
+0000000000000000000049BCCA7200000000000000000000
+0000000000000000006EFFFFFFFFB3000000000000000000
+00000000000000001CFFFFFFFFFFFF700000000000000000
+0000000000000001EFFFFFFFFFFFFFF80000000000000000
+000000000000000CFFFFFFFFFFFFFFFF6000000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+00000000000001FFFFFFFFFFFFFFFFFFF900000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFF00000000000000
+0000000000000BFFFFFFFFFFFFFFFFFFFF40000000000000
+0000000000000EFFFFFFFFFFFFFFFFFFFF70000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000FFFFFFFFFFFFFFFFFFFFF80000000000000
+0000000000000DFFFFFFFFFFFFFFFFFFFF60000000000000
+0000000000000AFFFFFFFFFFFFFFFFFFFF40000000000000
+00000000000006FFFFFFFFFFFFFFFFFFFE00000000000000
+00000000000000EFFFFFFFFFFFFFFFFFF800000000000000
+000000000000007FFFFFFFFFFFFFFFFFF100000000000000
+000000000000000BFFFFFFFFFFFFFFFF5000000000000000
+0000000000000001DFFFFFFFFFFFFFF70000000000000000
+00000000000000000BFFFFFFFFFFFF500000000000000000
+0000000000000000005DFFFFFFFFA1000000000000000000
+0000000000000000000037ABB96100000000000000000000
+000000000002578888300000000005888864100000000000
+0000000007DFFFFFFFFD9643347BFFFFFFFFFB4000000000
+00000004EFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB10000000
+0000007FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD2000000
+000006FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFE100000
+00003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB00000
+0000BFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF50000
+0003FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFD0000
+0009FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF2000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFB000
+001FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFA000
+000FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF8000
+000DFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF6000
+0009FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFF2000
+0003FFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFFD0000
+0000BFFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFF50000
+00003FFFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFFB00000
+000006FFFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFFE100000
+0000007FFFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFFD2000000
+00000004EFFF8FFFFFFFFFFFFFFFFFFFFFF8FFFB10000000
+0000000007DF8FFFFFFFFFFFFFFFFFFFFFF8FB4000000000
+000000000002578888888888888888888864100000000000
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -278,14 +439,12 @@ skinparam rectangle<<container>> {
     BackgroundColor #438DD5
     BorderColor #3C7FC0
 }
-
 skinparam database<<container>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
     BackgroundColor #438DD5
     BorderColor #3C7FC0
 }
-
 skinparam queue<<container>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
@@ -299,14 +458,12 @@ skinparam rectangle<<external_container>> {
     BackgroundColor #B3B3B3
     BorderColor #A6A6A6
 }
-
 skinparam database<<external_container>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
     BackgroundColor #B3B3B3
     BorderColor #A6A6A6
 }
-
 skinparam queue<<external_container>> {
     StereotypeFontColor #FFFFFF
     FontColor #FFFFFF
@@ -330,20 +487,21 @@ skinparam queue<<external_container>> {
 
 
 
+
+
+
 skinparam rectangle<<component>> {
     StereotypeFontColor #000000
     FontColor #000000
     BackgroundColor #85BBF0
     BorderColor #78A8D8
 }
-
 skinparam database<<component>> {
     StereotypeFontColor #000000
     FontColor #000000
     BackgroundColor #85BBF0
     BorderColor #78A8D8
 }
-
 skinparam queue<<component>> {
     StereotypeFontColor #000000
     FontColor #000000
@@ -357,14 +515,12 @@ skinparam rectangle<<external_component>> {
     BackgroundColor #CCCCCC
     BorderColor #BFBFBF
 }
-
 skinparam database<<external_component>> {
     StereotypeFontColor #000000
     FontColor #000000
     BackgroundColor #CCCCCC
     BorderColor #BFBFBF
 }
-
 skinparam queue<<external_component>> {
     StereotypeFontColor #000000
     FontColor #000000
@@ -383,22 +539,24 @@ skinparam queue<<external_component>> {
 
 
 
+
+
 title [Component diagram]  Balder
 
-rectangle "==Balder\n<size:12>[System]</size>" <<boundary>> as balder {
-  rectangle "==GUI Application\n<size:12>[Container]</size>" <<boundary>> as gui {
-    rectangle "==Main view\n//<size:12>[FkinPurseDashboard]</size>//\n\n Purse planner dashboard" <<component>> as dash
-    rectangle "==Configuration view\n//<size:12>[FkinSettings]</size>//\n\n User configuration" <<component>> as conf
-    rectangle "==Algorithm view\n//<size:12>[NlpInfo, RemoteProgramCommands]</size>//\n\n Control and status pane for algorithms" <<component>> as algorithm
-    rectangle "==Map plot\n//<size:12>[NorthEast]</size>//\n\n Displays suggested trajectories for vessel, fish school and deployment" <<component>> as traj
-    rectangle "==Environment info\n//<size:12>[InfoDirectionMagnitude, InfoPlanning, FkinDecisionIndicator]</size>//\n\n Displays information about fish school, environment and purse deployment" <<component>> as environment
-    rectangle "==Leadline\n//<size:12>[TimeChart]</size>//\n\n Shows estimated sink depth for leadline under current ambient conditions" <<component>> as leadline
-    rectangle "==Purse planner preferences\n//<size:12>[Various components]</size>//\n\n Provides elements that can changes key parameters of the path planner" <<component>> as settings
+rectangle "==Balder\n<size:12>[System]</size>" <<boundary>> as balder  {
+rectangle "==GUI Application\n<size:12>[Container]</size>" <<boundary>> as gui  {
+    rectangle "==Main view\n//<size:12>[FkinPurseDashboard]</size>//\n\n Purse planner dashboard" <<component>> as dash 
+    rectangle "==Configuration view\n//<size:12>[FkinSettings]</size>//\n\n User configuration" <<component>> as conf 
+    rectangle "==Algorithm view\n//<size:12>[NlpInfo, RemoteProgramCommands]</size>//\n\n Control and status pane for algorithms" <<component>> as algorithm 
+    rectangle "==Map plot\n//<size:12>[NorthEast]</size>//\n\n Displays suggested trajectories for vessel, fish school and deployment" <<component>> as traj 
+    rectangle "==Environment info\n//<size:12>[InfoDirectionMagnitude, InfoPlanning, FkinDecisionIndicator]</size>//\n\n Displays information about fish school, environment and purse deployment" <<component>> as environment 
+    rectangle "==Leadline\n//<size:12>[TimeChart]</size>//\n\n Shows estimated sink depth for leadline under current ambient conditions" <<component>> as leadline 
+    rectangle "==Purse planner preferences\n//<size:12>[Various components]</size>//\n\n Provides elements that can changes key parameters of the path planner" <<component>> as settings 
   }
 }
 
-rectangle "==Mimir\n\n Path planning" <<external_system>> as mimir
-rectangle "==Mimir\n\n Depth Estimator" <<external_system>> as stim
+rectangle "==Mimir\n\n Path planning" <<external_system>> as mimir 
+rectangle "==Mimir\n\n Depth Estimator" <<external_system>> as stim 
 dash -DOWN->> traj : **Displays**
 dash -DOWN->> environment : **Displays**
 conf -DOWN->> leadline : **Displays**
@@ -411,11 +569,11 @@ stim ->> mimir : **Provides leadline estimate [DDS]**
 
 @enduml
 
-PlantUML version 1.2021.2(Sun Mar 07 12:10:27 CET 2021)
+PlantUML version 1.2021.7(Sun May 23 12:40:07 GMT 2021)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
-Default Encoding: UTF-8
+Default Encoding: ANSI_X3.4-1968
 Language: en
 Country: US
 --></g></svg>

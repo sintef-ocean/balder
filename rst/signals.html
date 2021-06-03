@@ -41,6 +41,7 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script src="../_static/mathwork.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -109,7 +110,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="intro.html#usage">Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="intro.html#running-the-application">Running the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="intro.html#todo-typical-usage">TODO Typical usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#typical-usage-session">Typical usage session</a></li>
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Data sharing</a><ul>
@@ -226,12 +227,13 @@
       <li>Data sharing</li>
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-    
+
+<li class="wy-breadcrumbs-aside">
+  <a href="https://github.com/sintef-ocean/balder" class="fa fa-github"> Source on GitHub</a>
+  <a href="https://docs.sintef.io" class="icon icon-home"> docs.sintef.io</a>
+</li>
+
+
   </ul>
 
   
@@ -252,17 +254,17 @@
   <div class="section" id="data-sharing">
 <h1>Data sharing<a class="headerlink" href="#data-sharing" title="Permalink to this headline">¶</a></h1>
 <p>Communication of signals and data between software systems, which is indicated in
-<a class="reference internal" href="#fig-containers"><span class="std std-numref">Figure 6</span></a>, is achieved using a data distribution service standard <a class="reference external" href="https://www.omg.org/spec/DDS/About-DDS/">OMG DDS</a>.
+<a class="reference internal" href="#fig-containers"><span class="std std-numref">Figure 10</span></a>, is achieved using a data distribution service standard <a class="reference external" href="https://www.omg.org/spec/DDS/About-DDS/">OMG DDS</a>.
 In the following, we provide an overview of the various signals. This overview also
 includes the interface definition language (IDL) types used for the
 different signals. The IDL types are defined in the companion project <code class="docutils literal notranslate"><span class="pre">RatatoskIDL</span></code>.</p>
 <div class="figure align-center" id="id5">
-<span id="fig-containers"></span><a class="reference internal image-reference" href="../_images/container.svg"><img alt="../_images/container.svg" height="613" src="../_images/container.svg" width="388" /></a>
-<p class="caption"><span class="caption-number">Figure 6 </span><span class="caption-text">Container diagram for Balder.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+<span id="fig-containers"></span><a class="reference internal image-reference" href="../_images/container.svg"><img alt="../_images/container.svg" height="586" src="../_images/container.svg" width="388" /></a>
+<p class="caption"><span class="caption-number">Figure 10 </span><span class="caption-text">Container diagram for Balder.</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
 </div>
 <div class="section" id="signal-overview">
 <h2>Signal overview<a class="headerlink" href="#signal-overview" title="Permalink to this headline">¶</a></h2>
-<p>The diagram in <a class="reference internal" href="#fig-containers"><span class="std std-numref">Figure 6</span></a> only give a high-level view of the data sharing between the different systems.
+<p>The diagram in <a class="reference internal" href="#fig-containers"><span class="std std-numref">Figure 10</span></a> only give a high-level view of the data sharing between the different systems.
 With focus on the two algorithm systems <em>Mimir: Leadline</em> and <em>Mimir: Path planner</em>, we provide a more complete signal list in <a class="reference internal" href="#tab-flow"><span class="std std-numref">Table 1</span></a>.
 <em>Source</em> is a signal originator, it is the system that sends out the signal. <em>Target</em> is an intended signal receiver.
 The DCPS DDS interface (data-centric publish-subscribe) is designed to allow multiple recipients – one-to-many.
@@ -274,10 +276,10 @@ Note that <em>Name</em> in the table below is not the topic name of a signal. It
 <table class="docutils align-default" id="tab-flow">
 <caption><span class="caption-number">Table 1 </span><span class="caption-text">Overview of signal flow between systems.</span><a class="headerlink" href="#tab-flow" title="Permalink to this table">¶</a></caption>
 <colgroup>
-<col style="width: 26%" />
+<col style="width: 30%" />
 <col style="width: 11%" />
-<col style="width: 34%" />
-<col style="width: 28%" />
+<col style="width: 32%" />
+<col style="width: 26%" />
 </colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
@@ -347,22 +349,32 @@ Note that <em>Name</em> in the table below is not the topic name of a signal. It
 <td><p><code class="docutils literal notranslate"><span class="pre">fkin::ProcessStateAutomaton</span></code></p></td>
 <td><p>T: Balder</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">setting_speed</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">setting_speed_U_v</span></code></p></td>
 <td><p>parameter</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
 <td><p>S: Balder</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">setting_radius</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">setting_radii</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec2d</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aim_distance_D_s</span></code></p></td>
 <td><p>parameter</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
 <td><p>S: Balder</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">aim_point_arc</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fish_margin_d_f</span></code></p></td>
 <td><p>parameter</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
 <td><p>S: Balder</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">leadline</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">sink_margin_z_min</span></code></p></td>
+<td><p>parameter</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">leadline_tau_ll_z_d</span></code></p></td>
 <td><p>parameter</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec2d</span></code></p></td>
 <td><p>S: Balder</p></td>
@@ -377,12 +389,12 @@ Note that <em>Name</em> in the table below is not the topic name of a signal. It
 <td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
 <td><p>S: Ratatosk</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fish_water_velocity</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fish_velocity_over_ground</span></code></p></td>
 <td><p>parameter</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
 <td><p>S: Ratatosk, Balder <a class="footnote-reference brackets" href="#id3" id="id1">1</a></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fish_depth</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">fish_depth_z_s</span></code></p></td>
 <td><p>parameter</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">fkin::IdVec1d</span></code></p></td>
 <td><p>S: Ratatosk, Balder</p></td>
@@ -412,9 +424,19 @@ Note that <em>Name</em> in the table below is not the topic name of a signal. It
 <td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double3</span></code></p></td>
 <td><p>S: Ratatosk</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">trajectory_vessel</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">keep_solution</span></code></p></td>
+<td><p>input</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::Bit</span></code></p></td>
+<td><p>S: Balder</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">trajectory_vessel</span></code></p></td>
 <td><p>output</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">fkin::BatchKinematics2D</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">trajectory_vessel_rot</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">fkin::BatchIdVec1D</span></code></p></td>
 <td><p>T: Balder</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">trajectory_fish</span></code></p></td>
@@ -437,7 +459,7 @@ Note that <em>Name</em> in the table below is not the topic name of a signal. It
 <td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::DoubleVal</span></code></p></td>
 <td><p>T: Balder</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vessel_heading_rate</span></code></p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">vessel_course_rate</span></code></p></td>
 <td><p>output</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::DoubleVal</span></code></p></td>
 <td><p>T: Balder</p></td>
@@ -450,6 +472,11 @@ Note that <em>Name</em> in the table below is not the topic name of a signal. It
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">collide_position</span></code></p></td>
 <td><p>output</p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::Double2</span></code></p></td>
+<td><p>T: Balder</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">deploy_time</span></code></p></td>
+<td><p>output</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">ratatosk::types::DoubleVal</span></code></p></td>
 <td><p>T: Balder</p></td>
 </tr>
 </tbody>
@@ -497,7 +524,7 @@ topics without recompilation.</p>
     
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb1c2ebe0>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7f628c1d1a90>
 
 <br /><br />
 <table>

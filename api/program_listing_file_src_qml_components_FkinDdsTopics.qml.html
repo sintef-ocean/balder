@@ -41,6 +41,7 @@
         <script src="../_static/doctools.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script src="../_static/mathwork.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -107,7 +108,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/intro.html#usage">Usage</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#running-the-application">Running the application</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#todo-typical-usage">TODO Typical usage</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rst/intro.html#typical-usage-session">Typical usage session</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/signals.html">Data sharing</a><ul>
@@ -224,12 +225,13 @@
       <li>Program Listing for File FkinDdsTopics.qml</li>
     
     
-      <li class="wy-breadcrumbs-aside">
-        
-          
-        
-      </li>
-    
+
+<li class="wy-breadcrumbs-aside">
+  <a href="https://github.com/sintef-ocean/balder" class="fa fa-github"> Source on GitHub</a>
+  <a href="https://docs.sintef.io" class="icon icon-home"> docs.sintef.io</a>
+</li>
+
+
   </ul>
 
   
@@ -256,15 +258,17 @@
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">commandResponses:</span>     <span class="s2">&quot;fkinCmdResp&quot;</span><span class="p">;</span>
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">stateNotifications:</span>   <span class="s2">&quot;fkinStateNotification&quot;</span><span class="p">;</span>
 
+  <span class="nx">property</span> <span class="nx">string</span> <span class="k">keepSolution:</span>         <span class="s2">&quot;balder_keep_solution&quot;</span><span class="p">;</span>
   <span class="c1">// Outputs from purse planner:</span>
 
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">purseStats:</span>           <span class="s2">&quot;mimir_nlp_stats&quot;</span><span class="p">;</span>
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">purseConfig:</span>          <span class="s2">&quot;mimir_nlp_config&quot;</span><span class="p">;</span>
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">vesselTrajectory:</span>     <span class="s2">&quot;mimir_vessel_trajectory&quot;</span><span class="p">;</span>
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">fishTrajectory:</span>       <span class="s2">&quot;mimir_fish_trajectory&quot;</span><span class="p">;</span>
-  <span class="nx">property</span> <span class="nx">string</span> <span class="k">vesselRotDesired:</span>     <span class="s2">&quot;vessel_heading_rate_command&quot;</span><span class="p">;</span>
+  <span class="nx">property</span> <span class="nx">string</span> <span class="k">vesselRotDesired:</span>     <span class="s2">&quot;vessel_course_rate_command&quot;</span><span class="p">;</span>
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">deployPosition:</span>       <span class="s2">&quot;vessel_deploy_position&quot;</span><span class="p">;</span>
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">collidePosition:</span>      <span class="s2">&quot;fish_collide_position&quot;</span><span class="p">;</span>
+  <span class="nx">property</span> <span class="nx">string</span> <span class="k">deployTime:</span>           <span class="s2">&quot;vessel_deploy_time&quot;</span><span class="p">;</span>
 
   <span class="c1">// Vessel pos info signals</span>
   <span class="nx">property</span> <span class="nx">string</span> <span class="k">vesselPosInfo:</span>        <span class="s2">&quot;vessel_global_pos_vel&quot;</span><span class="p">;</span>
@@ -320,7 +324,7 @@
     
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7efdb1f464c0>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. <jinja2.runtime.BlockReference object at 0x7f628cf5e850>
 
 <br /><br />
 <table>
