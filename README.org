@@ -6,11 +6,16 @@
 #+STARTUP: overview
 #+STARTUP: logdone
 
+* Online documentation
+
+  [[./data/icons/icon@2x.png]] The online documentation for this repository is found at [[https://sintef-ocean.github.io/balder]].
+  For more information on the associated project, see [[https://docs.sintef.io/#fhf-catch-control-in-purse-seine][FHF catch control in purse seine]].
+
 * Build instructions
 
   You need a compiler that supports /c++17/ to build =balder=. It is known to compile
   with =gcc 8=, =clang 9=, and =msvc++ 14.2=. You need the [[https://cmake.org/][CMake]] build system
-  generator. The application requires =sinspekto= and [[https://www.qt.io/][Qt]].
+  generator. The application requires [[https://sintef-ocean.github.io/sinspekto][sinspekto]] and [[https://www.qt.io/][Qt]].
 
   The *recommended* approach to build the application is with the help of [[https://conan.io/][conan]]. =conan= is
   a python tool, and once installed, you need to set the following conan remotes.
