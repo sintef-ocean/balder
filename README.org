@@ -6,7 +6,7 @@
 #+STARTUP: overview
 #+STARTUP: logdone
 
-https://github.com/sintef-ocean/balder/workflows/GCC%20Conan/badge.svg]]
+[[https://github.com/sintef-ocean/balder/actions?query=workflow%3A"GCC+Conan"][https://github.com/sintef-ocean/balder/workflows/GCC%20Conan/badge.svg]]
 [[https://github.com/sintef-ocean/balder/actions?query=workflow%3A"MSVC+Conan"][https://github.com/sintef-ocean/balder/workflows/MSVC%20Conan/badge.svg]]
 [[https://github.com/sintef-ocean/balder/actions?query=workflow%3A"github+pages"][https://github.com/sintef-ocean/balder/workflows/github%20pages/badge.svg]]
 [[https://sintef-ocean.github.io/balder][https://img.shields.io/badge/Documentation-HTML-blue.svg?style=flat-square&logo=read-the-docs&logoColor=ffffff]]
