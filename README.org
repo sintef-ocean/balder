@@ -6,9 +6,9 @@
 #+STARTUP: overview
 #+STARTUP: logdone
 
-* Online documentation
+* Online documentation [[file:./data/icons/icon@2x.png]]
 
-  [[./data/icons/icon@2x.png]] The online documentation for this repository is found at [[https://sintef-ocean.github.io/balder]].
+  The online documentation for this repository is found at [[https://sintef-ocean.github.io/balder]].
   For more information on the associated project, see [[https://docs.sintef.io/#fhf-catch-control-in-purse-seine][FHF catch control in purse seine]].
 
 * Build instructions
