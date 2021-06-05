@@ -1,4 +1,3 @@
-#+TITLE: README balder
 #+AUTHOR: Joakim Haugen
 #+EMAIL: joakim.haugen@sintef.com
 #+DATE: [2020-09-01 Tue]
